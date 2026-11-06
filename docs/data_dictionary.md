@@ -1,0 +1,1035 @@
+# Data dictionary
+
+> Generated from the database by `python/export_data_dictionary.py` (view `meta.v_data_dictionary`).
+> Do not edit by hand: change the descriptions in the SQL scripts (`meta.usp_describe`) and re-export.
+
+## core - integrated, normalised model
+
+### `core.abrechnungsfall`
+
+Behandlungsfall: one pseudonymised patient at one practice in one quarter. SAMPLE of real volume.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `fall_id` | int | no | PK, identity |  |
+| `fallnummer` | varchar(20) | no |  |  |
+| `praxis_id` | int | no | FK -> `core.praxis` |  |
+| `quartal_code` | char(6) | no | FK -> `core.quartal` |  |
+| `patient_pseudonym` | char(64) | no |  | Salted SHA-256 hash of the insurance number; the KVNR itself never enters the DWH. |
+| `krankenkasse_id` | int | no | FK -> `core.krankenkasse` |  |
+| `versichertenstatus` | char(1) | no |  | M = Mitglied (member), F = Familienversicherter (family), R = Rentner (pensioner). |
+| `geschlecht` | char(1) | no |  |  |
+| `altersgruppe_code` | varchar(5) | no | FK -> `core.altersgruppe` |  |
+| `scheinuntergruppe_code` | char(2) | no | FK -> `core.scheinuntergruppe` |  |
+| `tss_vermittlungscode` | char(14) | yes |  | Code of the TSS appointment if the case came via the Terminservicestelle. |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.abschlagszahlung`
+
+Monthly advance payment to a practice during a quarter.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `abschlag_id` | int | no | PK, identity |  |
+| `praxis_id` | int | no | FK -> `core.praxis` |  |
+| `quartal_code` | char(6) | no | FK -> `core.quartal` |  |
+| `abschlag_nr` | tinyint | no |  |  |
+| `zahlungsdatum` | date | no |  |  |
+| `betrag` | decimal(12,2) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.altersgruppe`
+
+Age groups used by statistics, billing and TSS (conformed code list).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `altersgruppe_code` | varchar(5) | no | PK |  |
+| `bezeichnung` | nvarchar(40) | no |  |  |
+| `alter_von` | tinyint | no |  |  |
+| `alter_bis` | tinyint | yes |  |  |
+| `statistik_bezeichnung` | nvarchar(60) | no |  | Label used by the statistics office - used to map their file. |
+| `sortierung` | tinyint | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.arzt`
+
+Physician or psychotherapist in the Arztregister (synthetic persons).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arzt_id` | int | no | PK, identity |  |
+| `lanr` | char(9) | no |  | Lebenslange Arztnummer: 6-digit id + check digit + 2-digit Fachgruppe. Business key. |
+| `efn` | char(15) | yes |  | Einheitliche Fortbildungsnummer - key used by the Kammer for CME points. |
+| `titel` | nvarchar(40) | yes |  |  |
+| `vorname` | nvarchar(60) | no |  |  |
+| `nachname` | nvarchar(60) | no |  |  |
+| `geschlecht` | char(1) | no |  |  |
+| `geburtsjahr` | smallint | no |  | Year of birth (only the year is kept: data minimisation). |
+| `fachgruppe_code` | char(2) | no | FK -> `core.fachgruppe` |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.arztgruppe`
+
+Physician group of the Bedarfsplanung (needs planning), e.g. Hausärzte.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arztgruppe_code` | varchar(4) | no | PK |  |
+| `bezeichnung` | nvarchar(100) | no |  |  |
+| `versorgungsebene` | nvarchar(60) | no |  |  |
+| `planungsbereich_typ` | varchar(5) | no |  | Level of planning: KREIS or ROR (Raumordnungsregion). |
+| `verhaeltniszahl` | int | no |  | Target ratio: inhabitants per doctor at 100 % supply (simplified). |
+| `schwelle_unterversorgung_pct` | decimal(5,1) | no |  | Below this Versorgungsgrad an area counts as undersupplied (75 % Hausärzte, 50 % others). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.bereitschaftsdienst`
+
+One out-of-hours shift and the doctor who served it.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `dienst_id` | int | no | PK, identity |  |
+| `dienst_nr` | varchar(30) | no |  |  |
+| `notfallpraxis_id` | int | no | FK -> `core.notfallpraxis` |  |
+| `beginn` | datetime2(0) | no |  |  |
+| `ende` | datetime2(0) | no |  |  |
+| `arzt_id` | int | no | FK -> `core.arzt` |  |
+| `getauscht_von_arzt_id` | int | yes | FK -> `core.arzt` | Originally scheduled doctor if the shift was swapped. |
+| `dauer_stunden` | decimal(5,2) | yes |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.dokument`
+
+Unstructured document (enquiry, complaint, minutes, notice) with full text.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `dokument_id` | int | no | PK, identity |  |
+| `dokumenttyp_code` | varchar(10) | no | FK -> `core.dokumenttyp` |  |
+| `quelle_referenz` | nvarchar(200) | no |  | Business key: ticket id, source file name or file number. |
+| `titel` | nvarchar(300) | no |  |  |
+| `dokument_datum` | date | no |  |  |
+| `kategorie` | nvarchar(40) | yes |  |  |
+| `status` | varchar(10) | yes |  |  |
+| `inhalt` | nvarchar(MAX) | no |  | Full original text (NVARCHAR(MAX)); full-text index see sql/85_fulltext. |
+| `inhalt_sha256` | binary(32) | no |  | SHA-256 of the text to detect changes and duplicates. |
+| `zeichen_anzahl` | bigint | yes |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.dokument_bezug`
+
+Links a document to exactly one arzt, praxis or Zulassungsverfahren (exclusive arc).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `dokument_bezug_id` | int | no | PK, identity |  |
+| `dokument_id` | int | no | FK -> `core.dokument` |  |
+| `arzt_id` | int | yes | FK -> `core.arzt` |  |
+| `praxis_id` | int | yes | FK -> `core.praxis` |  |
+| `verfahren_id` | int | yes | FK -> `core.zulassungsverfahren` |  |
+| `bezugsart` | varchar(12) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.dokumenttyp`
+
+Type of document with its default confidentiality.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `dokumenttyp_code` | varchar(10) | no | PK |  |
+| `bezeichnung` | nvarchar(60) | no |  |  |
+| `vertraulichkeit` | varchar(12) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.ebm_kapitel`
+
+Chapter of the EBM fee schedule.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kapitel_nr` | tinyint | no | PK |  |
+| `bereich` | varchar(5) | no |  |  |
+| `bezeichnung` | nvarchar(100) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.einwohner`
+
+Population per Kreis, reference date, age group and sex (approximate, synthetic).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kreis_id` | int | no | PK, FK -> `core.kreis` |  |
+| `stichtag` | date | no | PK |  |
+| `altersgruppe_code` | varchar(5) | no | PK, FK -> `core.altersgruppe` |  |
+| `geschlecht` | char(1) | no | PK |  |
+| `anzahl` | int | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.fachgruppe`
+
+Specialty code = digits 8-9 of the LANR (KBV Arztgruppenschlüssel).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `fachgruppe_code` | char(2) | no | PK |  |
+| `bezeichnung` | nvarchar(100) | no |  |  |
+| `arztgruppe_code` | varchar(4) | yes | FK -> `core.arztgruppe` | Bedarfsplanung group this specialty counts towards (NULL = not planned). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.fall_diagnose`
+
+ICD-10 diagnoses of a case with Diagnosesicherheit (G/V/A/Z).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `fall_id` | int | no | PK, FK -> `core.abrechnungsfall` |  |
+| `icd_id` | int | no | PK, FK -> `core.icd10` |  |
+| `diagnosesicherheit` | char(1) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.fortbildungspunkte`
+
+CME points per doctor and year (§ 95d SGB V: 250 points in 5 years).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arzt_id` | int | no | PK, FK -> `core.arzt` |  |
+| `jahr` | smallint | no | PK |  |
+| `punkte` | smallint | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.gop`
+
+Gebührenordnungsposition (billing code) of the EBM. Points simplified.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `gop_id` | int | no | PK, identity |  |
+| `gop_code` | char(5) | no |  | 5-digit GOP code. Business key. |
+| `bezeichnung` | nvarchar(200) | no |  |  |
+| `kapitel_nr` | tinyint | no | FK -> `core.ebm_kapitel` |  |
+| `punktzahl` | int | no |  | Points per unit (example values). |
+| `pruefzeit_min` | smallint | yes |  | Standard minutes used for time-plausibility checks; NULL = none. |
+| `ist_extrabudgetaer` | bit | no |  | 1 = paid outside the budget at full price (EGV). |
+| `qs_bereich_code` | varchar(5) | yes | FK -> `core.qs_bereich` | If set, the doctor needs a valid QS-Genehmigung to bill this GOP. |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.honorarbescheid`
+
+Quarterly fee statement per practice as issued by the KV.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `bescheid_id` | int | no | PK, identity |  |
+| `bescheid_nr` | varchar(20) | no |  |  |
+| `praxis_id` | int | no | FK -> `core.praxis` |  |
+| `quartal_code` | char(6) | no | FK -> `core.quartal` |  |
+| `bescheiddatum` | date | no |  |  |
+| `punkte_angefordert` | int | no |  |  |
+| `punkte_berichtigt` | int | no |  | Points removed by sachlich-rechnerische Berichtigung (e.g. GOP without permit). |
+| `punkte_mgv` | int | no |  |  |
+| `punkte_egv` | int | no |  |  |
+| `quote_mgv` | decimal(6,4) | yes |  | Payout quota applied to budgeted points (simplified Honorarverteilung). |
+| `betrag_mgv` | decimal(12,2) | no |  |  |
+| `betrag_egv` | decimal(12,2) | no |  |  |
+| `honorar_brutto` | decimal(12,2) | no |  |  |
+| `verwaltungskosten` | decimal(12,2) | no |  |  |
+| `abschlaege` | decimal(12,2) | no |  |  |
+| `auszahlungsbetrag` | decimal(12,2) | no |  | Remaining payment after administration fee and advance payments (negative = refund). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.icd10`
+
+Selection of ICD-10-GM diagnosis codes (simplified).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `icd_id` | int | no | PK, identity |  |
+| `icd_code` | varchar(7) | no |  |  |
+| `bezeichnung` | nvarchar(300) | no |  |  |
+| `kapitel` | varchar(5) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.kassenart`
+
+Type of statutory health insurer (AOK, BKK, IKK, Ersatzkasse, Knappschaft, LKK).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kassenart_code` | varchar(4) | no | PK |  |
+| `bezeichnung` | nvarchar(60) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.kooperationsform`
+
+Form of practice: Einzelpraxis, Berufsausübungsgemeinschaft, MVZ.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kooperationsform_code` | varchar(3) | no | PK |  |
+| `bezeichnung` | nvarchar(60) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.krankenkasse`
+
+Statutory health insurer (payer). Real names, SYNTHETIC IK numbers.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `krankenkasse_id` | int | no | PK, identity |  |
+| `ik` | char(9) | no |  | Institutionskennzeichen (9 digits). Business key. |
+| `name` | nvarchar(150) | no |  |  |
+| `kassenart_code` | varchar(4) | no | FK -> `core.kassenart` |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.kreis`
+
+Kreis / kreisfreie Stadt / Regionalverband (district). Source: GeoJSON of the statistics office.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kreis_id` | int | no | PK, identity |  |
+| `ags` | char(5) | no |  | Amtlicher Gemeindeschlüssel at Kreis level (5 digits). Business key. |
+| `name` | nvarchar(100) | no |  |  |
+| `kreisart` | nvarchar(30) | no |  | Type of district (Landkreis, Regionalverband). |
+| `verwaltungssitz` | nvarchar(60) | no |  | Seat of the district administration. |
+| `geo_breite` | decimal(8,5) | yes |  | Latitude of the seat (approximate, WGS84). |
+| `geo_laenge` | decimal(8,5) | yes |  | Longitude of the seat (approximate, WGS84). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.leistung`
+
+One billed GOP within a case.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `leistung_id` | bigint | no | PK, identity |  |
+| `fall_id` | int | no | FK -> `core.abrechnungsfall` |  |
+| `positions_nr` | smallint | no |  |  |
+| `leistungsdatum` | date | no |  |  |
+| `arzt_id` | int | no | FK -> `core.arzt` | Doctor (LANR) who performed the service. |
+| `gop_id` | int | no | FK -> `core.gop` |  |
+| `anzahl` | smallint | no |  |  |
+| `punktzahl` | int | no |  | Points per unit copied from core.gop at load time (historical snapshot). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.notfallpraxis`
+
+Bereitschaftsdienstpraxis (out-of-hours practice).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `notfallpraxis_id` | int | no | PK, identity |  |
+| `kennung` | varchar(10) | no |  |  |
+| `name` | nvarchar(100) | no |  |  |
+| `ort` | nvarchar(60) | no |  |  |
+| `kreis_id` | int | no | FK -> `core.kreis` |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.orientierungswert`
+
+Euro value of one EBM point per year.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `jahr` | smallint | no | PK |  |
+| `euro_je_punkt` | decimal(9,6) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.planungsbereich`
+
+Planning area of the Bedarfsplanung.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `planungsbereich_id` | int | no | PK, identity |  |
+| `planungsbereich_code` | varchar(10) | no |  |  |
+| `name` | nvarchar(100) | no |  |  |
+| `typ` | varchar(5) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.planungsbereich_kreis`
+
+Which Kreise make up a planning area.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `planungsbereich_id` | int | no | PK, FK -> `core.planungsbereich` |  |
+| `kreis_id` | int | no | PK, FK -> `core.kreis` |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.praxis`
+
+Betriebsstätte (practice site) with its BSNR.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `praxis_id` | int | no | PK, identity |  |
+| `bsnr` | char(9) | no |  | Betriebsstättennummer (9 digits, starts with the KV code 73). Business key. |
+| `name` | nvarchar(200) | no |  |  |
+| `kooperationsform_code` | varchar(3) | no | FK -> `core.kooperationsform` | EP, BAG or MVZ. |
+| `strasse` | nvarchar(120) | yes |  |  |
+| `ort` | nvarchar(60) | no |  |  |
+| `kreis_id` | int | no | FK -> `core.kreis` |  |
+| `gruendungsdatum` | date | yes |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.pruefverfahren`
+
+Efficiency audit (Wirtschaftlichkeitsprüfung) of prescriptions by the Prüfungsstelle.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `pruefverfahren_id` | int | no | PK, identity |  |
+| `aktenzeichen` | varchar(20) | no |  |  |
+| `praxis_id` | int | no | FK -> `core.praxis` |  |
+| `quartal_code` | char(6) | no | FK -> `core.quartal` |  |
+| `pruefgegenstand` | varchar(15) | no |  |  |
+| `anlass` | varchar(15) | no |  |  |
+| `eingeleitet_am` | date | no |  |  |
+| `status` | varchar(15) | no |  |  |
+| `abgeschlossen_am` | date | yes |  |  |
+| `massnahme` | varchar(15) | yes |  |  |
+| `nachforderung_betrag` | decimal(12,2) | yes |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.qs_bereich`
+
+Quality-assurance area that requires a permit (Genehmigung) to bill its GOPs.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `qs_bereich_code` | varchar(5) | no | PK |  |
+| `bezeichnung` | nvarchar(60) | no |  |  |
+| `rechtsgrundlage` | nvarchar(200) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.qs_genehmigung`
+
+Permit of a doctor for a QS area, with validity interval.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arzt_id` | int | no | PK, FK -> `core.arzt` |  |
+| `qs_bereich_code` | varchar(5) | no | PK, FK -> `core.qs_bereich` |  |
+| `valid_from` | date | no | PK |  |
+| `valid_to` | date | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.quartal`
+
+Calendar quarters; billing in German statutory health insurance is quarterly.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `quartal_code` | char(6) | no | PK | Quarter in the form YYYYQn, e.g. 2025Q1. Sources use other notations (12025, 1/2025). |
+| `jahr` | smallint | no |  |  |
+| `quartal_nr` | tinyint | no |  |  |
+| `erster_tag` | date | no |  |  |
+| `letzter_tag` | date | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.richtgroesse`
+
+Target prescription volume in EUR per case (simplified).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arztgruppe_code` | varchar(4) | no | PK, FK -> `core.arztgruppe` |  |
+| `jahr` | smallint | no | PK |  |
+| `verordnungsart` | char(1) | no | PK |  |
+| `euro_je_fall` | decimal(8,2) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.scheinuntergruppe`
+
+Type of billing case (KVDT Scheinuntergruppe), e.g. referral, emergency.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `scheinuntergruppe_code` | char(2) | no | PK |  |
+| `bezeichnung` | nvarchar(60) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.teilnahme`
+
+Participation of a doctor at a practice over time (resolves arzt-praxis many-to-many).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `teilnahme_id` | int | no | PK, identity |  |
+| `arzt_id` | int | no | FK -> `core.arzt` |  |
+| `praxis_id` | int | no | FK -> `core.praxis` |  |
+| `teilnahmeform_code` | varchar(3) | no | FK -> `core.teilnahmeform` |  |
+| `anrechnungsfaktor` | decimal(3,2) | no |  | Share of a planning seat the person counts for (0.25 - 1.0). |
+| `valid_from` | date | no |  | Start of validity (inclusive). |
+| `valid_to` | date | no |  | End of validity (EXCLUSIVE); 9999-12-31 = open. |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.teilnahme_status`
+
+Status history of a Teilnahme: AKTIV, RUHEND (suspended), BEENDET.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `teilnahme_id` | int | no | PK, FK -> `core.teilnahme` |  |
+| `valid_from` | date | no | PK |  |
+| `valid_to` | date | no |  |  |
+| `status_code` | varchar(10) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.teilnahmeform`
+
+Form of participation in statutory care: Zulassung or Anstellung.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `teilnahmeform_code` | varchar(3) | no | PK |  |
+| `bezeichnung` | nvarchar(80) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.tss_anfrage`
+
+Request to the Terminservicestelle (116117) and the appointment arranged.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `anfrage_id` | int | no | PK, identity |  |
+| `tss_anfrage_uuid` | uniqueidentifier | no |  |  |
+| `eingang_zeitpunkt` | datetimeoffset(0) | no |  |  |
+| `kanal` | varchar(10) | no |  |  |
+| `arztgruppe_code` | varchar(4) | no | FK -> `core.arztgruppe` |  |
+| `dringlichkeit` | varchar(10) | no |  |  |
+| `patient_kreis_id` | int | no | FK -> `core.kreis` |  |
+| `patient_altersgruppe_code` | varchar(5) | no | FK -> `core.altersgruppe` |  |
+| `status` | varchar(20) | no |  |  |
+| `praxis_id` | int | yes | FK -> `core.praxis` |  |
+| `termin_zeitpunkt` | datetimeoffset(0) | yes |  |  |
+| `vermittlungscode` | char(14) | yes |  |  |
+| `termin_wahrgenommen` | bit | yes |  |  |
+| `wartezeit_tage` | int | yes |  | Computed: days between request and appointment. |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.tss_fachgebiet`
+
+Mapping of the specialty labels of the TSS API to Arztgruppen.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `tss_fachgebiet` | nvarchar(60) | no | PK |  |
+| `arztgruppe_code` | varchar(4) | no | FK -> `core.arztgruppe` |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.verordnung`
+
+Aggregated prescription costs per practice, quarter and type (A = Arzneimittel, H = Heilmittel).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `praxis_id` | int | no | PK, FK -> `core.praxis` |  |
+| `quartal_code` | char(6) | no | PK, FK -> `core.quartal` |  |
+| `verordnungsart` | char(1) | no | PK |  |
+| `anzahl_verordnungen` | int | no |  |  |
+| `brutto_betrag` | decimal(12,2) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.versorgungsgrad`
+
+Officially decided supply level per planning area, physician group and reference date.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `planungsbereich_id` | int | no | PK, FK -> `core.planungsbereich` |  |
+| `arztgruppe_code` | varchar(4) | no | PK, FK -> `core.arztgruppe` |  |
+| `stichtag` | date | no | PK |  |
+| `einwohner` | int | no |  |  |
+| `verhaeltniszahl` | int | no |  |  |
+| `soll_aerzte` | decimal(7,2) | no |  |  |
+| `ist_aerzte` | decimal(7,2) | no |  | Sum of Anrechnungsfaktoren of all doctors counted on the reference date. |
+| `versorgungsgrad_pct` | decimal(6,1) | no |  | Ist / Soll * 100. >110 % = closed (GESPERRT). |
+| `status` | varchar(15) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.zulassungsverfahren`
+
+Procedure before the Zulassungsausschuss (licensing committee).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `verfahren_id` | int | no | PK, identity |  |
+| `aktenzeichen` | varchar(20) | no |  | File number, e.g. ZA-2025-0007. Business key. |
+| `verfahrensart` | varchar(15) | no |  |  |
+| `arzt_id` | int | no | FK -> `core.arzt` |  |
+| `praxis_id` | int | yes | FK -> `core.praxis` |  |
+| `planungsbereich_id` | int | no | FK -> `core.planungsbereich` |  |
+| `antragsdatum` | date | no |  |  |
+| `sitzungsdatum` | date | yes |  |  |
+| `ergebnis` | varchar(16) | no |  |  |
+| `wirksam_ab` | date | yes |  |  |
+| `wirksam_bis` | date | yes |  |  |
+| `teilnahme_id` | int | yes | FK -> `core.teilnahme` | Teilnahme created or changed by the decision (NULL if none). |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+### `core.zulassungsverfahren_status`
+
+Status history of a Zulassungsverfahren (valid_to derived with LEAD).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `verfahren_id` | int | no | PK, FK -> `core.zulassungsverfahren` |  |
+| `valid_from` | date | no | PK |  |
+| `valid_to` | date | no |  |  |
+| `status_code` | varchar(20) | no |  |  |
+| `load_batch_id` | int | yes |  | Technical: batch (meta.load_batch) that last wrote the row; NULL = seeded by script. |
+| `loaded_at` | datetime2(0) | no |  | Technical: time the row was last written. |
+
+## mart - star schemas for reporting
+
+### `mart.dim_altersgruppe`
+
+Age groups.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `altersgruppe_key` | int | no | PK, identity |  |
+| `altersgruppe_code` | varchar(5) | yes |  |  |
+| `altersgruppe` | nvarchar(40) | yes |  |  |
+| `sortierung` | tinyint | yes |  |  |
+
+### `mart.dim_arzt`
+
+Doctors as SCD type 2: one row per version (practice / employment form changes).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arzt_key` | int | no | PK, identity |  |
+| `arzt_id` | int | yes |  |  |
+| `lanr` | char(9) | yes |  |  |
+| `arzt_name` | nvarchar(160) | yes |  |  |
+| `geschlecht` | char(1) | yes |  |  |
+| `geburtsjahr` | smallint | yes |  |  |
+| `fachgruppe_code` | char(2) | yes |  |  |
+| `fachgruppe` | nvarchar(100) | yes |  |  |
+| `praxis_bsnr` | char(9) | yes |  |  |
+| `praxis_name` | nvarchar(200) | yes |  |  |
+| `teilnahmeform_code` | varchar(3) | yes |  |  |
+| `anrechnungsfaktor` | decimal(3,2) | yes |  |  |
+| `valid_from` | date | no |  |  |
+| `valid_to` | date | no |  |  |
+| `is_current` | bit | no |  |  |
+
+### `mart.dim_arztgruppe`
+
+Bedarfsplanung physician groups.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `arztgruppe_key` | int | no | PK, identity |  |
+| `arztgruppe_code` | varchar(4) | yes |  |  |
+| `arztgruppe` | nvarchar(100) | yes |  |  |
+| `versorgungsebene` | nvarchar(60) | yes |  |  |
+| `planungsbereich_typ` | varchar(5) | yes |  |  |
+| `verhaeltniszahl` | int | yes |  |  |
+
+### `mart.dim_datum`
+
+Calendar day dimension 2024-2026 with Saarland public holidays. Key = yyyymmdd.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `datum_key` | int | no | PK |  |
+| `datum` | date | yes |  |  |
+| `jahr` | smallint | yes |  |  |
+| `quartal_nr` | tinyint | yes |  |  |
+| `quartal_code` | char(6) | yes |  |  |
+| `monat_nr` | tinyint | yes |  |  |
+| `monat_name` | nvarchar(12) | yes |  |  |
+| `kalenderwoche` | tinyint | yes |  |  |
+| `wochentag_nr` | tinyint | yes |  |  |
+| `wochentag_name` | nvarchar(12) | yes |  |  |
+| `ist_wochenende` | bit | yes |  |  |
+| `ist_feiertag` | bit | yes |  |  |
+| `feiertag_name` | nvarchar(40) | yes |  |  |
+
+### `mart.dim_fachgruppe`
+
+Specialties with their Arztgruppe (denormalised).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `fachgruppe_key` | int | no | PK, identity |  |
+| `fachgruppe_code` | char(2) | yes |  |  |
+| `fachgruppe` | nvarchar(100) | yes |  |  |
+| `arztgruppe_code` | varchar(4) | yes |  |  |
+| `arztgruppe` | nvarchar(100) | yes |  |  |
+| `versorgungsebene` | nvarchar(60) | yes |  |  |
+
+### `mart.dim_gop`
+
+EBM billing codes with chapter and QS area.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `gop_key` | int | no | PK, identity |  |
+| `gop_id` | int | yes |  |  |
+| `gop_code` | char(5) | yes |  |  |
+| `gop` | nvarchar(200) | yes |  |  |
+| `kapitel_nr` | tinyint | yes |  |  |
+| `kapitel` | nvarchar(100) | yes |  |  |
+| `ebm_bereich` | varchar(5) | yes |  |  |
+| `punktzahl` | int | yes |  |  |
+| `pruefzeit_min` | smallint | yes |  |  |
+| `ist_extrabudgetaer` | bit | yes |  |  |
+| `qs_bereich` | nvarchar(60) | yes |  |  |
+
+### `mart.dim_krankenkasse`
+
+Health insurers with their type.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `kasse_key` | int | no | PK, identity |  |
+| `krankenkasse_id` | int | yes |  |  |
+| `ik` | char(9) | yes |  |  |
+| `krankenkasse` | nvarchar(150) | yes |  |  |
+| `kassenart_code` | varchar(4) | yes |  |  |
+| `kassenart` | nvarchar(60) | yes |  |  |
+
+### `mart.dim_planungsbereich`
+
+Planning areas of the Bedarfsplanung.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `planungsbereich_key` | int | no | PK, identity |  |
+| `planungsbereich_id` | int | yes |  |  |
+| `planungsbereich_code` | varchar(10) | yes |  |  |
+| `planungsbereich` | nvarchar(100) | yes |  |  |
+| `typ` | varchar(5) | yes |  |  |
+
+### `mart.dim_praxis`
+
+Practices (type 1: always the current attributes).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `praxis_key` | int | no | PK, identity |  |
+| `praxis_id` | int | yes |  |  |
+| `bsnr` | char(9) | yes |  |  |
+| `praxis_name` | nvarchar(200) | yes |  |  |
+| `kooperationsform_code` | varchar(3) | yes |  |  |
+| `kooperationsform` | nvarchar(60) | yes |  |  |
+| `ort` | nvarchar(60) | yes |  |  |
+| `kreis` | nvarchar(100) | yes |  |  |
+| `gruendungsdatum` | date | yes |  |  |
+
+### `mart.dim_quartal`
+
+Quarter dimension (rolled-up calendar). Key = yyyyq, e.g. 20251.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `quartal_key` | int | no | PK |  |
+| `quartal_code` | char(6) | yes |  |  |
+| `quartal_label` | nvarchar(10) | yes |  |  |
+| `jahr` | smallint | yes |  |  |
+| `quartal_nr` | tinyint | yes |  |  |
+| `erster_tag` | date | yes |  |  |
+| `letzter_tag` | date | yes |  |  |
+
+### `mart.dim_region`
+
+Region dimension at Kreis level.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `region_key` | int | no | PK, identity |  |
+| `kreis_id` | int | yes |  |  |
+| `ags` | char(5) | yes |  |  |
+| `kreis` | nvarchar(100) | yes |  |  |
+| `kreisart` | nvarchar(30) | yes |  |  |
+| `verwaltungssitz` | nvarchar(60) | yes |  |  |
+| `planungsbereich_code` | varchar(10) | yes |  |  |
+| `land` | nvarchar(30) | yes |  |  |
+| `geo_breite` | decimal(8,5) | yes |  |  |
+| `geo_laenge` | decimal(8,5) | yes |  |  |
+
+### `mart.fact_abrechnungsfall`
+
+Grain: one Behandlungsfall. arzt/fachgruppe = doctor of the first billing line (Hauptbehandler).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `fall_id` | int | no | PK |  |
+| `fallnummer` | varchar(20) | no |  |  |
+| `quartal_key` | int | no | FK -> `mart.dim_quartal` |  |
+| `praxis_key` | int | no | FK -> `mart.dim_praxis` |  |
+| `region_key` | int | no | FK -> `mart.dim_region` |  |
+| `arzt_key` | int | no | FK -> `mart.dim_arzt` |  |
+| `fachgruppe_key` | int | no | FK -> `mart.dim_fachgruppe` |  |
+| `kasse_key` | int | no | FK -> `mart.dim_krankenkasse` |  |
+| `altersgruppe_key` | int | no | FK -> `mart.dim_altersgruppe` |  |
+| `versichertenstatus` | char(1) | no |  |  |
+| `scheinuntergruppe` | char(2) | no |  |  |
+| `ist_tss_fall` | bit | no |  |  |
+| `anzahl_leistungen` | int | no |  |  |
+| `anzahl_diagnosen` | int | no |  |  |
+| `punkte` | int | no |  |  |
+| `betrag_eur` | decimal(12,2) | no |  |  |
+
+### `mart.fact_bereitschaftsdienst`
+
+Grain: one out-of-hours shift.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `dienst_id` | int | no | PK |  |
+| `datum_key` | int | no | FK -> `mart.dim_datum` |  |
+| `arzt_key` | int | no | FK -> `mart.dim_arzt` |  |
+| `region_key` | int | no | FK -> `mart.dim_region` |  |
+| `notfallpraxis_kennung` | varchar(10) | no |  |  |
+| `dauer_stunden` | decimal(5,2) | no |  |  |
+| `ist_wochenende_feiertag` | bit | no |  |  |
+| `ist_getauscht` | bit | no |  |  |
+
+### `mart.fact_honorar_quartal`
+
+Grain: one practice per quarter (periodic snapshot of the Honorarbescheid plus payments).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `quartal_key` | int | no | PK, FK -> `mart.dim_quartal` |  |
+| `praxis_key` | int | no | PK, FK -> `mart.dim_praxis` |  |
+| `region_key` | int | no | FK -> `mart.dim_region` |  |
+| `anzahl_faelle` | int | no |  |  |
+| `punkte_angefordert` | int | no |  |  |
+| `punkte_berichtigt` | int | no |  |  |
+| `punkte_mgv` | int | no |  |  |
+| `punkte_egv` | int | no |  |  |
+| `betrag_mgv` | decimal(12,2) | no |  |  |
+| `betrag_egv` | decimal(12,2) | no |  |  |
+| `honorar_brutto` | decimal(12,2) | no |  |  |
+| `verwaltungskosten` | decimal(12,2) | no |  |  |
+| `abschlaege_laut_bescheid` | decimal(12,2) | no |  |  |
+| `abschlaege_gezahlt` | decimal(12,2) | no |  |  |
+| `auszahlungsbetrag` | decimal(12,2) | no |  |  |
+
+### `mart.fact_leistung`
+
+Grain: one billed GOP line. Values at Orientierungswert.
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `leistung_id` | bigint | no | PK |  |
+| `fallnummer` | varchar(20) | no |  |  |
+| `datum_key` | int | no | FK -> `mart.dim_datum` |  |
+| `quartal_key` | int | no | FK -> `mart.dim_quartal` |  |
+| `arzt_key` | int | no | FK -> `mart.dim_arzt` |  |
+| `praxis_key` | int | no | FK -> `mart.dim_praxis` |  |
+| `region_key` | int | no | FK -> `mart.dim_region` |  |
+| `fachgruppe_key` | int | no | FK -> `mart.dim_fachgruppe` |  |
+| `kasse_key` | int | no | FK -> `mart.dim_krankenkasse` |  |
+| `gop_key` | int | no | FK -> `mart.dim_gop` |  |
+| `altersgruppe_key` | int | no | FK -> `mart.dim_altersgruppe` |  |
+| `anzahl` | smallint | no |  |  |
+| `punkte` | int | no |  |  |
+| `betrag_eur` | decimal(12,2) | no |  |  |
+| `pruefzeit_min` | int | yes |  |  |
+
+### `mart.fact_tss_anfrage`
+
+Grain: one TSS request (accumulating snapshot with request and appointment date).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `anfrage_id` | int | no | PK |  |
+| `eingang_datum_key` | int | no | FK -> `mart.dim_datum` |  |
+| `termin_datum_key` | int | no | FK -> `mart.dim_datum` |  |
+| `arztgruppe_key` | int | no | FK -> `mart.dim_arztgruppe` |  |
+| `patient_region_key` | int | no | FK -> `mart.dim_region` |  |
+| `altersgruppe_key` | int | no | FK -> `mart.dim_altersgruppe` |  |
+| `praxis_key` | int | no | FK -> `mart.dim_praxis` |  |
+| `kanal` | varchar(10) | no |  |  |
+| `dringlichkeit` | varchar(10) | no |  |  |
+| `status` | varchar(20) | no |  |  |
+| `ist_vermittelt` | bit | no |  |  |
+| `wartezeit_tage` | int | yes |  |  |
+| `ist_innerhalb_4_wochen` | bit | yes |  |  |
+| `termin_wahrgenommen` | bit | yes |  |  |
+| `anzahl_anfragen` | int | no |  |  |
+
+### `mart.fact_versorgungsgrad`
+
+Grain: planning area x Arztgruppe x reference date (official + recomputed Ist).
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `stichtag_key` | int | no | PK, FK -> `mart.dim_datum` |  |
+| `planungsbereich_key` | int | no | PK, FK -> `mart.dim_planungsbereich` |  |
+| `arztgruppe_key` | int | no | PK, FK -> `mart.dim_arztgruppe` |  |
+| `einwohner` | int | no |  |  |
+| `soll_aerzte` | decimal(7,2) | no |  |  |
+| `ist_aerzte` | decimal(7,2) | no |  |  |
+| `ist_aerzte_berechnet` | decimal(7,2) | no |  |  |
+| `versorgungsgrad_pct` | decimal(6,1) | no |  |  |
+| `status` | varchar(15) | no |  |  |
+
+## meta - load log, data quality
+
+### `meta.dq_result`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `run_id` | int | no | PK, FK -> `meta.dq_run` |  |
+| `rule_code` | varchar(10) | no | PK, FK -> `meta.dq_rule` |  |
+| `failed_rows` | int | no |  |  |
+| `result` | varchar(10) | no |  |  |
+| `checked_at` | datetime2(0) | no |  |  |
+
+### `meta.dq_rule`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `rule_code` | varchar(10) | no | PK |  |
+| `rule_name` | nvarchar(200) | no |  |  |
+| `category` | varchar(20) | no |  |  |
+| `severity` | varchar(10) | no |  |  |
+| `checked_object` | nvarchar(256) | no |  |  |
+| `description` | nvarchar(1000) | no |  |  |
+
+### `meta.dq_run`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `run_id` | int | no | PK, identity |  |
+| `batch_id` | int | yes |  |  |
+| `started_at` | datetime2(0) | no |  |  |
+| `finished_at` | datetime2(0) | yes |  |  |
+
+### `meta.load_batch`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `batch_id` | int | no | PK, identity |  |
+| `started_at` | datetime2(0) | no |  |  |
+| `finished_at` | datetime2(0) | yes |  |  |
+| `status` | varchar(10) | no |  |  |
+| `started_by` | nvarchar(128) | no |  |  |
+| `note` | nvarchar(400) | yes |  |  |
+
+### `meta.load_file`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `load_file_id` | int | no | PK, identity |  |
+| `batch_id` | int | no | FK -> `meta.load_batch` |  |
+| `source_name` | varchar(60) | no |  |  |
+| `file_name` | nvarchar(260) | no |  |  |
+| `file_sha256` | char(64) | no |  |  |
+| `file_size_bytes` | bigint | no |  |  |
+| `target_table` | nvarchar(128) | no |  |  |
+| `rows_loaded` | int | no |  |  |
+| `loaded_at` | datetime2(0) | no |  |  |
+
+### `meta.load_step`
+
+_(no description)_
+
+| Column | Type | Null | Key | Description |
+|---|---|---|---|---|
+| `step_id` | int | no | PK, identity |  |
+| `batch_id` | int | no | FK -> `meta.load_batch` |  |
+| `step_name` | nvarchar(128) | no |  |  |
+| `started_at` | datetime2(3) | no |  |  |
+| `finished_at` | datetime2(3) | yes |  |  |
+| `status` | varchar(10) | no |  |  |
+| `rows_affected` | int | yes |  |  |
+| `message` | nvarchar(4000) | yes |  |  |
+
+## stg - staging (1:1 copies of the source files)
+
+| Table | Source |
+|---|---|
+| `stg.abrechnung_diagnosen` | Source: abrechnung/diagnosen_<year>Q<n>.csv - one row per ICD per case. |
+| `stg.abrechnung_faelle` | Source: abrechnung/faelle_<year>Q<n>.csv - one row per Behandlungsfall. |
+| `stg.abrechnung_leistungen` | Source: abrechnung/leistungen_<year>Q<n>.csv - one row per billed GOP. |
+| `stg.arztregister_aerzte` | Source: arztregister/aerzte.csv - persons in the Arztregister. |
+| `stg.arztregister_betriebsstaetten` | Source: arztregister/betriebsstaetten.csv - practices (BSNR). |
+| `stg.arztregister_teilnahme_status` | Source: arztregister/teilnahme_status.csv - status history per Teilnahme. |
+| `stg.arztregister_teilnahmen` | Source: arztregister/teilnahmen.csv - who works where (Zulassung/Anstellung). |
+| `stg.bd_bereitschaftspraxen` | Source: bereitschaftsdienst/bereitschaftspraxen.csv. |
+| `stg.bd_dienstplan` | Source: bereitschaftsdienst/dienstplan_<year>.csv - shifts; end time may be on the next day. |
+| `stg.bedarfsplanung_arztgruppen` | Source: bedarfsplanung_2025.xlsx, sheet Arztgruppen. |
+| `stg.bedarfsplanung_planungsbereiche` | Source: bedarfsplanung_2025.xlsx, sheet Planungsbereiche. |
+| `stg.bedarfsplanung_versorgungsgrade` | Source: bedarfsplanung_2025.xlsx, sheet Versorgungsgrade (header in row 3). |
+| `stg.beschwerden_txt` | Source: beschwerdemanagement/beschwerde_*.txt - one row per complaint file. |
+| `stg.bfarm_icd10` | Source: bfarm/icd10gm2025_auswahl.txt - ICD-10-GM selection, file has no header row. |
+| `stg.honorar_abschlaege` | Source: honorar/abschlagszahlungen_<year>.csv (finance system, cp1252, German number format). |
+| `stg.honorar_bescheide_xml` | Source: honorar/honorarbescheide_<year>Q<n>.xml - one row per file (XML). |
+| `stg.kammer_fortbildungspunkte` | Source: kammern/fortbildungspunkte_2021_2025.csv - keyed by EFN, not LANR. |
+| `stg.kassen_krankenkassen` | Source: kassenverzeichnis/krankenkassen.csv. |
+| `stg.kbv_arztgruppenschluessel` | Source: kbv_referenz/arztgruppenschluessel.csv - Fachgruppe codes (LANR digits 8-9). |
+| `stg.kbv_ebm_xml` | Source: kbv_referenz/ebm_2025.xml - EBM catalogue, one row per file (XML). |
+| `stg.mitgliederservice_anfragen_json` | Source: mitgliederservice/anfragen_<year>.json (CRM export) - one row per file. |
+| `stg.pruefung_verfahren_xml` | Source: pruefungsstelle/pruefverfahren_<year>.xml - one row per file (XML). |
+| `stg.qs_genehmigungen` | Source: qualitaetssicherung/qs_genehmigungen.csv. |
+| `stg.statistik_bevoelkerung` | Source: statistik/bevoelkerung_kreise_2024.csv (Statistisches Amt, cp1252, metadata header lines). |
+| `stg.statistik_kreise_geojson` | Source: statistik/kreise_saarland.geojson - one row per file, shredded with OPENJSON. |
+| `stg.tss_anfragen_json` | Source: terminservice/tss_anfragen_<year>_pNNN.json - one row per API page. |
+| `stg.verordnung_richtgroessen` | Source: verordnungen/richtgroessen_<year>.csv. |
+| `stg.verordnung_zeilen` | Source: verordnungen/verordnungen_<year>.txt - fixed-width records (HD/VO/TR), one raw line per row. |
+| `stg.zulassung_protokolle` | Source: zulassungsausschuss/protokolle/*.md - one row per Markdown file. |
+| `stg.zulassung_verfahren_xml` | Source: zulassungsausschuss/zulassungsverfahren_2025.xml - one row per file (XML). |
+
