@@ -1,8 +1,8 @@
-Eingangsdatum: 19.07.2025
-Eingangskanal: Brief (eingescannt)
-Kategorie: PRIVATLEISTUNG
-Bezug-BSNR: 736744473
-Betreff: Druck zu einer Privatleistung
+Eingangsdatum: 09.12.2025
+Eingangskanal: Telefon (Gesprächsnotiz)
+Kategorie: HYGIENE
+Bezug-BSNR: 736781135
+Betreff: Hygienemängel
 Beschwerdeführende Person: (anonymisiert)
 
-In der Praxis Hausarztpraxis Dr. med. Seidel wurde mir am 03.07.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.
+Bei meinem Besuch in der Praxis Kinder- und Jugendarztpraxis Dr. med. Bolnbach am 20.11.2025 sind mir deutliche Hygienemängel im Wartebereich aufgefallen.

@@ -1,8 +1,8 @@
-Eingangsdatum: 27.05.2025
-Eingangskanal: Telefon (Gesprächsnotiz)
-Kategorie: PRIVATLEISTUNG
-Bezug-BSNR: 734538872
-Betreff: Druck zu einer Privatleistung
+Eingangsdatum: 23.02.2025
+Eingangskanal: Brief (eingescannt)
+Kategorie: WARTEZEIT
+Bezug-BSNR: 734614372
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-In der Praxis Psychotherapeutische Praxis M. Sc. Psych. Säuberlich wurde mir am 22.05.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.
+Ich hatte am 07.02.2025 einen Termin in der Praxis Augenarztpraxis Dr. med. Ullmann in Neunkirchen. Trotz Termin musste ich über 4 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

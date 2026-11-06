@@ -1,8 +1,8 @@
-Eingangsdatum: 05.06.2025
-Eingangskanal: Brief (eingescannt)
-Kategorie: HYGIENE
-Bezug-BSNR: 739995887
-Betreff: Hygienemängel
+Eingangsdatum: 28.07.2025
+Eingangskanal: Online-Formular
+Kategorie: WARTEZEIT
+Bezug-BSNR: 738740030
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-Bei meinem Besuch in der Praxis Gemeinschaftspraxis Kraus & Matthäi (Hausärzte) am 26.05.2025 sind mir deutliche Hygienemängel im Wartebereich aufgefallen.
+Ich hatte am 16.07.2025 einen Termin in der Praxis Hausarztpraxis Aloisia Vogt in Homburg. Trotz Termin musste ich über 2 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

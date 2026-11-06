@@ -6,6 +6,225 @@
   "exportedAt": "2026-10-31T00:00:00+01:00",
   "items": [
     {
+      "id": "0be70dc7-d73c-4a86-9968-516ef913b485",
+      "createdAt": "2025-03-17T09:24:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 56
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "737024691",
+        "start": "2025-04-22T12:30:00+02:00",
+        "vermittlungscode": "NQE2-G8US-227J",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "2c4a190f-b0c8-46da-ae49-1eb9886652c5",
+      "createdAt": "2025-03-17T09:48:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Orthopädie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 59
+      },
+      "status": "STORNIERT",
+      "termin": null
+    },
+    {
+      "id": "7e84b7e9-39bf-481d-958c-718f691ba6f3",
+      "createdAt": "2025-03-17T10:11:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 60
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "733889156",
+        "start": "2025-04-16T13:15:00+02:00",
+        "vermittlungscode": "E5CU-DA7P-H2MX",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "58770f63-8f43-470e-a633-2d7a8547974a",
+      "createdAt": "2025-03-17T12:47:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Innere Medizin",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 22
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731634659",
+        "start": "2025-04-09T12:00:00+02:00",
+        "vermittlungscode": "Z425-B7EK-YSBY",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "30f020b6-64a2-4856-9a82-0f877aad7872",
+      "createdAt": "2025-03-17T14:20:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 86
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732428058",
+        "start": "2025-04-07T08:15:00+02:00",
+        "vermittlungscode": "XEEJ-HWPQ-MCEF",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "41f514cd-5903-484b-af89-dc5bffcc4367",
+      "createdAt": "2025-03-17T14:54:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Kinder- und Jugendmedizin",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 8
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "737854986",
+        "start": "2025-03-24T17:00:00+01:00",
+        "vermittlungscode": "9L9Y-U2AU-52ZU",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "4ae73476-f49b-4fce-8f69-3bcc63709123",
+      "createdAt": "2025-03-17T15:20:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 36
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "735174910",
+        "start": "2025-03-21T11:45:00+01:00",
+        "vermittlungscode": "H6KH-QVDZ-ZCEY",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "9a2fb890-53e2-4e4d-ad18-492016877487",
+      "createdAt": "2025-03-17T17:49:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10046",
+        "alter": 65
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738422890",
+        "start": "2025-03-31T16:15:00+02:00",
+        "vermittlungscode": "4J2D-GP8K-JPDD",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "8fd7bd96-320e-470c-9b7a-f9a4f6e82648",
+      "createdAt": "2025-03-17T19:04:00+01:00",
+      "channel": "APP",
+      "fachgebiet": "Augenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 11
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738200340",
+        "start": "2025-04-10T10:00:00+02:00",
+        "vermittlungscode": "7JHX-HFZB-JUWD",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "e14c8687-7afd-4d47-94bb-c994c9de83c0",
+      "createdAt": "2025-03-18T10:47:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 56
+      },
+      "status": "NICHT_VERMITTELT",
+      "termin": null
+    },
+    {
+      "id": "b65fd432-106d-4b79-9af8-e7f7453e66eb",
+      "createdAt": "2025-03-18T14:36:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 36
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732054123",
+        "start": "2025-05-12T11:45:00+02:00",
+        "vermittlungscode": "2MD8-7MR4-4P5F",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "b8b0e377-0cf3-4b6d-a068-39be832bb3e3",
+      "createdAt": "2025-03-18T15:02:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Frauenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 35
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "735200871",
+        "start": "2025-03-27T13:30:00+01:00",
+        "vermittlungscode": "YPA9-Z2ZQ-64JC",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "641f6cc4-11d9-4a2f-b8bf-8b2cf44c1eca",
+      "createdAt": "2025-03-18T17:30:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 52
+      },
+      "status": "STORNIERT",
+      "termin": null
+    },
+    {
       "id": "61e74325-aa0e-46a6-8621-da697c38d6f3",
       "createdAt": "2025-03-19T08:29:00+01:00",
       "channel": "ONLINE",
@@ -18,54 +237,82 @@
       "status": "VERMITTELT",
       "termin": {
         "bsnr": "734817287",
-        "start": "2025-04-14T11:45:00+02:00",
-        "vermittlungscode": "9YDM-TKNV-QHJU",
-        "wahrgenommen": true
+        "start": "2025-04-14T12:00:00+02:00",
+        "vermittlungscode": "YDMT-KNVQ-HJU8",
+        "wahrgenommen": false
       }
     },
     {
-      "id": "c9f3599a-f900-48c4-9c0a-1d6833e7b5b8",
-      "createdAt": "2025-03-19T13:30:00+01:00",
+      "id": "db612885-c137-463c-af2b-d34757313ee5",
+      "createdAt": "2025-03-19T08:42:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "AKUT",
+      "fachgebiet": "Kinder- und Jugendmedizin",
+      "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 46
+        "alter": 7
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "736089231",
-        "start": "2025-03-21T12:45:00+01:00",
-        "vermittlungscode": "TK94-X74N-G9ST",
+        "bsnr": "732647966",
+        "start": "2025-03-24T14:00:00+01:00",
+        "vermittlungscode": "YQ94-P76Y-C5XP",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "1d9a9fbb-4504-4055-af56-194e778cf154",
+      "createdAt": "2025-03-19T09:18:00+01:00",
+      "channel": "APP",
+      "fachgebiet": "Frauenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10046",
+        "alter": 35
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732135480",
+        "start": "2025-04-07T12:45:00+02:00",
+        "vermittlungscode": "VJ4B-7J48-Z85P",
         "wahrgenommen": true
       }
     },
     {
-      "id": "632decb9-9415-4ae9-bb20-7353989442eb",
-      "createdAt": "2025-03-19T15:38:00+01:00",
+      "id": "042790d7-b8ac-4b82-9f20-2d01ee8d7e96",
+      "createdAt": "2025-03-19T10:46:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
+      "fachgebiet": "Frauenheilkunde",
+      "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10045",
-        "alter": 90
+        "kreisAgs": "10041",
+        "alter": 40
       },
-      "status": "NICHT_VERMITTELT",
-      "termin": null
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732987488",
+        "start": "2025-04-07T12:45:00+02:00",
+        "vermittlungscode": "P2QY-FL9K-RTHL",
+        "wahrgenommen": true
+      }
     },
     {
-      "id": "8ac09759-a606-4e88-9357-a7627a7c6f57",
-      "createdAt": "2025-03-19T21:27:00+01:00",
-      "channel": "APP",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "id": "64ae52c5-4c68-4d04-847c-482f5953100c",
+      "createdAt": "2025-03-19T17:25:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Psychotherapie",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 6
+        "alter": 23
       },
-      "status": "STORNIERT",
-      "termin": null
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "733152682",
+        "start": "2025-04-16T12:30:00+02:00",
+        "vermittlungscode": "94R6-ALLG-EZAV",
+        "wahrgenommen": true
+      }
     },
     {
       "id": "2aae706d-9f0a-48c3-8a82-d9382b44d727",
@@ -79,77 +326,118 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731777142",
-        "start": "2025-04-07T08:00:00+02:00",
+        "bsnr": "732758801",
+        "start": "2025-04-07T17:00:00+02:00",
         "vermittlungscode": "8KKR-BVZD-4EAZ",
         "wahrgenommen": true
       }
     },
     {
-      "id": "6d8d5cca-45ea-4ccc-b460-82576bbd7287",
-      "createdAt": "2025-03-20T13:00:00+01:00",
+      "id": "fbeb54b4-390a-4e6f-b264-bb023039f676",
+      "createdAt": "2025-03-20T10:53:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "ROUTINE",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 57
+        "alter": 26
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739978937",
-        "start": "2025-05-13T11:30:00+02:00",
-        "vermittlungscode": "F9ER-K8GT-435S",
+        "bsnr": "734943968",
+        "start": "2025-04-03T14:45:00+02:00",
+        "vermittlungscode": "M2NG-K9U7-DUQN",
         "wahrgenommen": true
       }
     },
     {
-      "id": "156886bc-8db2-4f65-8c69-31fcfef3e075",
-      "createdAt": "2025-03-20T13:19:00+01:00",
-      "channel": "APP",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
+      "id": "65f509f0-7a56-486d-9728-a98b752dc5b3",
+      "createdAt": "2025-03-20T12:03:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10044",
-        "alter": 72
-      },
-      "status": "STORNIERT",
-      "termin": null
-    },
-    {
-      "id": "19d83453-8d82-4451-9212-78ec3d66c412",
-      "createdAt": "2025-03-20T13:42:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 85
+        "kreisAgs": "10045",
+        "alter": 24
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739626090",
-        "start": "2025-04-04T14:45:00+02:00",
-        "vermittlungscode": "YDYF-NQZZ-GMJ4",
+        "bsnr": "737887547",
+        "start": "2025-05-05T10:15:00+02:00",
+        "vermittlungscode": "U3D3-HZY8-8C8S",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "6b12ace1-b00a-4be6-bd0d-2d28372b7ca3",
+      "createdAt": "2025-03-20T13:39:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 63
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732426404",
+        "start": "2025-04-28T09:30:00+02:00",
+        "vermittlungscode": "UCCB-3B2F-XMSK",
         "wahrgenommen": false
       }
     },
     {
-      "id": "8cea2764-eaf2-4261-b3bc-993c3750f46b",
-      "createdAt": "2025-03-20T17:11:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
+      "id": "a43c193f-8fd9-45e4-82ef-2cefb69ec3a5",
+      "createdAt": "2025-03-20T13:45:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 87
+        "kreisAgs": "10041",
+        "alter": 27
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "738492640",
-        "start": "2025-04-11T08:15:00+02:00",
-        "vermittlungscode": "D9XW-4SHC-6B6U",
+        "bsnr": "731171192",
+        "start": "2025-04-03T09:45:00+02:00",
+        "vermittlungscode": "9M6L-8ZWX-8VUJ",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "76c17fc6-f357-409d-9046-32a7132a4286",
+      "createdAt": "2025-03-21T06:20:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10046",
+        "alter": 60
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731797199",
+        "start": "2025-04-02T17:00:00+02:00",
+        "vermittlungscode": "B52J-HDH5-JBXR",
         "wahrgenommen": false
+      }
+    },
+    {
+      "id": "312b4ac0-c1e5-4317-a892-67819da17f3d",
+      "createdAt": "2025-03-21T07:50:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Hausarzt",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 71
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731228724",
+        "start": "2025-03-24T14:15:00+01:00",
+        "vermittlungscode": "UANR-TP9G-SKRV",
+        "wahrgenommen": true
       }
     },
     {
@@ -164,114 +452,104 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "733217995",
-        "start": "2025-04-28T15:30:00+02:00",
+        "bsnr": "738617165",
+        "start": "2025-04-28T13:00:00+02:00",
         "vermittlungscode": "ZEDW-XPJC-VSCD",
         "wahrgenommen": true
       }
     },
     {
-      "id": "51052d9a-44f4-424b-88e2-5261759e7a05",
-      "createdAt": "2025-03-21T12:10:00+01:00",
-      "channel": "APP",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 60
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732672496",
-        "start": "2025-03-28T14:15:00+01:00",
-        "vermittlungscode": "6JJ8-ZBWK-VWJD",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "d12a9868-24e6-4dd0-a745-fe25badd4657",
-      "createdAt": "2025-03-21T12:34:00+01:00",
+      "id": "6d9c2a5e-499d-4b93-a916-e6abbc23d5a9",
+      "createdAt": "2025-03-21T13:46:00+01:00",
       "channel": "ONLINE",
       "fachgebiet": "Dermatologie",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 31
+        "kreisAgs": "10043",
+        "alter": 39
       },
       "status": "STORNIERT",
       "termin": null
     },
     {
-      "id": "081917d6-bba3-4283-8716-f416a6da2de1",
-      "createdAt": "2025-03-21T14:24:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Augenheilkunde",
+      "id": "34e8f4a4-295c-456d-80d8-0354aa4923fa",
+      "createdAt": "2025-03-21T14:03:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
       "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 77
+        "kreisAgs": "10045",
+        "alter": 40
       },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "738492640",
-        "start": "2025-04-28T16:00:00+02:00",
-        "vermittlungscode": "N4JZ-NX58-L2PK",
-        "wahrgenommen": true
-      }
+      "status": "NICHT_VERMITTELT",
+      "termin": null
     },
     {
-      "id": "3d1ec620-0a5d-4788-a7f4-4d92fc625864",
-      "createdAt": "2025-03-21T14:48:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Frauenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 48
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732578011",
-        "start": "2025-03-31T08:45:00+02:00",
-        "vermittlungscode": "YGFG-URP5-9VTP",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "cfafc06b-0183-42d2-9dc5-a24534b1e367",
-      "createdAt": "2025-03-21T17:10:00+01:00",
+      "id": "daf9cd53-cbb1-4682-9a19-8a49a50d3d72",
+      "createdAt": "2025-03-21T15:30:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Hausarzt",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10045",
-        "alter": 56
+        "kreisAgs": "10041",
+        "alter": 55
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739079571",
-        "start": "2025-03-24T14:00:00+01:00",
-        "vermittlungscode": "ZKYF-QGAG-SLHD",
+        "bsnr": "733201201",
+        "start": "2025-03-24T16:30:00+01:00",
+        "vermittlungscode": "4JML-QRNG-LSSF",
         "wahrgenommen": true
       }
     },
     {
-      "id": "9788a581-004a-4ffa-8a28-a34b6ff976a8",
-      "createdAt": "2025-03-21T19:31:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Frauenheilkunde",
+      "id": "42f4c5fa-5186-496a-8d75-099e1af481ea",
+      "createdAt": "2025-03-21T15:49:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Dermatologie",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 19
+        "kreisAgs": "10044",
+        "alter": 59
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "735994719",
-        "start": "2025-03-27T15:30:00+01:00",
-        "vermittlungscode": "4FJM-CZS7-DHTP",
+        "bsnr": "732387680",
+        "start": "2025-04-04T14:45:00+02:00",
+        "vermittlungscode": "4B7G-9DUK-D7QU",
         "wahrgenommen": true
       }
+    },
+    {
+      "id": "16358f0f-eb57-40b2-8139-50f19d6f1841",
+      "createdAt": "2025-03-22T16:29:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 36
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "735675475",
+        "start": "2025-04-22T11:00:00+02:00",
+        "vermittlungscode": "UYG9-7CR2-6XG3",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "efb87f59-ae5b-4293-a9f1-ebbe66239ae9",
+      "createdAt": "2025-03-23T20:49:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 70
+      },
+      "status": "STORNIERT",
+      "termin": null
     },
     {
       "id": "126c6110-8f4c-4d73-adf5-5ffa98f712a3",
@@ -285,81 +563,63 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "735346489",
-        "start": "2025-04-08T09:00:00+02:00",
-        "vermittlungscode": "8VBB-H5X3-6QC5",
+        "bsnr": "739596690",
+        "start": "2025-04-08T15:30:00+02:00",
+        "vermittlungscode": "E8VB-BH5X-36QC",
         "wahrgenommen": true
       }
     },
     {
-      "id": "57411110-4968-47f6-b375-eb7d2a102d8e",
-      "createdAt": "2025-03-24T08:28:00+01:00",
+      "id": "9fedbdc6-7046-4f84-99dd-7056b307c8f6",
+      "createdAt": "2025-03-24T08:39:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Dermatologie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 42
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731850069",
-        "start": "2025-04-07T08:30:00+02:00",
-        "vermittlungscode": "EY6A-45JS-76AG",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "503ae622-cd0a-484a-94c7-7d91843f2fdb",
-      "createdAt": "2025-03-24T08:36:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 37
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735319384",
-        "start": "2025-04-16T13:30:00+02:00",
-        "vermittlungscode": "NTBX-9Z2P-4STJ",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "ab5ef18e-3935-4a1d-919b-a7ac19ab55b9",
-      "createdAt": "2025-03-24T10:09:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10044",
-        "alter": 95
+        "alter": 20
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734343094",
-        "start": "2025-05-02T10:30:00+02:00",
-        "vermittlungscode": "W49S-2YBF-2HK3",
+        "bsnr": "738264416",
+        "start": "2025-03-28T13:00:00+01:00",
+        "vermittlungscode": "X47C-3C52-VSQS",
         "wahrgenommen": true
       }
     },
     {
-      "id": "5b97f5f4-da31-4c05-b703-ee138b07579b",
-      "createdAt": "2025-03-24T10:44:00+01:00",
+      "id": "610394cf-eec5-4a86-8c21-de83a8947d23",
+      "createdAt": "2025-03-24T09:30:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
-      "dringlichkeit": "DRINGEND",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10043",
-        "alter": 8
+        "kreisAgs": "10041",
+        "alter": 35
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "733107784",
-        "start": "2025-04-17T12:00:00+02:00",
-        "vermittlungscode": "D2GH-TVHQ-KZP3",
+        "bsnr": "735382265",
+        "start": "2025-04-08T15:00:00+02:00",
+        "vermittlungscode": "TLAZ-8MBS-Y527",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "5dd950d8-5071-4353-82dc-004b198de6b6",
+      "createdAt": "2025-03-24T10:35:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Augenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 25
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738492640",
+        "start": "2025-03-31T15:15:00+02:00",
+        "vermittlungscode": "N73Y-PPWE-HXBF",
         "wahrgenommen": true
       }
     },
@@ -376,41 +636,46 @@
       "status": "VERMITTELT",
       "termin": {
         "bsnr": "733748780",
-        "start": "2025-04-07T13:00:00+02:00",
-        "vermittlungscode": "LTPQ-6DKG-L3N5",
+        "start": "2025-04-07T08:45:00+02:00",
+        "vermittlungscode": "WLTP-Q6DK-GL3N",
         "wahrgenommen": true
       }
     },
     {
-      "id": "b6a9cec4-8f84-453b-84c7-2933e02f1754",
-      "createdAt": "2025-03-24T12:10:00+01:00",
+      "id": "74baafbe-e9ec-407f-a49f-d9a6d92cb8b7",
+      "createdAt": "2025-03-24T12:16:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Hausarzt",
+      "fachgebiet": "Innere Medizin",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10045",
-        "alter": 83
+        "kreisAgs": "10041",
+        "alter": 87
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731211191",
-        "start": "2025-03-26T13:00:00+01:00",
-        "vermittlungscode": "7UYD-ZTLF-94AD",
+        "bsnr": "735644316",
+        "start": "2025-04-08T09:45:00+02:00",
+        "vermittlungscode": "US6Q-A3QP-9LSN",
         "wahrgenommen": true
       }
     },
     {
-      "id": "687802f6-f4a5-4a5a-9037-da61aa2e1b1a",
-      "createdAt": "2025-03-24T12:27:00+01:00",
+      "id": "d0464058-8b4b-407e-8c50-ad37abb2142b",
+      "createdAt": "2025-03-24T12:33:00+01:00",
       "channel": "TELEFON",
-      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "fachgebiet": "Dermatologie",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10044",
-        "alter": 43
+        "alter": 32
       },
-      "status": "NICHT_VERMITTELT",
-      "termin": null
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "737008188",
+        "start": "2025-04-01T12:15:00+02:00",
+        "vermittlungscode": "CKLH-T6ZD-8HGB",
+        "wahrgenommen": true
+      }
     },
     {
       "id": "22d8aa99-8e19-4ef1-98f9-14a5f8a94519",
@@ -424,114 +689,96 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "735949740",
-        "start": "2025-04-14T15:15:00+02:00",
-        "vermittlungscode": "2ZRJ-TEFZ-SBYQ",
+        "bsnr": "737098778",
+        "start": "2025-04-14T12:15:00+02:00",
+        "vermittlungscode": "ZRJT-EFZS-BYQ5",
         "wahrgenommen": true
       }
     },
     {
-      "id": "72a1005a-98a9-429b-ac94-fb6c66e18c2b",
-      "createdAt": "2025-03-24T13:11:00+01:00",
-      "channel": "TELEFON",
+      "id": "652abd14-7bba-470a-bef4-71abbd5e0f3a",
+      "createdAt": "2025-03-24T21:41:00+01:00",
+      "channel": "ONLINE",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "ROUTINE",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 56
+        "alter": 54
       },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "734909886",
-        "start": "2025-05-19T09:45:00+02:00",
-        "vermittlungscode": "ZX7W-TFFK-A6P7",
-        "wahrgenommen": true
-      }
+      "status": "NICHT_VERMITTELT",
+      "termin": null
     },
     {
-      "id": "ce19d89b-e816-45a0-9188-e109ec0ebc1e",
-      "createdAt": "2025-03-24T14:28:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 28
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735222155",
-        "start": "2025-04-25T10:00:00+02:00",
-        "vermittlungscode": "L9CR-SMKJ-N68P",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "b545a2a3-6bd2-47da-83fb-adecfdf37fb6",
-      "createdAt": "2025-03-24T15:48:00+01:00",
+      "id": "b9b4fd87-7b8e-4811-99f5-fdaf304c86a7",
+      "createdAt": "2025-03-25T10:17:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
+      "dringlichkeit": "ROUTINE",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 35
+        "alter": 19
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "737962635",
-        "start": "2025-04-03T16:30:00+02:00",
-        "vermittlungscode": "89UG-RSBV-XDBX",
+        "bsnr": "731454846",
+        "start": "2025-04-22T08:45:00+02:00",
+        "vermittlungscode": "LTCF-73VU-7LUL",
         "wahrgenommen": true
       }
     },
     {
-      "id": "439b4bde-174c-4068-a6d2-d18170b4b852",
-      "createdAt": "2025-03-24T17:02:00+01:00",
+      "id": "59aefc97-7997-45ed-be15-cd9a1becd1b7",
+      "createdAt": "2025-03-25T10:38:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10041",
-        "alter": 69
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "736605732",
-        "start": "2025-04-09T11:30:00+02:00",
-        "vermittlungscode": "R46A-UDWR-GTH5",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "9e443493-ebf0-42c2-8a5e-e4c016edf351",
-      "createdAt": "2025-03-24T18:24:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "AKUT",
-      "patient": {
         "kreisAgs": "10044",
-        "alter": 64
+        "alter": 27
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731083281",
-        "start": "2025-03-24T15:30:00+01:00",
-        "vermittlungscode": "2XA6-HX84-MP49",
+        "bsnr": "732830615",
+        "start": "2025-04-24T17:15:00+02:00",
+        "vermittlungscode": "L963-GC5M-ZXWD",
         "wahrgenommen": true
       }
     },
     {
-      "id": "6372f4f8-2777-4e56-9094-6e5c655f57a4",
-      "createdAt": "2025-03-25T14:57:00+01:00",
+      "id": "2edd53c5-d541-4dab-8d26-f1e3c15e1b4a",
+      "createdAt": "2025-03-25T12:40:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 70
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732107422",
+        "start": "2025-04-04T14:30:00+02:00",
+        "vermittlungscode": "QCGX-S982-5CS7",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "e3361fa1-ea1d-451b-b104-d72c8404b06d",
+      "createdAt": "2025-03-25T14:07:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 37
+        "kreisAgs": "10041",
+        "alter": 21
       },
-      "status": "STORNIERT",
-      "termin": null
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738048991",
+        "start": "2025-05-02T17:00:00+02:00",
+        "vermittlungscode": "DW6T-P39Q-46V4",
+        "wahrgenommen": true
+      }
     },
     {
       "id": "1f6d5f50-32ef-4563-889c-f63d5a6f2d5d",
@@ -545,148 +792,117 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734722831",
-        "start": "2025-04-23T10:30:00+02:00",
+        "bsnr": "733426380",
+        "start": "2025-04-23T09:00:00+02:00",
         "vermittlungscode": "9U7R-7X2P-BZRL",
         "wahrgenommen": true
       }
     },
     {
-      "id": "0134df1b-1192-4edc-84f1-0859709c31ec",
-      "createdAt": "2025-03-25T21:08:00+01:00",
+      "id": "8146093d-ef7e-49bb-94bb-3dd7db5e2a1f",
+      "createdAt": "2025-03-25T17:00:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Frauenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 41
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735870069",
-        "start": "2025-04-04T12:15:00+02:00",
-        "vermittlungscode": "6ZZT-B4EN-6UF5",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "3254ea21-5f54-4651-b8be-04aa452c0521",
-      "createdAt": "2025-03-26T10:22:00+01:00",
-      "channel": "APP",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "AKUT",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 49
-      },
-      "status": "NICHT_VERMITTELT",
-      "termin": null
-    },
-    {
-      "id": "360d51d2-ed68-4917-ae45-aab866ac2b81",
-      "createdAt": "2025-03-26T13:28:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 40
+        "alter": 48
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "737449949",
-        "start": "2025-04-03T08:45:00+02:00",
-        "vermittlungscode": "SNX8-WK6U-6DF5",
+        "bsnr": "739204452",
+        "start": "2025-04-22T09:45:00+02:00",
+        "vermittlungscode": "75H3-627Q-ZTXM",
         "wahrgenommen": true
       }
     },
     {
-      "id": "36f51f99-02ac-45e5-a942-1822e88825a0",
-      "createdAt": "2025-03-26T14:13:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 94
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "739822848",
-        "start": "2025-04-15T13:30:00+02:00",
-        "vermittlungscode": "ZAC9-6H23-UA3M",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "7bc623e0-9287-4177-ab48-f8b7ddfade57",
-      "createdAt": "2025-03-26T16:53:00+01:00",
+      "id": "41f05fd1-d05d-451b-9101-66171b6f3fe3",
+      "createdAt": "2025-03-25T17:36:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 31
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "736450733",
-        "start": "2025-04-30T13:00:00+02:00",
-        "vermittlungscode": "TK7H-XWSH-UXC9",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "e8916df9-7ca2-435f-8e90-329768482bcb",
-      "createdAt": "2025-03-27T09:25:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Innere Medizin",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10046",
-        "alter": 75
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "733332593",
-        "start": "2025-04-07T12:15:00+02:00",
-        "vermittlungscode": "5JW6-R9DG-WVAR",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "c267efbb-adc4-4215-a2c9-d5004947cec6",
-      "createdAt": "2025-03-27T10:07:00+01:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
         "kreisAgs": "10043",
-        "alter": 30
+        "alter": 53
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "737024691",
-        "start": "2025-04-11T13:45:00+02:00",
-        "vermittlungscode": "LFC6-V22E-2EYN",
+        "bsnr": "734082137",
+        "start": "2025-04-07T10:45:00+02:00",
+        "vermittlungscode": "5TXM-ETRF-Z7C6",
         "wahrgenommen": true
       }
     },
     {
-      "id": "c72aadd3-b1b2-42dd-9fc9-7886b71cd17c",
-      "createdAt": "2025-03-27T14:22:00+01:00",
+      "id": "92aa4ef8-b879-4488-8ac6-57cab0d66a31",
+      "createdAt": "2025-03-26T15:31:00+01:00",
       "channel": "TELEFON",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "ROUTINE",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 23
+        "alter": 33
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731820932",
-        "start": "2025-05-12T15:45:00+02:00",
-        "vermittlungscode": "QYK7-YRU9-95CA",
+        "bsnr": "732931454",
+        "start": "2025-05-19T14:00:00+02:00",
+        "vermittlungscode": "5SU9-X3RY-U8HJ",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "0724989f-1f07-49bc-b0a0-7eb51e48c7c1",
+      "createdAt": "2025-03-26T15:33:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 71
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731777142",
+        "start": "2025-05-02T11:30:00+02:00",
+        "vermittlungscode": "CS4T-ZHW7-RFRB",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "f0516463-9453-499e-9d6c-fd5580819f06",
+      "createdAt": "2025-03-27T07:21:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 17
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "734418172",
+        "start": "2025-04-08T14:30:00+02:00",
+        "vermittlungscode": "P7MQ-YHDW-P3DF",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "cbf669bc-cd2a-4256-b4e8-0e7c7b738615",
+      "createdAt": "2025-03-27T15:51:00+01:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Orthopädie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 36
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "733027639",
+        "start": "2025-04-04T15:45:00+02:00",
+        "vermittlungscode": "3JXH-EHKZ-T9P3",
         "wahrgenommen": true
       }
     },
@@ -702,145 +918,194 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731239332",
-        "start": "2025-03-31T08:30:00+02:00",
+        "bsnr": "732705498",
+        "start": "2025-03-31T14:45:00+02:00",
         "vermittlungscode": "QMTK-VCTT-GMWP",
         "wahrgenommen": true
       }
     },
     {
-      "id": "6655f44d-5859-4c43-8b94-601c70eadfc6",
-      "createdAt": "2025-03-28T15:11:00+01:00",
+      "id": "0036615d-e5bf-4165-8a71-de0f954ef7d6",
+      "createdAt": "2025-03-28T06:03:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 42
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "736744473",
-        "start": "2025-03-31T12:15:00+02:00",
-        "vermittlungscode": "DNBT-PDZK-V5UH",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "56abfe34-4e53-4cfe-9529-4cd0ea99babe",
-      "createdAt": "2025-03-28T15:27:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Dermatologie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 73
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732308768",
-        "start": "2025-04-14T17:30:00+02:00",
-        "vermittlungscode": "QMKP-JBH2-ZL8J",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "f2f8cdf0-34aa-40d7-b308-3704b0cc109a",
-      "createdAt": "2025-03-29T06:46:00+01:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Psychotherapie",
+      "fachgebiet": "Frauenheilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10046",
-        "alter": 43
+        "alter": 69
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "736625764",
-        "start": "2025-04-14T12:15:00+02:00",
-        "vermittlungscode": "25J7-R4LN-UUYN",
+        "bsnr": "734999051",
+        "start": "2025-04-08T15:30:00+02:00",
+        "vermittlungscode": "CEWV-EG9M-54J2",
         "wahrgenommen": true
       }
     },
     {
-      "id": "6f5baac0-431f-4181-8901-da2a2d495213",
-      "createdAt": "2025-03-29T14:39:00+01:00",
+      "id": "8315609b-9102-4afe-8064-a55ebca69653",
+      "createdAt": "2025-03-28T10:07:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 46
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735880853",
-        "start": "2025-04-17T11:45:00+02:00",
-        "vermittlungscode": "CC98-2HVD-EWJP",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "9b582095-0ded-433b-954f-7fd2571f5689",
-      "createdAt": "2025-03-30T08:28:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Psychotherapie",
+      "fachgebiet": "Frauenheilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 23
+        "kreisAgs": "10043",
+        "alter": 31
       },
-      "status": "STORNIERT",
+      "status": "NICHT_VERMITTELT",
       "termin": null
     },
     {
-      "id": "b5d2df8f-c681-4d0d-9aac-e043e7690516",
-      "createdAt": "2025-03-30T10:32:00+02:00",
-      "channel": "ONLINE",
+      "id": "48c4b0c8-bdf1-4506-97f4-c147ffad3ed3",
+      "createdAt": "2025-03-28T15:48:00+01:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 82
+      },
+      "status": "NICHT_VERMITTELT",
+      "termin": null
+    },
+    {
+      "id": "c73f65e0-f21a-4bba-bf58-265bed74f1bb",
+      "createdAt": "2025-03-28T17:01:00+01:00",
+      "channel": "TELEFON",
       "fachgebiet": "Orthopädie",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10046",
-        "alter": 12
+        "kreisAgs": "10041",
+        "alter": 61
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739925884",
-        "start": "2025-04-15T08:15:00+02:00",
-        "vermittlungscode": "C9X5-82F2-FSYT",
+        "bsnr": "734249191",
+        "start": "2025-04-07T10:30:00+02:00",
+        "vermittlungscode": "5UP8-8F7U-E39T",
         "wahrgenommen": true
       }
     },
     {
-      "id": "9e643728-948e-4f26-8fc7-2264c6a99a3e",
-      "createdAt": "2025-03-30T11:06:00+02:00",
+      "id": "9b52e605-46d2-4ec7-859c-cc36e3bb573e",
+      "createdAt": "2025-03-28T22:19:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Orthopädie",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10045",
+        "kreisAgs": "10041",
+        "alter": 25
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "737349623",
+        "start": "2025-04-01T12:45:00+02:00",
+        "vermittlungscode": "BMRX-HZYM-B285",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "8933f197-bad2-4fd3-9252-bb61e816a927",
+      "createdAt": "2025-03-29T13:44:00+01:00",
+      "channel": "APP",
+      "fachgebiet": "Orthopädie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10041",
         "alter": 63
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731802994",
-        "start": "2025-04-14T13:15:00+02:00",
-        "vermittlungscode": "VABX-FW45-3TNG",
+        "bsnr": "731093539",
+        "start": "2025-04-22T11:15:00+02:00",
+        "vermittlungscode": "UNFZ-5XYZ-6AM4",
         "wahrgenommen": true
       }
     },
     {
-      "id": "09bd8808-c4e0-4cec-8859-82f39606d1d6",
-      "createdAt": "2025-03-30T22:46:00+02:00",
+      "id": "a2ff5514-649d-4208-a629-2542378fe962",
+      "createdAt": "2025-03-29T14:31:00+01:00",
+      "channel": "APP",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 24
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "734723526",
+        "start": "2025-04-22T10:30:00+02:00",
+        "vermittlungscode": "5R9B-LX9R-BW6G",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "00695ee3-bb82-4e79-bccb-d83e4f9147a8",
+      "createdAt": "2025-03-29T18:24:00+01:00",
+      "channel": "APP",
+      "fachgebiet": "Innere Medizin",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 58
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731688879",
+        "start": "2025-04-29T16:00:00+02:00",
+        "vermittlungscode": "TVU6-UVJB-AKER",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "2a6e5bd6-864c-4c7f-9ec0-023917787548",
+      "createdAt": "2025-03-29T21:00:00+01:00",
       "channel": "ONLINE",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "AKUT",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 74
+        "alter": 36
       },
       "status": "NICHT_VERMITTELT",
       "termin": null
+    },
+    {
+      "id": "8e3824bb-133f-4ee5-bf1d-cb7f23589cab",
+      "createdAt": "2025-03-30T10:46:00+02:00",
+      "channel": "APP",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 54
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731659287",
+        "start": "2025-05-19T16:45:00+02:00",
+        "vermittlungscode": "PSU6-FA7S-LEND",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "6f510e73-9e4c-4c7b-a39e-5611f63e3dba",
+      "createdAt": "2025-03-31T06:01:00+02:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 40
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "733392590",
+        "start": "2025-04-22T16:30:00+02:00",
+        "vermittlungscode": "LCLJ-YNNU-YFW8",
+        "wahrgenommen": true
+      }
     },
     {
       "id": "b2941be6-d6d7-433a-9dfa-a68f3f1bd123",
@@ -854,28 +1119,162 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "732479295",
-        "start": "2025-05-07T09:30:00+02:00",
-        "vermittlungscode": "U6G9-R8EB-KRDK",
+        "bsnr": "734178231",
+        "start": "2025-05-07T16:30:00+02:00",
+        "vermittlungscode": "GU6G-9R8E-BKRD",
         "wahrgenommen": true
       }
     },
     {
-      "id": "1820afc7-b076-4874-8074-7d5e76364113",
-      "createdAt": "2025-03-31T08:16:00+02:00",
+      "id": "fba2548b-e148-43b9-8fb1-f0ce6cb45450",
+      "createdAt": "2025-03-31T09:43:00+02:00",
       "channel": "TELEFON",
-      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "fachgebiet": "Kinder- und Jugendmedizin",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10044",
-        "alter": 78
+        "kreisAgs": "10041",
+        "alter": 16
+      },
+      "status": "STORNIERT",
+      "termin": null
+    },
+    {
+      "id": "c9fc2cc1-ed5d-43b7-8843-a6022ae2172b",
+      "createdAt": "2025-03-31T09:45:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10046",
+        "alter": 35
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "734431351",
+        "start": "2025-04-16T08:00:00+02:00",
+        "vermittlungscode": "9WN3-MXEQ-PMLU",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "c15b7ddb-4f0b-4258-bc8f-d84747882fd1",
+      "createdAt": "2025-03-31T11:25:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 35
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "739594953",
+        "start": "2025-04-14T09:45:00+02:00",
+        "vermittlungscode": "PLDA-YCBB-EZCR",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "773e62aa-c23b-492c-a66e-1856ccccaddf",
+      "createdAt": "2025-03-31T12:33:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 91
       },
       "status": "NICHT_VERMITTELT",
       "termin": null
     },
     {
-      "id": "08f79bed-a14e-4ad6-8a02-7b586d7a767b",
-      "createdAt": "2025-03-31T10:10:00+02:00",
+      "id": "f7a06c74-51e3-42a1-9336-5c57cc872120",
+      "createdAt": "2025-03-31T12:58:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Frauenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 93
+      },
+      "status": "NICHT_VERMITTELT",
+      "termin": null
+    },
+    {
+      "id": "d0917b60-b7ff-4a6f-a67b-5f305e491961",
+      "createdAt": "2025-03-31T18:59:00+02:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Augenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 44
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "734537922",
+        "start": "2025-04-22T11:45:00+02:00",
+        "vermittlungscode": "5TJ9-MS2N-TXNU",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "60e23229-8803-469a-8071-cf276f8afcf9",
+      "createdAt": "2025-04-01T08:53:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Augenheilkunde",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 12
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "734614372",
+        "start": "2025-04-28T08:30:00+02:00",
+        "vermittlungscode": "G3Q5-GQML-T2KQ",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "0632307a-2f61-42e5-adea-e3db98f59685",
+      "createdAt": "2025-04-01T13:53:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 27
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "731751366",
+        "start": "2025-05-06T08:30:00+02:00",
+        "vermittlungscode": "VJUU-HFFK-UWJS",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "bad494d3-e86a-4f31-a0a5-4d80aaef5920",
+      "createdAt": "2025-04-01T15:41:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 64
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "737024691",
+        "start": "2025-04-22T16:00:00+02:00",
+        "vermittlungscode": "36UH-48LJ-EZD3",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "0abae26f-8d45-42d3-a39b-a39287544210",
+      "createdAt": "2025-04-02T09:23:00+02:00",
       "channel": "TELEFON",
       "fachgebiet": "Dermatologie",
       "dringlichkeit": "DRINGEND",
@@ -885,16 +1284,83 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "733027639",
-        "start": "2025-04-22T10:00:00+02:00",
-        "vermittlungscode": "Y4D5-VXE8-G73L",
+        "bsnr": "735949740",
+        "start": "2025-04-23T16:30:00+02:00",
+        "vermittlungscode": "JYF2-62GR-NEAA",
         "wahrgenommen": true
       }
     },
     {
-      "id": "680b2c9b-a270-427b-aa35-3b7b7e90e6a5",
-      "createdAt": "2025-03-31T11:24:00+02:00",
+      "id": "ff72e63d-627c-4425-9786-98d38e17a428",
+      "createdAt": "2025-04-02T09:40:00+02:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 68
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738940814",
+        "start": "2025-04-22T13:45:00+02:00",
+        "vermittlungscode": "GDKD-5YH2-GX74",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "9d197828-6a81-46af-bd0b-4078136501da",
+      "createdAt": "2025-04-02T15:41:00+02:00",
       "channel": "TELEFON",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 81
+      },
+      "status": "STORNIERT",
+      "termin": null
+    },
+    {
+      "id": "7a9e66c9-387f-4afd-95ef-e0b786d17930",
+      "createdAt": "2025-04-02T18:01:00+02:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10041",
+        "alter": 41
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738261243",
+        "start": "2025-04-17T13:15:00+02:00",
+        "vermittlungscode": "PD6B-YSWC-EEUJ",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "8002a9ca-ca4d-4966-a592-8d0aece18b83",
+      "createdAt": "2025-04-02T18:15:00+02:00",
+      "channel": "ONLINE",
+      "fachgebiet": "Frauenheilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10042",
+        "alter": 25
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "733720916",
+        "start": "2025-04-22T14:30:00+02:00",
+        "vermittlungscode": "NN2B-5YKM-M9B9",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "6f329c10-ef9b-45ee-a3f2-6851b93784e4",
+      "createdAt": "2025-04-02T22:41:00+02:00",
+      "channel": "ONLINE",
       "fachgebiet": "Dermatologie",
       "dringlichkeit": "DRINGEND",
       "patient": {
@@ -903,171 +1369,9 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739847506",
-        "start": "2025-04-22T08:15:00+02:00",
-        "vermittlungscode": "8799-3F5D-TMEC",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "1631be9d-f074-4968-9f55-ce84c49a20b0",
-      "createdAt": "2025-03-31T12:58:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 28
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731893784",
-        "start": "2025-04-09T15:30:00+02:00",
-        "vermittlungscode": "TE5Q-GSSX-MBWF",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "2126ae31-b8c5-4108-80c4-921c35c6455f",
-      "createdAt": "2025-04-01T13:04:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Innere Medizin",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10045",
-        "alter": 56
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735713574",
-        "start": "2025-04-14T09:45:00+02:00",
-        "vermittlungscode": "X37X-LAWX-AX76",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "7bc8e8a8-e18a-474a-8e55-89ea60c70080",
-      "createdAt": "2025-04-01T14:27:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Dermatologie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 35
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "739847506",
-        "start": "2025-04-22T10:15:00+02:00",
-        "vermittlungscode": "PLEJ-WS85-ZJ65",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "358369d0-a5f9-4121-9f5c-b43fdfde8ff2",
-      "createdAt": "2025-04-01T22:11:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Innere Medizin",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 6
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "734474056",
-        "start": "2025-04-22T12:15:00+02:00",
-        "vermittlungscode": "2Q4V-GU65-46EE",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "d02354f6-df22-4545-a7cf-a837c07c9772",
-      "createdAt": "2025-04-02T08:36:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 65
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "739963610",
-        "start": "2025-05-12T12:30:00+02:00",
-        "vermittlungscode": "WCB3-F7UC-S5WD",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "af415a14-68a1-4538-8d3c-fe981d37613c",
-      "createdAt": "2025-04-02T09:37:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10045",
-        "alter": 67
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735471248",
-        "start": "2025-04-07T13:15:00+02:00",
-        "vermittlungscode": "SBG4-HN4V-WNZJ",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "56e28ff2-0d37-4c65-a033-5508f4111538",
-      "createdAt": "2025-04-02T13:50:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 50
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "734585288",
-        "start": "2025-04-08T17:30:00+02:00",
-        "vermittlungscode": "WUXR-FTKC-Q5EL",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "422b0546-2131-4e5e-9b9c-0e2d01ba4c94",
-      "createdAt": "2025-04-02T16:37:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Frauenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 23
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732987488",
-        "start": "2025-04-14T11:45:00+02:00",
-        "vermittlungscode": "NM89-EVPY-626E",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "df3236a1-e94c-463d-ad37-8b7f0a43283e",
-      "createdAt": "2025-04-02T17:30:00+02:00",
-      "channel": "APP",
-      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 73
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "738547686",
-        "start": "2025-04-09T17:00:00+02:00",
-        "vermittlungscode": "VHRE-DTD3-A7S3",
+        "bsnr": "734600862",
+        "start": "2025-04-17T08:45:00+02:00",
+        "vermittlungscode": "VQ3C-LWQB-M8AQ",
         "wahrgenommen": true
       }
     },
@@ -1111,6 +1415,55 @@
       "termin": null
     },
     {
+      "id": "a82b9cc0-5cf2-44dd-9170-5134773966ac",
+      "createdAt": "2025-04-03T14:20:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 67
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "732641500",
+        "start": "2025-05-15T16:00:00+02:00",
+        "vermittlungscode": "2PV3-YDDY-WPCX",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "da415838-4962-47f8-9789-c3509744bdbd",
+      "createdAt": "2025-04-03T14:25:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hausarzt",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10043",
+        "alter": 91
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "735571448",
+        "start": "2025-04-07T13:45:00+02:00",
+        "vermittlungscode": "NVA7-FDVP-G8S6",
+        "wahrgenommen": false
+      }
+    },
+    {
+      "id": "772cf449-21f7-47af-aec4-2dabe53e7d38",
+      "createdAt": "2025-04-03T14:54:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
+      "dringlichkeit": "ROUTINE",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 24
+      },
+      "status": "NICHT_VERMITTELT",
+      "termin": null
+    },
+    {
       "id": "b5bb461a-53ef-4024-b0fd-ee8ee4cc0b7a",
       "createdAt": "2025-04-03T16:33:00+02:00",
       "channel": "TELEFON",
@@ -1123,75 +1476,26 @@
       "status": "VERMITTELT",
       "termin": {
         "bsnr": "737854986",
-        "start": "2025-04-07T17:30:00+02:00",
+        "start": "2025-04-07T09:45:00+02:00",
         "vermittlungscode": "43D5-BFLK-3E35",
         "wahrgenommen": true
       }
     },
     {
-      "id": "8ec99f3e-32dd-4e03-a81d-640f394d1e8b",
-      "createdAt": "2025-04-03T19:13:00+02:00",
+      "id": "69a237bd-6943-4287-8ec6-7d099f027413",
+      "createdAt": "2025-04-03T17:24:00+02:00",
       "channel": "ONLINE",
-      "fachgebiet": "Frauenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 26
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "738879231",
-        "start": "2025-04-14T10:00:00+02:00",
-        "vermittlungscode": "NRXR-XD9H-4GJ7",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "f8786788-063e-4262-b40c-d5943151a66a",
-      "createdAt": "2025-04-03T22:46:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 22
-      },
-      "status": "NICHT_VERMITTELT",
-      "termin": null
-    },
-    {
-      "id": "7909904f-447a-4155-ae9b-866f8b5e7af6",
-      "createdAt": "2025-04-04T08:46:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10046",
-        "alter": 23
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "734797396",
-        "start": "2025-05-05T16:45:00+02:00",
-        "vermittlungscode": "K67K-2YWD-RHWX",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "c5f2bb12-16e1-4b14-9b30-01faf07ef19e",
-      "createdAt": "2025-04-04T10:00:00+02:00",
-      "channel": "TELEFON",
       "fachgebiet": "Augenheilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 64
+        "alter": 60
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "733598924",
-        "start": "2025-04-22T15:00:00+02:00",
-        "vermittlungscode": "NXHT-33TF-D3R9",
+        "bsnr": "739749272",
+        "start": "2025-04-22T13:15:00+02:00",
+        "vermittlungscode": "C4UR-3XZF-EGSY",
         "wahrgenommen": true
       }
     },
@@ -1207,179 +1511,133 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "736470545",
-        "start": "2025-04-16T12:30:00+02:00",
-        "vermittlungscode": "3B25-FAVK-B5X4",
-        "wahrgenommen": true
+        "bsnr": "739587628",
+        "start": "2025-04-16T14:15:00+02:00",
+        "vermittlungscode": "B25F-AVKB-5X4C",
+        "wahrgenommen": false
       }
     },
     {
-      "id": "612071c2-4429-42d8-a91a-2840f4f4d29b",
-      "createdAt": "2025-04-04T12:24:00+02:00",
+      "id": "2ade7b4f-ea1e-42f9-a26b-6d70ae42a4a3",
+      "createdAt": "2025-04-04T10:13:00+02:00",
       "channel": "TELEFON",
-      "fachgebiet": "Frauenheilkunde",
+      "fachgebiet": "Neurologie/Nervenheilkunde",
       "dringlichkeit": "DRINGEND",
       "patient": {
-        "kreisAgs": "10041",
-        "alter": 54
+        "kreisAgs": "10042",
+        "alter": 94
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734779151",
-        "start": "2025-04-10T13:00:00+02:00",
-        "vermittlungscode": "AK7J-ZE9S-NV6T",
+        "bsnr": "731569272",
+        "start": "2025-04-30T08:00:00+02:00",
+        "vermittlungscode": "SENC-TH5P-88M8",
         "wahrgenommen": true
       }
     },
     {
-      "id": "c52e9375-25ca-4714-b54d-eaf08960792f",
-      "createdAt": "2025-04-04T14:39:00+02:00",
+      "id": "75f8d122-59a3-4aca-b86e-147cd64207c9",
+      "createdAt": "2025-04-04T10:37:00+02:00",
       "channel": "ONLINE",
+      "fachgebiet": "Orthopädie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10044",
+        "alter": 80
+      },
+      "status": "STORNIERT",
+      "termin": null
+    },
+    {
+      "id": "d6fee5a7-18a0-4477-97fa-3cd38ce21a35",
+      "createdAt": "2025-04-04T12:36:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 43
+      },
+      "status": "NICHT_VERMITTELT",
+      "termin": null
+    },
+    {
+      "id": "5b1445a6-f757-4a9c-986e-96024365a0bd",
+      "createdAt": "2025-04-04T14:32:00+02:00",
+      "channel": "TELEFON",
       "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "ROUTINE",
+      "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10043",
-        "alter": 74
+        "alter": 46
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734614372",
-        "start": "2025-05-07T09:30:00+02:00",
-        "vermittlungscode": "CZKQ-2NEL-EDAJ",
+        "bsnr": "738386988",
+        "start": "2025-04-17T15:15:00+02:00",
+        "vermittlungscode": "J8P5-9SWN-K2P6",
         "wahrgenommen": true
       }
     },
     {
-      "id": "5dfbe969-9b1a-47a7-ad78-05daf39a0360",
-      "createdAt": "2025-04-04T14:57:00+02:00",
+      "id": "bb0924c3-dddf-47bc-a2b5-12c38cac117a",
+      "createdAt": "2025-04-04T17:58:00+02:00",
       "channel": "TELEFON",
+      "fachgebiet": "Dermatologie",
+      "dringlichkeit": "DRINGEND",
+      "patient": {
+        "kreisAgs": "10045",
+        "alter": 80
+      },
+      "status": "VERMITTELT",
+      "termin": {
+        "bsnr": "738940814",
+        "start": "2025-04-22T15:30:00+02:00",
+        "vermittlungscode": "TA9Q-Y5ZW-4MS4",
+        "wahrgenommen": true
+      }
+    },
+    {
+      "id": "1bc776c4-aa55-4218-a4ab-0ae912123cf6",
+      "createdAt": "2025-04-05T19:33:00+02:00",
+      "channel": "APP",
       "fachgebiet": "Hausarzt",
       "dringlichkeit": "AKUT",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 93
+        "alter": 57
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739131419",
-        "start": "2025-04-07T14:30:00+02:00",
-        "vermittlungscode": "PYQT-BTPB-CZPX",
+        "bsnr": "736947411",
+        "start": "2025-04-07T17:15:00+02:00",
+        "vermittlungscode": "KQND-6PQ8-EC3D",
         "wahrgenommen": true
       }
     },
     {
-      "id": "05389b66-77d0-485c-9c4b-16dd5524f8b2",
-      "createdAt": "2025-04-05T10:54:00+02:00",
+      "id": "dc2aa03d-4af0-4705-9465-708f0b9fa347",
+      "createdAt": "2025-04-06T12:32:00+02:00",
       "channel": "ONLINE",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 74
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "738492640",
-        "start": "2025-04-22T10:30:00+02:00",
-        "vermittlungscode": "ENE7-QPNN-7XZ5",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "d495fed2-f1c8-4d37-be02-f38c6103fd27",
-      "createdAt": "2025-04-05T14:29:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 82
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "737166004",
-        "start": "2025-04-30T14:30:00+02:00",
-        "vermittlungscode": "25QU-FYBX-DTZW",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "bad3470b-f979-4303-8afd-3c72417e066c",
-      "createdAt": "2025-04-05T14:59:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Dermatologie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 62
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732308768",
-        "start": "2025-04-14T17:00:00+02:00",
-        "vermittlungscode": "TURM-AC2G-3ZVG",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "a7e2bb66-5d47-4d9a-8be1-f79bf418c70b",
-      "createdAt": "2025-04-05T22:25:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 50
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "736495995",
-        "start": "2025-05-30T10:45:00+02:00",
-        "vermittlungscode": "R8SF-R2CG-2PVJ",
-        "wahrgenommen": false
-      }
-    },
-    {
-      "id": "8ddab2e5-434b-4c3d-89f5-146b477c832f",
-      "createdAt": "2025-04-06T09:11:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Augenheilkunde",
+      "fachgebiet": "Innere Medizin",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10043",
-        "alter": 21
+        "alter": 91
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734614372",
-        "start": "2025-04-28T11:00:00+02:00",
-        "vermittlungscode": "EQJ2-HSTV-QAQK",
-        "wahrgenommen": true
+        "bsnr": "737672173",
+        "start": "2025-05-05T13:45:00+02:00",
+        "vermittlungscode": "TT35-LYLW-L6U8",
+        "wahrgenommen": false
       }
     },
     {
-      "id": "1bb953cc-a841-44d5-a440-71a36690e64d",
-      "createdAt": "2025-04-06T09:34:00+02:00",
-      "channel": "APP",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 7
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "738664580",
-        "start": "2025-04-09T11:30:00+02:00",
-        "vermittlungscode": "NY4F-722E-LS22",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "d06145fd-0c84-44a9-9be8-a4a058127d46",
-      "createdAt": "2025-04-06T22:47:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Orthopädie",
+      "id": "68b97ab9-6eb5-45f6-b792-de0dd45843aa",
+      "createdAt": "2025-04-07T10:02:00+02:00",
+      "channel": "TELEFON",
+      "fachgebiet": "Psychotherapie",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10044",
@@ -1387,338 +1645,60 @@
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "731008282",
-        "start": "2025-04-14T10:00:00+02:00",
-        "vermittlungscode": "2CG7-Y9EX-4VQY",
+        "bsnr": "731998366",
+        "start": "2025-04-22T10:45:00+02:00",
+        "vermittlungscode": "7CF8-JVN5-ZFX5",
         "wahrgenommen": true
       }
     },
     {
-      "id": "f2364b90-b533-4c45-8b0a-7aeecf97f545",
-      "createdAt": "2025-04-07T06:10:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Innere Medizin",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 67
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "737672173",
-        "start": "2025-05-02T16:00:00+02:00",
-        "vermittlungscode": "WRRU-QY6S-RC3P",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "58a4e8fc-3bc6-4de3-816d-28900166bde4",
-      "createdAt": "2025-04-07T07:09:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 83
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735250211",
-        "start": "2025-04-24T13:15:00+02:00",
-        "vermittlungscode": "N3GB-6DVQ-YM57",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "d24444f0-4a8a-424d-b5f5-469aedb2518a",
-      "createdAt": "2025-04-07T08:25:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 39
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731093539",
-        "start": "2025-04-16T17:15:00+02:00",
-        "vermittlungscode": "MERE-QH63-K6AH",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "3b5f91e4-44df-49fa-9e10-1626d79bab1b",
-      "createdAt": "2025-04-07T08:26:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 68
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "732435880",
-        "start": "2025-04-28T13:00:00+02:00",
-        "vermittlungscode": "N32W-479H-27BX",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "676b1bac-7c61-471d-a57e-d3ef72a90e74",
+      "id": "c5a59cb4-cbca-40e8-a443-37078cb72e6a",
       "createdAt": "2025-04-07T10:52:00+02:00",
       "channel": "TELEFON",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
+      "fachgebiet": "Psychotherapie",
       "dringlichkeit": "DRINGEND",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 55
-      },
-      "status": "STORNIERT",
-      "termin": null
-    },
-    {
-      "id": "2339b02b-33e9-4707-b475-9e6e2cbd4c73",
-      "createdAt": "2025-04-07T12:54:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Hals-Nasen-Ohren-Heilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10042",
-        "alter": 63
+        "alter": 37
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "734585288",
-        "start": "2025-04-14T12:30:00+02:00",
-        "vermittlungscode": "NCUA-LBDM-U6Z7",
-        "wahrgenommen": false
+        "bsnr": "731698160",
+        "start": "2025-04-28T08:30:00+02:00",
+        "vermittlungscode": "5QDZ-63AK-2KAU",
+        "wahrgenommen": true
       }
     },
     {
-      "id": "49c44e2f-e99a-456d-a7ee-a3b5d5f78173",
-      "createdAt": "2025-04-07T13:44:00+02:00",
-      "channel": "TELEFON",
+      "id": "490c095c-fc63-4220-82fd-d29478671307",
+      "createdAt": "2025-04-07T10:53:00+02:00",
+      "channel": "APP",
       "fachgebiet": "Psychotherapie",
       "dringlichkeit": "ROUTINE",
       "patient": {
         "kreisAgs": "10041",
-        "alter": 36
+        "alter": 59
       },
       "status": "VERMITTELT",
       "termin": {
-        "bsnr": "739612463",
-        "start": "2025-05-19T13:15:00+02:00",
-        "vermittlungscode": "VWSY-DGF8-HM6V",
+        "bsnr": "734335159",
+        "start": "2025-05-16T15:15:00+02:00",
+        "vermittlungscode": "DFBD-SVZS-2AYA",
         "wahrgenommen": true
       }
     },
     {
-      "id": "b6ad138e-804e-4876-b69a-ac71d914e730",
-      "createdAt": "2025-04-07T14:00:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Kinder- und Jugendmedizin",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 8
-      },
-      "status": "STORNIERT",
-      "termin": null
-    },
-    {
-      "id": "81a7a795-e4d2-4e0d-8a03-b4f0cc6d9612",
-      "createdAt": "2025-04-07T14:35:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Dermatologie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 65
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "733183722",
-        "start": "2025-04-29T16:30:00+02:00",
-        "vermittlungscode": "GGCU-YRAR-8VA6",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "93cd2863-f96b-4817-a1f0-90c4b16f2d47",
-      "createdAt": "2025-04-07T17:41:00+02:00",
+      "id": "cef3e6c0-64a2-4727-abf2-a628f245aced",
+      "createdAt": "2025-04-07T13:37:00+02:00",
       "channel": "ONLINE",
       "fachgebiet": "Orthopädie",
       "dringlichkeit": "ROUTINE",
       "patient": {
-        "kreisAgs": "10042",
-        "alter": 33
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735402727",
-        "start": "2025-04-16T12:15:00+02:00",
-        "vermittlungscode": "2SGS-9QAQ-3LP3",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "7f4350a7-914a-41dc-97e8-3b91dc4eb6f4",
-      "createdAt": "2025-04-07T19:42:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Neurologie/Nervenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
         "kreisAgs": "10044",
-        "alter": 69
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731160639",
-        "start": "2025-04-22T14:00:00+02:00",
-        "vermittlungscode": "K8HK-TTZJ-CUX5",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "c69269c7-eb70-4582-8865-3fc62deceb82",
-      "createdAt": "2025-04-07T22:08:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "AKUT",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 22
+        "alter": 64
       },
       "status": "NICHT_VERMITTELT",
       "termin": null
-    },
-    {
-      "id": "1ba61a5c-661d-4054-8c1d-79659e432141",
-      "createdAt": "2025-04-08T09:00:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Frauenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 24
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735192311",
-        "start": "2025-04-24T16:30:00+02:00",
-        "vermittlungscode": "X7G3-37RL-7CQ8",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "13ecb206-2c52-40c1-a0d3-0c1331d3fe66",
-      "createdAt": "2025-04-08T12:43:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 79
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "739822848",
-        "start": "2025-05-05T10:30:00+02:00",
-        "vermittlungscode": "VMKV-52FM-S5WS",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "541a69ce-a5b1-4ffd-a28f-f877cf99a9bb",
-      "createdAt": "2025-04-08T13:14:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Augenheilkunde",
-      "dringlichkeit": "ROUTINE",
-      "patient": {
-        "kreisAgs": "10046",
-        "alter": 73
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "734614372",
-        "start": "2025-04-22T12:45:00+02:00",
-        "vermittlungscode": "6WYR-3T87-HK8E",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "270d2083-17a3-430e-b1d1-917baf5a9812",
-      "createdAt": "2025-04-08T16:57:00+02:00",
-      "channel": "TELEFON",
-      "fachgebiet": "Hausarzt",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10041",
-        "alter": 32
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731617027",
-        "start": "2025-04-11T08:45:00+02:00",
-        "vermittlungscode": "ZG8Y-BEUT-FQEB",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "341b318f-860d-426b-9915-8ca04bcd732f",
-      "createdAt": "2025-04-08T19:38:00+02:00",
-      "channel": "APP",
-      "fachgebiet": "Kinder- und Jugendmedizin",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10043",
-        "alter": 1
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "735292636",
-        "start": "2025-04-15T11:30:00+02:00",
-        "vermittlungscode": "YSYC-MH95-FSAU",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "357b92bc-2c87-45b5-a35f-e9437c3af5e7",
-      "createdAt": "2025-04-09T06:48:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Psychotherapie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 34
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "733870150",
-        "start": "2025-05-09T11:30:00+02:00",
-        "vermittlungscode": "5532-B8EM-PRZ7",
-        "wahrgenommen": true
-      }
-    },
-    {
-      "id": "ed08d546-5c47-49d7-9e81-a7493b61587e",
-      "createdAt": "2025-04-09T08:37:00+02:00",
-      "channel": "ONLINE",
-      "fachgebiet": "Orthopädie",
-      "dringlichkeit": "DRINGEND",
-      "patient": {
-        "kreisAgs": "10044",
-        "alter": 73
-      },
-      "status": "VERMITTELT",
-      "termin": {
-        "bsnr": "731802994",
-        "start": "2025-04-28T14:00:00+02:00",
-        "vermittlungscode": "WCGE-NMUW-XE5X",
-        "wahrgenommen": true
-      }
     }
   ]
 }

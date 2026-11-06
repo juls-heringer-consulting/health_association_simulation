@@ -1,8 +1,8 @@
-Eingangsdatum: 15.09.2025
+Eingangsdatum: 25.12.2025
 Eingangskanal: Brief (eingescannt)
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 735839384
-Betreff: Keine Termine für neue Patienten
+Kategorie: WARTEZEIT
+Bezug-BSNR: 738568343
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Gemeinschaftspraxis Hartung & Gertz & Otto (Hausärzte) in Lebach nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Lebach und finde keine Praxis. Ist das zulässig?
+Ich hatte am 15.12.2025 einen Termin in der Praxis Gemeinschaftspraxis Stey & Preiß (Orthopäden) in Saarbrücken. Trotz Termin musste ich über 2 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

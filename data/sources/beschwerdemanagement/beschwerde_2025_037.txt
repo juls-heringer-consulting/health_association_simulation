@@ -1,8 +1,8 @@
-Eingangsdatum: 28.02.2025
-Eingangskanal: Online-Formular
-Kategorie: ERREICHBARKEIT
-Bezug-BSNR: 736357862
-Betreff: Praxis telefonisch nicht erreichbar
+Eingangsdatum: 29.10.2025
+Eingangskanal: Telefon (Gesprächsnotiz)
+Kategorie: WARTEZEIT
+Bezug-BSNR: 734575279
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-Seit dem 10.02.2025 versuche ich, die Praxis Nervenärztliche Praxis Dr. med. Heydrich telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.
+Ich hatte am 13.10.2025 einen Termin in der Praxis Gemeinschaftspraxis Wende & Carsten (Hautärzte) in Blieskastel. Trotz Termin musste ich über 3 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

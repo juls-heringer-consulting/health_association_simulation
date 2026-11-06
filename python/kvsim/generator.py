@@ -950,6 +950,12 @@ class WorldBuilder:
                 tday = day + timedelta(days=wait)
                 while not is_workday(tday):
                     tday += timedelta(days=1)
+                termin = datetime.combine(tday, time(8, 0)) + timedelta(minutes=15 * rng.randint(0, 38))
+                if termin <= eingang:   # a same-day slot must lie AFTER the request (found by DQ16)
+                    tday += timedelta(days=1)
+                    while not is_workday(tday):
+                        tday += timedelta(days=1)
+                    termin = datetime.combine(tday, termin.time())
                 cands = [t for t in index[(g, patient.kreis_ags)] if t.active_on(tday)] if rng.random() < .8 else []
                 if not cands:
                     cands = [t for k in ref.KREISE for t in index[(g, k.ags)] if t.active_on(tday)]
@@ -958,7 +964,7 @@ class WorldBuilder:
                 else:
                     t = rng.choice(cands)
                     a.praxis = t.praxis
-                    a.termin = datetime.combine(tday, time(8, 0)) + timedelta(minutes=15 * rng.randint(0, 38))
+                    a.termin = termin
                     a.code = ids.make_vermittlungscode(rng)
                     a.wahrgenommen = rng.random() < 0.9
                     if a.wahrgenommen and tday.year == y:
@@ -1108,9 +1114,9 @@ class WorldBuilder:
             if not a.teilnahmen:
                 continue
             first_year = min(t.von for t in a.teilnahmen).year
-            low = rng.random() < .06
+            low = rng.random() < .03
             for jahr in range(max(2021, first_year), self.year + 1):
-                pts = rng.gauss(30, 10) if low else rng.gauss(60, 14)
+                pts = rng.gauss(30, 10) if low else rng.gauss(62, 12)
                 rows.append((a, jahr, int(min(140, max(0, round(pts))))))
         return rows
 

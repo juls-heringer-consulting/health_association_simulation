@@ -1,8 +1,8 @@
-Eingangsdatum: 14.11.2025
-Eingangskanal: Brief (eingescannt)
-Kategorie: ERREICHBARKEIT
-Bezug-BSNR: 739785081
-Betreff: Praxis telefonisch nicht erreichbar
+Eingangsdatum: 31.05.2025
+Eingangskanal: E-Mail
+Kategorie: PRIVATLEISTUNG
+Bezug-BSNR: 737842096
+Betreff: Druck zu einer Privatleistung
 Beschwerdeführende Person: (anonymisiert)
 
-Seit dem 03.11.2025 versuche ich, die Praxis Augenarztpraxis Dr. med. Sontag telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.
+In der Praxis Gemeinschaftspraxis Misicher & Schleich (HNO-Ärzte) wurde mir am 26.05.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.

@@ -1,8 +1,8 @@
-Eingangsdatum: 02.10.2025
+Eingangsdatum: 06.10.2025
 Eingangskanal: Telefon (Gesprächsnotiz)
-Kategorie: ERREICHBARKEIT
-Bezug-BSNR: 736414928
-Betreff: Praxis telefonisch nicht erreichbar
+Kategorie: PRIVATLEISTUNG
+Bezug-BSNR: 733027639
+Betreff: Druck zu einer Privatleistung
 Beschwerdeführende Person: (anonymisiert)
 
-Seit dem 23.09.2025 versuche ich, die Praxis Psychotherapeutische Praxis Dipl.-Psych. Hofmann telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.
+In der Praxis MVZ Wadgassen wurde mir am 02.10.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.

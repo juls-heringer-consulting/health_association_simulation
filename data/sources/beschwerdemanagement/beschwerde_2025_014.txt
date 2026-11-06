@@ -1,8 +1,8 @@
-Eingangsdatum: 22.11.2025
-Eingangskanal: Telefon (Gesprächsnotiz)
-Kategorie: HYGIENE
-Bezug-BSNR: 736774644
-Betreff: Hygienemängel
+Eingangsdatum: 06.05.2025
+Eingangskanal: Online-Formular
+Kategorie: PRIVATLEISTUNG
+Bezug-BSNR: 731182917
+Betreff: Druck zu einer Privatleistung
 Beschwerdeführende Person: (anonymisiert)
 
-Bei meinem Besuch in der Praxis Gemeinschaftspraxis Juncken & Wesack & Spieß (Hausärzte) am 03.11.2025 sind mir deutliche Hygienemängel im Wartebereich aufgefallen.
+In der Praxis Gemeinschaftspraxis Gude & Hermighausen (Hausärzte) wurde mir am 28.04.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.

@@ -1,8 +1,8 @@
-Eingangsdatum: 21.12.2025
-Eingangskanal: Brief (eingescannt)
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 739506103
-Betreff: Keine Termine für neue Patienten
+Eingangsdatum: 12.09.2025
+Eingangskanal: Telefon (Gesprächsnotiz)
+Kategorie: ERREICHBARKEIT
+Bezug-BSNR: 738547686
+Betreff: Praxis telefonisch nicht erreichbar
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Gemeinschaftspraxis Zorbach & Anders & Wende (Kinder- und Jugendärzte) in Saarbrücken nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Saarbrücken und finde keine Praxis. Ist das zulässig?
+Seit dem 11.09.2025 versuche ich, die Praxis Gemeinschaftspraxis Spieß & Zobel & Warmer (HNO-Ärzte) telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.

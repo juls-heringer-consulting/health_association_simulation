@@ -1,8 +1,8 @@
-Eingangsdatum: 03.10.2025
+Eingangsdatum: 20.01.2025
 Eingangskanal: Online-Formular
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 732417267
-Betreff: Keine Termine für neue Patienten
+Kategorie: WARTEZEIT
+Bezug-BSNR: 738617165
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Gemeinschaftspraxis Haering & Plath (Frauenärzte) in Neunkirchen nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Neunkirchen und finde keine Praxis. Ist das zulässig?
+Ich hatte am 08.01.2025 einen Termin in der Praxis Gemeinschaftspraxis Becker & Atzler (Nervenärzte) in Lebach. Trotz Termin musste ich über 3 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

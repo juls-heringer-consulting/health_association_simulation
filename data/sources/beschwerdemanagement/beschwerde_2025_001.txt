@@ -1,8 +1,8 @@
-Eingangsdatum: 20.06.2025
-Eingangskanal: Telefon (Gesprächsnotiz)
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 731574879
-Betreff: Keine Termine für neue Patienten
+Eingangsdatum: 06.02.2025
+Eingangskanal: Online-Formular
+Kategorie: KOMMUNIKATION
+Bezug-BSNR: 731630323
+Betreff: Unfreundliche Behandlung
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Kinder- und Jugendarztpraxis Dr. med. Weitzel in Bexbach nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Bexbach und finde keine Praxis. Ist das zulässig?
+Bei meinem Besuch am 27.01.2025 hat sich die behandelnde Ärztin bzw. der behandelnde Arzt kaum Zeit genommen und meine Fragen nicht beantwortet. Ich habe mich nicht ernst genommen gefühlt.

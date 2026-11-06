@@ -1,8 +1,8 @@
-Eingangsdatum: 16.08.2025
-Eingangskanal: Online-Formular
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 739136116
-Betreff: Keine Termine für neue Patienten
+Eingangsdatum: 22.02.2025
+Eingangskanal: Telefon (Gesprächsnotiz)
+Kategorie: ERREICHBARKEIT
+Bezug-BSNR: 735884424
+Betreff: Praxis telefonisch nicht erreichbar
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Gemeinschaftspraxis Huhn & Eimer (Fachinternisten) in Dillingen/Saar nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Dillingen/Saar und finde keine Praxis. Ist das zulässig?
+Seit dem 17.02.2025 versuche ich, die Praxis Gemeinschaftspraxis Steinberg & Schomber & Schmidtke (Hausärzte) telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.

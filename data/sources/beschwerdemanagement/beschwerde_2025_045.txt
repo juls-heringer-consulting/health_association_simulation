@@ -1,8 +1,8 @@
-Eingangsdatum: 07.07.2025
+Eingangsdatum: 22.02.2025
 Eingangskanal: Online-Formular
-Kategorie: TERMINVERGABE
-Bezug-BSNR: 732294657
-Betreff: Keine Termine für neue Patienten
+Kategorie: ERREICHBARKEIT
+Bezug-BSNR: 736356180
+Betreff: Praxis telefonisch nicht erreichbar
 Beschwerdeführende Person: (anonymisiert)
 
-Die Praxis Gemeinschaftspraxis Hethur & Drub & Sorgatz (Kinder- und Jugendärzte) in Ottweiler nimmt nach Auskunft am Telefon keine neuen Patienten auf. Ich wohne seit kurzem in Ottweiler und finde keine Praxis. Ist das zulässig?
+Seit dem 04.02.2025 versuche ich, die Praxis Hausarztpraxis Dariusz Vollbrecht telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.

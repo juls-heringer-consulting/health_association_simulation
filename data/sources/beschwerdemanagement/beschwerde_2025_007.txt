@@ -1,8 +1,8 @@
-Eingangsdatum: 25.08.2025
+Eingangsdatum: 19.09.2025
 Eingangskanal: Online-Formular
-Kategorie: WARTEZEIT
-Bezug-BSNR: 738705996
-Betreff: Lange Wartezeit trotz Termin
+Kategorie: PRIVATLEISTUNG
+Bezug-BSNR: 734657713
+Betreff: Druck zu einer Privatleistung
 Beschwerdeführende Person: (anonymisiert)
 
-Ich hatte am 13.08.2025 einen Termin in der Praxis Psychotherapeutische Praxis Dipl.-Psych. Hamann in Merzig. Trotz Termin musste ich über 2 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.
+In der Praxis Gemeinschaftspraxis Knappe & Scheuermann (Hausärzte) wurde mir am 08.09.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.

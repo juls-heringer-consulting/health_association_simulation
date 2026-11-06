@@ -1,8 +1,8 @@
-Eingangsdatum: 13.02.2025
-Eingangskanal: Telefon (Gesprächsnotiz)
-Kategorie: PRIVATLEISTUNG
-Bezug-BSNR: 738422890
-Betreff: Druck zu einer Privatleistung
+Eingangsdatum: 27.03.2025
+Eingangskanal: E-Mail
+Kategorie: WARTEZEIT
+Bezug-BSNR: 737918220
+Betreff: Lange Wartezeit trotz Termin
 Beschwerdeführende Person: (anonymisiert)
 
-In der Praxis HNO-Praxis Dr. med. Weinhold wurde mir am 04.02.2025 nahegelegt, eine Untersuchung privat zu bezahlen, da sie sonst erst in einigen Monaten möglich sei.
+Ich hatte am 10.03.2025 einen Termin in der Praxis HNO-Praxis Dr. med. Wulff in Neunkirchen. Trotz Termin musste ich über 2 Stunden warten, ohne dass mir jemand den Grund erklärt hat. Ich bitte die KV, sich die Terminorganisation anzusehen.

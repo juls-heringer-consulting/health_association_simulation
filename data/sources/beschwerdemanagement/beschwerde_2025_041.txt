@@ -1,8 +1,8 @@
-Eingangsdatum: 20.10.2025
-Eingangskanal: Brief (eingescannt)
-Kategorie: HYGIENE
-Bezug-BSNR: 731630323
-Betreff: Hygienemängel
+Eingangsdatum: 01.08.2025
+Eingangskanal: Telefon (Gesprächsnotiz)
+Kategorie: ERREICHBARKEIT
+Bezug-BSNR: 736428861
+Betreff: Praxis telefonisch nicht erreichbar
 Beschwerdeführende Person: (anonymisiert)
 
-Bei meinem Besuch in der Praxis Hausarztpraxis Klaus Peter Rogge am 09.10.2025 sind mir deutliche Hygienemängel im Wartebereich aufgefallen.
+Seit dem 23.07.2025 versuche ich, die Praxis Gemeinschaftspraxis Hecker & Reising (Kinder- und Jugendärzte) telefonisch zu erreichen. Es meldet sich nur der Anrufbeantworter, Rückrufe erfolgen nicht.
