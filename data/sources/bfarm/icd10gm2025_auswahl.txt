@@ -1,0 +1,52 @@
+I;A09.9;Sonstige und nicht näher bezeichnete Gastroenteritis und Kolitis nicht näher bezeichneten Ursprungs
+I;B35.1;Tinea unguium
+II;D22.9;Melanozytennävus, nicht näher bezeichnet
+IV;E11.90;Diabetes mellitus, Typ 2: Ohne Komplikationen: Nicht als entgleist bezeichnet
+IV;E78.0;Reine Hypercholesterinämie
+V;F32.1;Mittelgradige depressive Episode
+V;F32.9;Depressive Episode, nicht näher bezeichnet
+V;F33.1;Rezidivierende depressive Störung, gegenwärtig mittelgradige Episode
+V;F40.1;Soziale Phobien
+V;F41.1;Generalisierte Angststörung
+V;F43.1;Posttraumatische Belastungsstörung
+V;F43.2;Anpassungsstörungen
+VI;G40.9;Epilepsie, nicht näher bezeichnet
+VI;G43.9;Migräne, nicht näher bezeichnet
+VI;G62.9;Polyneuropathie, nicht näher bezeichnet
+VII;H10.9;Konjunktivitis, nicht näher bezeichnet
+VII;H25.9;Senile Katarakt, nicht näher bezeichnet
+VII;H35.3;Degeneration der Makula und des hinteren Poles
+VII;H40.1;Primäres Weitwinkelglaukom
+VII;H52.4;Presbyopie
+VIII;H61.2;Zeruminalpfropf
+VIII;H66.9;Otitis media, nicht näher bezeichnet
+VIII;H90.3;Hörverlust durch Schallempfindungsstörung, beidseitig
+VIII;H93.1;Tinnitus aurium
+IX;I10.90;Essentielle Hypertonie, nicht näher bezeichnet: Ohne Angabe einer hypertensiven Krise
+IX;I25.9;Chronische ischämische Herzkrankheit, nicht näher bezeichnet
+IX;I48.9;Vorhofflimmern und Vorhofflattern, nicht näher bezeichnet
+X;J02.9;Akute Pharyngitis, nicht näher bezeichnet
+X;J06.9;Akute Infektion der oberen Atemwege, nicht näher bezeichnet
+X;J20.9;Akute Bronchitis, nicht näher bezeichnet
+X;J32.9;Chronische Sinusitis, nicht näher bezeichnet
+XI;K21.9;Gastroösophageale Refluxkrankheit ohne Ösophagitis
+XI;K29.7;Gastritis, nicht näher bezeichnet
+XII;L20.9;Atopisches [endogenes] Ekzem, nicht näher bezeichnet
+XII;L40.0;Psoriasis vulgaris
+XII;L70.0;Acne vulgaris
+XIII;M16.9;Koxarthrose, nicht näher bezeichnet
+XIII;M17.9;Gonarthrose, nicht näher bezeichnet
+XIII;M51.2;Sonstige näher bezeichnete Bandscheibenverlagerung
+XIII;M54.4;Lumboischialgie
+XIII;M75.1;Läsionen der Rotatorenmanschette
+XIV;N39.0;Harnwegsinfektion, Lokalisation nicht näher bezeichnet
+XIV;N76.0;Akute Kolpitis
+XIV;N95.1;Zustände im Zusammenhang mit der Menopause und dem Klimakterium
+XVIII;R10.4;Sonstige und nicht näher bezeichnete Bauchschmerzen
+XVIII;R51;Kopfschmerz
+XXI;Z00.0;Ärztliche Allgemeinuntersuchung
+XXI;Z00.1;Gesundheitsvorsorgeuntersuchung eines Kindes
+XXI;Z12.1;Spezielle Verfahren zur Untersuchung auf Neubildung des Darmtraktes
+XXI;Z12.4;Spezielle Verfahren zur Untersuchung auf Neubildung der Cervix uteri
+XXI;Z30.9;Kontrazeptive Maßnahme, nicht näher bezeichnet
+XXI;Z34;Überwachung einer normalen Schwangerschaft

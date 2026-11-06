@@ -1,0 +1,1097 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Pruefverfahren exportiert_am="2026-10-31" stelle="Prüfungsstelle der Ärzte und Krankenkassen im Saarland (Simulation)">
+  <Verfahren aktenzeichen="PS-2025-0001">
+    <BSNR>731071504</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-07-30</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-11-20</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0002">
+    <BSNR>731211191</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-18</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-23</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0003">
+    <BSNR>731211191</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-22</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-18</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0004">
+    <BSNR>731723386</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-07</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-19</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0005">
+    <BSNR>733203668</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-13</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-23</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0006">
+    <BSNR>733203668</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-27</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-10-28</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0007">
+    <BSNR>733883167</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-07-30</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-10-22</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0008">
+    <BSNR>733883167</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-02</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-27</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0009">
+    <BSNR>734544293</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-08</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0010">
+    <BSNR>734757499</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-20</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-21</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0011">
+    <BSNR>735368778</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-05</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-08</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0012">
+    <BSNR>735517607</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-08</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-17</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0013">
+    <BSNR>735703276</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-17</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-06</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0014">
+    <BSNR>735703276</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-27</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-03</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0015">
+    <BSNR>736089231</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-16</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-10-22</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0016">
+    <BSNR>736830424</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-02</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-11-05</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0017">
+    <BSNR>736830424</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-12</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-11-11</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0018">
+    <BSNR>737368638</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-26</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-11-12</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0019">
+    <BSNR>737368638</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-03</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-19</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0020">
+    <BSNR>737472095</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-01</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-07</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0021">
+    <BSNR>737672173</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>ZUFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-27</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-03</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0022">
+    <BSNR>738072097</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-10</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-02</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0023">
+    <BSNR>738697702</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>ZUFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-08-13</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-21</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0024">
+    <BSNR>738704246</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-11</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2025-12-06</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0025">
+    <BSNR>739360949</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-09-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-03</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0026">
+    <BSNR>739642740</BSNR>
+    <Quartal>1/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-10</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-06</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0027">
+    <BSNR>731211191</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-04</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-30</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0028">
+    <BSNR>731211191</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-05</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-06</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0029">
+    <BSNR>731723386</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-27</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-23</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0030">
+    <BSNR>732264877</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-25</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0031">
+    <BSNR>732417267</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-02</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-06</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0032">
+    <BSNR>732430296</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-31</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-12</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0033">
+    <BSNR>733203668</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-16</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-11</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0034">
+    <BSNR>733203668</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-08</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-21</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0035">
+    <BSNR>733659322</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-18</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0036">
+    <BSNR>733883167</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-31</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-25</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0037">
+    <BSNR>733883167</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-30</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-20</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0038">
+    <BSNR>733929460</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-11</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-14</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0039">
+    <BSNR>734757499</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-31</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-25</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0040">
+    <BSNR>735134584</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-17</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-13</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0041">
+    <BSNR>735563547</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-06</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-15</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0042">
+    <BSNR>735563547</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-24</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-18</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0043">
+    <BSNR>735703276</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-17</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-06-06</Abgeschlossen>
+    <Massnahme betrag="9.15">NACHFORDERUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0044">
+    <BSNR>735703276</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-04</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0045">
+    <BSNR>735713574</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>ZUFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-06</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-09</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0046">
+    <BSNR>736524576</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-01</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-02</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0047">
+    <BSNR>736753419</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-12</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-16</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0048">
+    <BSNR>736830424</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-29</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-23</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0049">
+    <BSNR>736830424</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-10-29</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-20</Abgeschlossen>
+    <Massnahme betrag="24.79">NACHFORDERUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0050">
+    <BSNR>737368638</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-22</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-07</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0051">
+    <BSNR>737368638</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-03</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-11</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0052">
+    <BSNR>738056427</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-17</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-06-11</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0053">
+    <BSNR>738147443</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-30</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-22</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0054">
+    <BSNR>738200340</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-06</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-21</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0055">
+    <BSNR>738224287</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-18</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-04</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0056">
+    <BSNR>738571490</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-03</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-02-10</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0057">
+    <BSNR>738603379</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-04</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-27</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0058">
+    <BSNR>739325470</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-11</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-01-15</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0059">
+    <BSNR>739349984</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-11-24</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-03-26</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0060">
+    <BSNR>739925884</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-02</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-02</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0061">
+    <BSNR>739925884</BSNR>
+    <Quartal>2/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2025-12-08</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-07</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0062">
+    <BSNR>731174509</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>ZUFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-11</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0063">
+    <BSNR>731177508</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-18</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-06-26</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0064">
+    <BSNR>731211191</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-15</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0065">
+    <BSNR>731211191</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-14</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-05-06</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0066">
+    <BSNR>731779770</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-07</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-08-30</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0067">
+    <BSNR>732428058</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-10</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-06-23</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0068">
+    <BSNR>732473194</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-09</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0069">
+    <BSNR>733203668</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-24</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0070">
+    <BSNR>733203668</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-30</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-22</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0071">
+    <BSNR>733872619</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-15</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-08-07</Abgeschlossen>
+    <Massnahme>KEINE</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0072">
+    <BSNR>733883167</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-19</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-23</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0073">
+    <BSNR>733883167</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-26</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-01</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0074">
+    <BSNR>734112834</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-25</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-06-05</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0075">
+    <BSNR>734757499</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-02</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0076">
+    <BSNR>735403652</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-05</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0077">
+    <BSNR>735563547</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-10</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-08-19</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0078">
+    <BSNR>735563547</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-05</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-18</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0079">
+    <BSNR>736416925</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-04-02</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0080">
+    <BSNR>736830424</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-18</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0081">
+    <BSNR>736830424</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-14</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-04-27</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0082">
+    <BSNR>737157078</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-01</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0083">
+    <BSNR>737368638</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-01-31</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0084">
+    <BSNR>737368638</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-16</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-22</Abgeschlossen>
+    <Massnahme betrag="4.12">NACHFORDERUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0085">
+    <BSNR>738093044</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-02-07</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0086">
+    <BSNR>739802146</BSNR>
+    <Quartal>3/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-03-03</Eingeleitet>
+    <Status>ABGESCHLOSSEN</Status>
+    <Abgeschlossen>2026-07-22</Abgeschlossen>
+    <Massnahme>BERATUNG</Massnahme>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0087">
+    <BSNR>731211191</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-13</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0088">
+    <BSNR>731211191</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-25</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0089">
+    <BSNR>731723386</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-07-06</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0090">
+    <BSNR>732212991</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-18</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0091">
+    <BSNR>732687356</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-13</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0092">
+    <BSNR>732934425</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-09</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0093">
+    <BSNR>733103188</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-06</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0094">
+    <BSNR>733203668</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-12</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0095">
+    <BSNR>733203668</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-19</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0096">
+    <BSNR>733591026</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-16</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0097">
+    <BSNR>733741212</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-27</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0098">
+    <BSNR>733821562</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-07-12</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0099">
+    <BSNR>733883167</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-07-04</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0100">
+    <BSNR>733883167</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-14</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0101">
+    <BSNR>734757499</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-09</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0102">
+    <BSNR>735089176</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-14</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0103">
+    <BSNR>735563547</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-19</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0104">
+    <BSNR>735563547</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-30</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0105">
+    <BSNR>735580545</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-27</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0106">
+    <BSNR>735703276</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-07-06</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0107">
+    <BSNR>735703276</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-09</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0108">
+    <BSNR>735818892</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-22</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0109">
+    <BSNR>736514452</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-07</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0110">
+    <BSNR>736830424</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-01</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0111">
+    <BSNR>736830424</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-07-05</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0112">
+    <BSNR>737368638</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-12</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0113">
+    <BSNR>737368638</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-05</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0114">
+    <BSNR>737918220</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-25</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0115">
+    <BSNR>738061172</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-13</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0116">
+    <BSNR>738664580</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-13</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0117">
+    <BSNR>739079571</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>ARZNEIMITTEL</Gegenstand>
+    <Anlass>ZUFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-06-01</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+  <Verfahren aktenzeichen="PS-2025-0118">
+    <BSNR>739325470</BSNR>
+    <Quartal>4/2025</Quartal>
+    <Gegenstand>HEILMITTEL</Gegenstand>
+    <Anlass>AUFFAELLIGKEIT</Anlass>
+    <Eingeleitet>2026-05-07</Eingeleitet>
+    <Status>LAUFEND</Status>
+  </Verfahren>
+</Pruefverfahren>

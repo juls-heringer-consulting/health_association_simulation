@@ -1,0 +1,2526 @@
+{
+  "exportedAt": "2026-10-31T00:00:00+01:00",
+  "system": "CRM Mitgliederservice (Simulation)",
+  "tickets": [
+    {
+      "ticketId": "T-2025-00124",
+      "createdAt": "2025-01-06T08:08:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "354242534",
+        "bsnr": "738388251"
+      },
+      "subject": "Frage zur Abrechnung der GOP 04000",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738388251) ist unklar, ob die GOP 04000 (Versichertenpauschale (Kinder- und Jugendmedizin)) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Gunhild Hiller\nKinder- und Jugendarztpraxis Dr. med. Hiller, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-09T08:08:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00139",
+      "createdAt": "2025-01-06T12:25:00+01:00",
+      "channel": "EMAIL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "743209551",
+        "bsnr": "731549722"
+      },
+      "subject": "Abrechnungsübermittlung über KIM",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie Übermittlung unserer Abrechnung 1/2025 über KIM ist mit einer Fehlermeldung abgebrochen. Ist die Abrechnung bei Ihnen eingegangen?\n\nMit freundlichen Grüßen\nThorsten Mentzel\nGemeinschaftspraxis Mentzel & Holt (Nervenärzte), St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-09T13:25:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00117",
+      "createdAt": "2025-01-07T07:46:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "962594568",
+        "bsnr": "731010245"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDipl.-Psych. Maxim Scholz\nGemeinschaftspraxis Kobelt & Scholz (Psychotherapeuten), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-12T09:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00177",
+      "createdAt": "2025-01-07T16:57:00+01:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "618453215",
+        "bsnr": "738284939"
+      },
+      "subject": "Diensttausch am 05.03.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 05.03.2025 in der Bereitschaftsdienstpraxis St. Wendel mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDr. med. Claire Förster\nFrauenarztpraxis Dr. med. Förster, St. Wendel",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00039",
+      "createdAt": "2025-01-09T14:56:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "229695303",
+        "bsnr": "735472663"
+      },
+      "subject": "Frage zur Abrechnung der GOP 16210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 735472663) ist unklar, ob die GOP 16210 (Grundpauschale Nervenheilkunde, bis 5. Lebensjahr) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Marit Speer\nHausarztpraxis Dr. med. Speer, Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-23T20:56:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00064",
+      "createdAt": "2025-01-13T16:08:00+01:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "113621423",
+        "bsnr": "737567838"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Fredi Kabus\nGemeinschaftspraxis Ziegert & Kabus (Fachinternisten), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-23T21:08:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00083",
+      "createdAt": "2025-01-13T17:07:00+01:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "376422923",
+        "bsnr": "734049698"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nAndres Heinz\nInternistische Praxis Andres Heinz, Saarbrücken",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00077",
+      "createdAt": "2025-01-14T11:46:00+01:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "556110868",
+        "bsnr": "739070546"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 1/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 739070546).\n\nMit freundlichen Grüßen\nDipl.-Psych. Michaele auch Schlauchin\nPsychotherapeutische Praxis Dipl.-Psych. auch Schlauchin, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-01T13:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00159",
+      "createdAt": "2025-01-17T10:28:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "782490001",
+        "bsnr": "736830424"
+      },
+      "subject": "Frage zur Abrechnung der GOP 33042",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 736830424) ist unklar, ob die GOP 33042 (Sonographie des Abdomens) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Martha Wieloch\nMVZ Saarbrücken 2, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-04T14:28:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00173",
+      "createdAt": "2025-01-20T18:40:00+01:00",
+      "channel": "TELEFON",
+      "topic": "IT",
+      "requester": {
+        "lanr": "859485468",
+        "bsnr": "737457895"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nDipl.-Psych. Klaas Dussen van\nPsychotherapeutische Praxis Silvia Koch II, Blieskastel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-28T23:40:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00070",
+      "createdAt": "2025-01-21T07:40:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "727729401",
+        "bsnr": "732580940"
+      },
+      "subject": "Frage zur Abrechnung der GOP 09210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 732580940) ist unklar, ob die GOP 09210 (Grundpauschale Hals-Nasen-Ohrenheilkunde, bis 5. Lebensjahr) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nErcan Barkholz\nGemeinschaftspraxis Hornich & Barkholz (Hausärzte), Blieskastel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-02T11:40:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00149",
+      "createdAt": "2025-01-22T10:32:00+01:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "859485468",
+        "bsnr": "737457895"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nDipl.-Psych. Klaas Dussen van\nPsychotherapeutische Praxis Silvia Koch II, Blieskastel",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00084",
+      "createdAt": "2025-01-27T13:33:00+01:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "561924715",
+        "bsnr": "737797469"
+      },
+      "subject": "Diensttausch am 13.03.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 13.03.2025 in der Bereitschaftsdienstpraxis Saarbrücken mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nProf. Dr. med. Emmerich Sontag\nFrauenarztpraxis Prof. Dr. med. Sontag, Nonnweiler",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00146",
+      "createdAt": "2025-01-27T14:22:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "434828901",
+        "bsnr": "735516506"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 20.03.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Carmen Ebert\nGemeinschaftspraxis Hettner & Ebert (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-01-29T14:22:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00055",
+      "createdAt": "2025-01-30T07:18:00+01:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "828308915",
+        "bsnr": "738256124"
+      },
+      "subject": "Diensttausch am 07.03.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 07.03.2025 in der Bereitschaftsdienstpraxis St. Wendel mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nUrszula Fischer\nGemeinschaftspraxis Fischer & Köster (Frauenärzte), Homburg",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00119",
+      "createdAt": "2025-02-05T11:10:00+01:00",
+      "channel": "TELEFON",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "409730305",
+        "bsnr": "737943134"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDr. med. Wanda Beer\nAugenarztpraxis Dr. med. Beer, Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-14T15:10:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00032",
+      "createdAt": "2025-02-06T07:55:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "525011923",
+        "bsnr": "732411200"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 18210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Oswin Wernecke\nInternistische Praxis Dr. med. Wernecke, Blieskastel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-27T13:55:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00048",
+      "createdAt": "2025-02-06T16:44:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "834542634",
+        "bsnr": "731965680"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 08212 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Zoltan Kruschwitz\nGemeinschaftspraxis Mies & Kruschwitz (Kinder- und Jugendärzte), Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-11T16:44:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00111",
+      "createdAt": "2025-02-10T17:17:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "443374568",
+        "bsnr": "738034010"
+      },
+      "subject": "Frage zur Abrechnung der GOP 13212",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738034010) ist unklar, ob die GOP 13212 (Grundpauschale Innere Medizin (fachärztlich), ab 60. Lebensjahr) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Dragica Hertrampf\nPsychotherapeutische Praxis M. Sc. Psych. Hertrampf, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-24T19:17:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00115",
+      "createdAt": "2025-02-10T18:09:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "204410615",
+        "bsnr": "734999051"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nDr. med. Hanne-Lore Rosemann\nGemeinschaftspraxis Ehlert & Rosemann (Frauenärzte), Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-21T23:09:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00156",
+      "createdAt": "2025-02-13T18:42:00+01:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "630989503",
+        "bsnr": "732978707"
+      },
+      "subject": "Diensttausch am 31.03.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 31.03.2025 in der Bereitschaftsdienstpraxis Homburg mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDr. med. Henriette Kraushaar\nGemeinschaftspraxis Zorbach & Stumpf (Hausärzte), Schiffweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-24T19:42:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00026",
+      "createdAt": "2025-02-17T11:16:00+01:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "297135705",
+        "bsnr": "738492640"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Ernestine Matthäi\nGemeinschaftspraxis Beer & Matthäi & Koch (Augenärzte), Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-24T16:16:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00095",
+      "createdAt": "2025-02-17T11:46:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "474451034",
+        "bsnr": "731850472"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nBertha Meister\nGemeinschaftspraxis Löchel & Meister & Junken (Kinder- und Jugendärzte), Ensdorf",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-08T11:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00172",
+      "createdAt": "2025-02-18T11:39:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "786440451",
+        "bsnr": "736357862"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Kornelia Karz\nNervenärztliche Praxis Dr. med. Heydrich, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-04T14:39:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00125",
+      "createdAt": "2025-02-19T12:37:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "969161203",
+        "bsnr": "733008536"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nJakob Peukert\nGemeinschaftspraxis Peukert & van der Dussen (Hausärzte), Kirkel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-09T13:37:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00144",
+      "createdAt": "2025-02-21T18:04:00+01:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "875692701",
+        "bsnr": "731228724"
+      },
+      "subject": "Diensttausch am 10.03.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 10.03.2025 in der Bereitschaftsdienstpraxis Saarlouis mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDr. med. Frederike Kranz\nHausarztpraxis Dr. med. Kranz, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-02-23T19:04:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00121",
+      "createdAt": "2025-02-24T07:36:00+01:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "621434068",
+        "bsnr": "731438429"
+      },
+      "subject": "Diensttausch am 16.04.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 16.04.2025 in der Bereitschaftsdienstpraxis Homburg mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDipl.-Psych. Jenny Zobel\nPsychotherapeutische Praxis Dipl.-Psych. Zobel, Saarbrücken",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00157",
+      "createdAt": "2025-02-24T09:33:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "134066534",
+        "bsnr": "733649478"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10044",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10044 derzeit Zulassungsmöglichkeiten für Kinder- und Jugendärzte?\n\nMit freundlichen Grüßen\nDr. med. Emine Hande\nGemeinschaftspraxis Conradi & Hande & Tintzmann (Kinder- und Jugendärzte), Schmelz",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-06T14:33:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00006",
+      "createdAt": "2025-02-24T14:12:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "717104001",
+        "bsnr": "731294181"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 1/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 731294181).\n\nMit freundlichen Grüßen\nGerlinde Zobel\nHausarztpraxis Gerlinde Zobel, Dillingen/Saar",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-17T20:12:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00043",
+      "createdAt": "2025-02-26T08:41:00+01:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "203180968",
+        "bsnr": "733426380"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 1/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 733426380).\n\nMit freundlichen Grüßen\nDipl.-Psych. Rose-Marie Jungfer\nPsychotherapeutische Praxis Dipl.-Psych. Jungfer, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-11T08:41:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00013",
+      "createdAt": "2025-02-26T12:28:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "309982101",
+        "bsnr": "738664580"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 06211 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Sedat Ackermann\nGemeinschaftspraxis Radisch & Ackermann (Hausärzte), Spiesen-Elversberg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-18T15:28:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00073",
+      "createdAt": "2025-02-27T10:04:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "342542501",
+        "bsnr": "737818720"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 35151 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Kathleen Neureuther\nGemeinschaftspraxis Neureuther & Textor (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-09T10:04:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00054",
+      "createdAt": "2025-03-03T09:02:00+01:00",
+      "channel": "PORTAL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "674967934",
+        "bsnr": "734980532"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 1/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 734980532).\n\nMit freundlichen Grüßen\nDr. med. Türkan Jessel\nMVZ Merzig 2, Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-18T11:02:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00072",
+      "createdAt": "2025-03-05T17:56:00+01:00",
+      "channel": "TELEFON",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "775513351",
+        "bsnr": "734343094"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 1/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nDr. med. Dörthe Schuster\nNervenärztliche Praxis Dr. med. Schuster, Püttlingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-23T17:56:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00109",
+      "createdAt": "2025-03-10T12:37:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "656776203",
+        "bsnr": "736289483"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Lilly Trubin\nHausarztpraxis Dr. med. Trubin, Bexbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-18T17:37:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00114",
+      "createdAt": "2025-03-10T15:13:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "651081603",
+        "bsnr": "735818892"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nDr. med. Leon Aumann\nHausarztpraxis Dr. med. Aumann, Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-11T17:13:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00063",
+      "createdAt": "2025-03-10T18:20:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "402371268",
+        "bsnr": "733151570"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDipl.-Psych. Brigitta Schomber\nPsychotherapeutische Praxis Dipl.-Psych. Schomber, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-25T21:20:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00044",
+      "createdAt": "2025-03-13T12:29:00+01:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "336185101",
+        "bsnr": "732634315"
+      },
+      "subject": "Genehmigung Koloskopie",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Koloskopie beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Aleksandr Jacobi Jäckel\nGemeinschaftspraxis Hörle & Heydrich & Nohlmans (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-31T17:29:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00140",
+      "createdAt": "2025-03-17T07:37:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "615120068",
+        "bsnr": "732359221"
+      },
+      "subject": "Frage zur Abrechnung der GOP 08210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 732359221) ist unklar, ob die GOP 08210 (Grundpauschale Frauenheilkunde, bis 5. Lebensjahr) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. phil. Franco Wesack\nPsychotherapeutische Praxis Dr. phil. Wesack, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-27T12:37:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00010",
+      "createdAt": "2025-03-17T07:57:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "595763501",
+        "bsnr": "732522031"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Maya Carsten\nMVZ St. Ingbert 2, St. Ingbert",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-03-24T12:57:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00151",
+      "createdAt": "2025-03-17T15:14:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "502814015",
+        "bsnr": "733720916"
+      },
+      "subject": "Genehmigung Koloskopie",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Koloskopie beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Sieglinde Jacob\nGemeinschaftspraxis Jacob & Reinhardt (Frauenärzte), Merzig",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00071",
+      "createdAt": "2025-03-18T10:38:00+01:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "129846023",
+        "bsnr": "732557916"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 1/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nCarmine Riehl\nInternistische Praxis Carmine Riehl, Losheim am See",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00128",
+      "createdAt": "2025-03-19T15:38:00+01:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "402529201",
+        "bsnr": "739325470"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 1/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 739325470).\n\nMit freundlichen Grüßen\nDr. med. Oliver Rosenow\nHausarztpraxis Dr. med. Rosenow, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-07T17:38:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00093",
+      "createdAt": "2025-03-24T10:07:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "815794415",
+        "bsnr": "731207441"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 08210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nAysel Ladeck\nFrauenarztpraxis Aysel Ladeck, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-12T10:07:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00104",
+      "createdAt": "2025-03-24T13:56:00+01:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "987496801",
+        "bsnr": "737485013"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 1/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nHelen Schacht\nHausarztpraxis Helen Schacht, Mandelbachtal",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00145",
+      "createdAt": "2025-03-24T15:54:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "727127601",
+        "bsnr": "737318179"
+      },
+      "subject": "Korrektur der Abrechnung 1/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 1/2025 wurde die GOP 01732 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Engin Trub\nGemeinschaftspraxis Mühle & Trub (Hausärzte), Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-10T20:54:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00126",
+      "createdAt": "2025-03-25T14:29:00+01:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "268873915",
+        "bsnr": "736931241"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Fredy Ziegert\nFrauenarztpraxis Dr. med. Ziegert, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-15T16:29:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00090",
+      "createdAt": "2025-03-26T14:06:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "559474968",
+        "bsnr": "738766468"
+      },
+      "subject": "Frage zur Abrechnung der GOP 04230",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738766468) ist unklar, ob die GOP 04230 (Problemorientiertes ärztliches Gespräch (Kinder- und Jugendmedizin)) im Quartal 1/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Wolf Sager\nPsychotherapeutische Praxis M. Sc. Psych. Sager, Wadern",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-16T15:06:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00110",
+      "createdAt": "2025-03-26T17:59:00+01:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "660549068",
+        "bsnr": "737747369"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nM. Sc. Psych. Käthi Fliegner\nPsychotherapeutische Praxis M. Sc. Psych. Fliegner, Nalbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-07T22:59:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00116",
+      "createdAt": "2025-04-01T15:32:00+02:00",
+      "channel": "TELEFON",
+      "topic": "IT",
+      "requester": {
+        "lanr": "177376603",
+        "bsnr": "735839384"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nDr. med. Aloys Hartung\nGemeinschaftspraxis Hartung & Gertz & Otto (Hausärzte), Lebach",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00040",
+      "createdAt": "2025-04-02T17:07:00+02:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "229656003",
+        "bsnr": "739972140"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nDr. med. Sylvio Hornig\nGemeinschaftspraxis Hornig & Hendriks (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-22T18:07:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00097",
+      "createdAt": "2025-04-07T09:57:00+02:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "800131801",
+        "bsnr": "732712722"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nDr. med. Meike Kabus\nGemeinschaftspraxis Nette & Kabus & Wiek (Hausärzte), St. Ingbert",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00036",
+      "createdAt": "2025-04-07T11:01:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "998032134",
+        "bsnr": "731786553"
+      },
+      "subject": "Frage zur Abrechnung der GOP 35150",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 731786553) ist unklar, ob die GOP 35150 (Probatorische Sitzung) im Quartal 2/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nNils Wende\nKinder- und Jugendarztpraxis Nils Wende, Saarwellingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-23T13:01:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00019",
+      "createdAt": "2025-04-07T16:07:00+02:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "213845805",
+        "bsnr": "734537922"
+      },
+      "subject": "Diensttausch am 12.05.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 12.05.2025 in der Bereitschaftsdienstpraxis Merzig mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nTraugott Herrmann\nMVZ Homburg, Homburg",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00176",
+      "createdAt": "2025-04-07T18:15:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "307036403",
+        "bsnr": "732753050"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10043",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10043 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nDr. med. Frederik Haering\nMVZ Neunkirchen, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-11T21:15:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00134",
+      "createdAt": "2025-04-08T11:58:00+02:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "882147068",
+        "bsnr": "733821491"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 2/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nDr. phil. Zeynep Salz\nPsychotherapeutische Praxis Dr. phil. Atzler, Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-10T14:58:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00106",
+      "createdAt": "2025-04-08T12:44:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "115691801",
+        "bsnr": "733398467"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nAlwine Reuter\nMVZ Saarbrücken, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-28T14:44:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00123",
+      "createdAt": "2025-04-14T10:33:00+02:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "101550703",
+        "bsnr": "735312152"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Selma Pohl\nGemeinschaftspraxis Zorbach & Pohl (Hausärzte), Freisen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-15T14:33:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00135",
+      "createdAt": "2025-04-14T14:28:00+02:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "397060519",
+        "bsnr": "731239332"
+      },
+      "subject": "Genehmigung Ultraschalldiagnostik",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Ultraschalldiagnostik beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Eva-Marie Winkler\nGemeinschaftspraxis Werner & Siering & Winkler (HNO-Ärzte), Mandelbachtal",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00031",
+      "createdAt": "2025-04-22T09:39:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "264728901",
+        "bsnr": "734880001"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 13210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nThilo Mude\nHausarztpraxis Thilo Mude, Überherrn",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-23T12:39:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00153",
+      "createdAt": "2025-04-22T11:32:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "498605205",
+        "bsnr": "737158396"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 16211 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Hans-Werner Hövel\nAugenarztpraxis Dr. med. Hövel, St. Ingbert",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-13T11:32:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00161",
+      "createdAt": "2025-04-22T17:18:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "535894901",
+        "bsnr": "738785387"
+      },
+      "subject": "Frage zur Abrechnung der GOP 03040",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738785387) ist unklar, ob die GOP 03040 (Zuschlag zur Versichertenpauschale (Vorhaltepauschale)) im Quartal 2/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nHans-Jürgen Margraf\nMVZ Merzig, Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-23T19:18:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00092",
+      "createdAt": "2025-04-24T12:06:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "107975401",
+        "bsnr": "736118974"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 20.06.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Andrej Aumann\nGemeinschaftspraxis Aumann & Geisel & Ziegert (Hausärzte), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-06T18:06:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00132",
+      "createdAt": "2025-04-25T13:13:00+02:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "197564268",
+        "bsnr": "733807893"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDipl.-Psych. Valerij Buchholz\nPsychotherapeutische Praxis Dipl.-Psych. Buchholz, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-05T14:13:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00061",
+      "createdAt": "2025-04-25T14:05:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "746750968",
+        "bsnr": "731277632"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 30791 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDipl.-Psych. Gerhild Eckbauer\nPsychotherapeutische Praxis Dipl.-Psych. Eckbauer, Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-08T16:05:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00012",
+      "createdAt": "2025-04-25T15:55:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "947376101",
+        "bsnr": "732278624"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 23210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Jozef Klingelhöfer\nHausarztpraxis Dr. med. Klingelhöfer, Bexbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-06T16:55:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00170",
+      "createdAt": "2025-04-25T18:55:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "580867901",
+        "bsnr": "738224287"
+      },
+      "subject": "Frage zur Abrechnung der GOP 10211",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738224287) ist unklar, ob die GOP 10211 (Grundpauschale Dermatologie, 6. bis 59. Lebensjahr) im Quartal 2/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nStavros Jähn\nHausarztpraxis Stavros Jähn, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-28T19:55:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00024",
+      "createdAt": "2025-04-28T07:30:00+02:00",
+      "channel": "TELEFON",
+      "topic": "IT",
+      "requester": {
+        "lanr": "106500768",
+        "bsnr": "735880853"
+      },
+      "subject": "Abrechnungsübermittlung über KIM",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie Übermittlung unserer Abrechnung 2/2025 über KIM ist mit einer Fehlermeldung abgebrochen. Ist die Abrechnung bei Ihnen eingegangen?\n\nMit freundlichen Grüßen\nDipl.-Psych. Stefani Killer\nPsychotherapeutische Praxis Dipl.-Psych. Killer, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-04-30T08:30:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00018",
+      "createdAt": "2025-04-28T14:08:00+02:00",
+      "channel": "PORTAL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "556875634",
+        "bsnr": "731850472"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDr. med. Angelique Junken\nGemeinschaftspraxis Löchel & Meister & Junken (Kinder- und Jugendärzte), Ensdorf",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-12T19:08:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00169",
+      "createdAt": "2025-04-30T07:04:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "634891601",
+        "bsnr": "738740030"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 04000 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nAloisia Vogt\nHausarztpraxis Aloisia Vogt, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-02T11:04:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00008",
+      "createdAt": "2025-05-02T10:51:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "354437603",
+        "bsnr": "736118974"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 35401 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nNiko Geisel\nGemeinschaftspraxis Aumann & Geisel & Ziegert (Hausärzte), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-18T13:51:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00120",
+      "createdAt": "2025-05-05T18:17:00+02:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "105511868",
+        "bsnr": "731005057"
+      },
+      "subject": "Diensttausch am 21.06.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 21.06.2025 in der Bereitschaftsdienstpraxis Saarbrücken mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nTrude Peukert\nPsychotherapeutische Praxis Dr. phil. Wulff, Illingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-26T18:17:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00053",
+      "createdAt": "2025-05-07T09:49:00+02:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "741325203",
+        "bsnr": "734351636"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Hans-Rudolf Gerlach\nHausarztpraxis Dr. med. Gerlach, Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-13T12:49:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00108",
+      "createdAt": "2025-05-12T10:57:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "258531915",
+        "bsnr": "731723386"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nSimon Mans\nGemeinschaftspraxis Wilmsen & Mans (Frauenärzte), Völklingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-28T12:57:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00062",
+      "createdAt": "2025-05-15T13:14:00+02:00",
+      "channel": "EMAIL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "790113101",
+        "bsnr": "732978707"
+      },
+      "subject": "Abrechnungsübermittlung über KIM",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie Übermittlung unserer Abrechnung 2/2025 über KIM ist mit einer Fehlermeldung abgebrochen. Ist die Abrechnung bei Ihnen eingegangen?\n\nMit freundlichen Grüßen\nDr. med. Ada Kambs\nGemeinschaftspraxis Zorbach & Stumpf (Hausärzte), Schiffweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-20T14:14:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00016",
+      "createdAt": "2025-05-16T14:30:00+02:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "481422668",
+        "bsnr": "738710229"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDipl.-Psych. Dietlinde Rogge\nGemeinschaftspraxis Weihmann & Hartung (Psychotherapeuten), Saarwellingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-27T18:30:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00057",
+      "createdAt": "2025-05-19T07:18:00+02:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "478549705",
+        "bsnr": "734431256"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nJana Möchlichen\nAugenarztpraxis Jana Möchlichen, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-25T12:18:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00067",
+      "createdAt": "2025-05-19T10:56:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "402049903",
+        "bsnr": "739087432"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10044",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10044 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nDr. med. Hilde Seifert\nHausarztpraxis Dr. med. Seifert, Nalbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-02T16:56:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00098",
+      "createdAt": "2025-05-19T18:14:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "103630834",
+        "bsnr": "732294657"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 09210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Silvester Köster\nGemeinschaftspraxis Hethur & Drub & Sorgatz (Kinder- und Jugendärzte), Ottweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-05-26T20:14:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00171",
+      "createdAt": "2025-05-21T16:24:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "100110323",
+        "bsnr": "736856296"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nDr. med. August Buchholz\nGemeinschaftspraxis Meister & Buchholz & Meister (Fachinternisten), Illingen",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00160",
+      "createdAt": "2025-05-26T11:19:00+02:00",
+      "channel": "TELEFON",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "693829268",
+        "bsnr": "735325234"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Greta Losekann\nGemeinschaftspraxis Scholz & Losekann (Psychotherapeuten), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-16T11:19:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00143",
+      "createdAt": "2025-05-30T07:47:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "396199768",
+        "bsnr": "732324057"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 09.07.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDipl.-Psych. Jeanette Hörle\nPsychotherapeutische Praxis Dipl.-Psych. Hörle, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-03T08:47:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00050",
+      "createdAt": "2025-06-10T14:26:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "815905305",
+        "bsnr": "737630623"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 18210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Slawomir Klapp\nAugenarztpraxis Dr. med. Klapp, Saarlouis",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00086",
+      "createdAt": "2025-06-10T17:49:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "136831215",
+        "bsnr": "734629692"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 30790 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nEllinor Trub\nFrauenarztpraxis Ellinor Trub, Völklingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-15T17:49:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00147",
+      "createdAt": "2025-06-11T09:37:00+02:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "437143710",
+        "bsnr": "731802994"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Mehmet Stolze\nGemeinschaftspraxis Rörricht & Stolze & Faust (Orthopäden), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-30T14:37:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00105",
+      "createdAt": "2025-06-13T12:45:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "223976919",
+        "bsnr": "735774524"
+      },
+      "subject": "Frage zur Abrechnung der GOP 01760",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 735774524) ist unklar, ob die GOP 01760 (Krebsfrüherkennung bei der Frau) im Quartal 2/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Irmgard Seifert\nMVZ Neunkirchen 2, Neunkirchen",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00085",
+      "createdAt": "2025-06-16T16:44:00+02:00",
+      "channel": "PORTAL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "190674701",
+        "bsnr": "738697702"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDr. med. Irmingard Harloff\nGemeinschaftspraxis Bohlander & Harloff (Hausärzte), Dillingen/Saar",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00003",
+      "createdAt": "2025-06-18T15:22:00+02:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "957208110",
+        "bsnr": "731802994"
+      },
+      "subject": "Genehmigung Akupunktur",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Akupunktur beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nMeinhard Faust\nGemeinschaftspraxis Rörricht & Stolze & Faust (Orthopäden), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-26T17:22:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00163",
+      "createdAt": "2025-06-20T14:33:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "969511668",
+        "bsnr": "739620483"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10042",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10042 derzeit Zulassungsmöglichkeiten für Psychotherapeuten?\n\nMit freundlichen Grüßen\nDipl.-Psych. Bianca Kusch\nPsychotherapeutische Praxis Dipl.-Psych. Kusch, Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-06-26T19:33:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00089",
+      "createdAt": "2025-06-20T17:07:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "379147168",
+        "bsnr": "739963610"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10041",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10041 derzeit Zulassungsmöglichkeiten für Psychotherapeuten?\n\nMit freundlichen Grüßen\nDipl.-Psych. Dörte Trubin\nPsychotherapeutische Praxis Dipl.-Psych. Trubin, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-01T22:07:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00100",
+      "createdAt": "2025-06-23T10:04:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "761528968",
+        "bsnr": "736177305"
+      },
+      "subject": "Frage zur Abrechnung der GOP 10212",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 736177305) ist unklar, ob die GOP 10212 (Grundpauschale Dermatologie, ab 60. Lebensjahr) im Quartal 2/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDipl.-Psych. Anna-Luise Neuschäfer\nGemeinschaftspraxis Neuschäfer & Eberhardt (Psychotherapeuten), Saarbrücken",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00075",
+      "createdAt": "2025-06-23T15:06:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "440295968",
+        "bsnr": "736130617"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 06210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. phil. Cäcilie Tlustek\nPsychotherapeutische Praxis Dipl.-Psych. Hermann, Blieskastel",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00122",
+      "createdAt": "2025-06-30T14:39:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "850347715",
+        "bsnr": "732987488"
+      },
+      "subject": "Korrektur der Abrechnung 2/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 2/2025 wurde die GOP 03321 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nHermann Josef Hiller\nGemeinschaftspraxis Weller & Hiller & Gierschner (Frauenärzte), Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-06T20:39:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00175",
+      "createdAt": "2025-07-01T16:12:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "721526301",
+        "bsnr": "737060350"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 30791 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Gunar Franke\nGemeinschaftspraxis Wieloch & Franke & Finke (Hausärzte), Schmelz",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-05T20:12:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00025",
+      "createdAt": "2025-07-04T08:43:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "296976403",
+        "bsnr": "738886637"
+      },
+      "subject": "Frage zur Abrechnung der GOP 18210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738886637) ist unklar, ob die GOP 18210 (Grundpauschale Orthopädie, bis 5. Lebensjahr) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nUllrich Schmiedt\nHausarztpraxis Ullrich Schmiedt, Nalbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-13T09:43:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00079",
+      "createdAt": "2025-07-04T15:38:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "919042501",
+        "bsnr": "736830424"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 03221 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nJanusz Ladeck\nMVZ Saarbrücken 2, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-15T20:38:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00158",
+      "createdAt": "2025-07-07T16:43:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "556110868",
+        "bsnr": "739070546"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDipl.-Psych. Michaele auch Schlauchin\nPsychotherapeutische Praxis Dipl.-Psych. auch Schlauchin, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-10T22:43:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00113",
+      "createdAt": "2025-07-07T18:09:00+02:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "576165503",
+        "bsnr": "733268592"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Rita Hauffer\nHausarztpraxis Dr. med. Hauffer, Merzig",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-27T22:09:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00041",
+      "createdAt": "2025-07-08T17:46:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "880596123",
+        "bsnr": "731688879"
+      },
+      "subject": "Frage zur Abrechnung der GOP 35151",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 731688879) ist unklar, ob die GOP 35151 (Psychotherapeutische Sprechstunde) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Pietro Dussen van\nMVZ Saarbrücken 8, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-24T23:46:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00035",
+      "createdAt": "2025-07-09T12:44:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "547062423",
+        "bsnr": "733531063"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 26.08.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Bayram Nerger\nGemeinschaftspraxis Nerger & Austermühle (Fachinternisten), Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-19T13:44:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00034",
+      "createdAt": "2025-07-11T16:17:00+02:00",
+      "channel": "EMAIL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "204410615",
+        "bsnr": "734999051"
+      },
+      "subject": "Abrechnungsübermittlung über KIM",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie Übermittlung unserer Abrechnung 3/2025 über KIM ist mit einer Fehlermeldung abgebrochen. Ist die Abrechnung bei Ihnen eingegangen?\n\nMit freundlichen Grüßen\nDr. med. Hanne-Lore Rosemann\nGemeinschaftspraxis Ehlert & Rosemann (Frauenärzte), Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-26T17:17:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00080",
+      "createdAt": "2025-07-14T11:15:00+02:00",
+      "channel": "TELEFON",
+      "topic": "IT",
+      "requester": {
+        "lanr": "361572968",
+        "bsnr": "732914700"
+      },
+      "subject": "Abrechnungsübermittlung über KIM",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie Übermittlung unserer Abrechnung 3/2025 über KIM ist mit einer Fehlermeldung abgebrochen. Ist die Abrechnung bei Ihnen eingegangen?\n\nMit freundlichen Grüßen\nDipl.-Psych. Kira Zänker\nPsychotherapeutische Praxis Dipl.-Psych. Zänker, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-31T15:15:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00130",
+      "createdAt": "2025-07-14T12:53:00+02:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "994280768",
+        "bsnr": "736793050"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 3/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 736793050).\n\nMit freundlichen Grüßen\nDipl.-Psych. Erna Stoll\nPsychotherapeutische Praxis Dipl.-Psych. Stoll, Saarbrücken",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00023",
+      "createdAt": "2025-07-21T12:53:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "716141551",
+        "bsnr": "732893489"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 3/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 732893489).\n\nMit freundlichen Grüßen\nDr. med. Olivia Hesse\nNervenärztliche Praxis Traute Heuser, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-10T14:53:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00001",
+      "createdAt": "2025-07-21T13:25:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "967381415",
+        "bsnr": "735646284"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Theodora Staude\nMVZ Saarbrücken 6, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-07-31T19:25:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00142",
+      "createdAt": "2025-07-22T12:58:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "107975401",
+        "bsnr": "736118974"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 13210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Andrej Aumann\nGemeinschaftspraxis Aumann & Geisel & Ziegert (Hausärzte), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-04T16:58:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00168",
+      "createdAt": "2025-07-30T07:55:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "353877801",
+        "bsnr": "737198792"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10044",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10044 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nDr. med. Pascal Hoffmann\nHausarztpraxis Dr. med. Hoffmann, Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-17T12:55:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00174",
+      "createdAt": "2025-07-30T16:51:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "431976001",
+        "bsnr": "736643728"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10042",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10042 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nTülay Freudenberger\nGemeinschaftspraxis Freudenberger & Stiebitz (Hausärzte), Wadern",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00045",
+      "createdAt": "2025-08-01T15:31:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "354242534",
+        "bsnr": "738388251"
+      },
+      "subject": "Frage zur Abrechnung der GOP 13212",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738388251) ist unklar, ob die GOP 13212 (Grundpauschale Innere Medizin (fachärztlich), ab 60. Lebensjahr) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Gunhild Hiller\nKinder- und Jugendarztpraxis Dr. med. Hiller, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-09T20:31:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00102",
+      "createdAt": "2025-08-06T17:06:00+02:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "553029423",
+        "bsnr": "736829709"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nMarisa Kühnert\nInternistische Praxis Marisa Kühnert, Dillingen/Saar",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-12T23:06:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00002",
+      "createdAt": "2025-08-07T13:04:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "912149168",
+        "bsnr": "735239585"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 01732 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nGesche Stolze\nPsychotherapeutische Praxis Gesche Stolze, Dillingen/Saar",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-11T15:04:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00118",
+      "createdAt": "2025-08-08T12:56:00+02:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "446543668",
+        "bsnr": "733762943"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Gerlind Sölzer\nGemeinschaftspraxis Schweitzer & Sölzer (Psychotherapeuten), Völklingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-26T14:56:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00021",
+      "createdAt": "2025-08-11T07:04:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "743209551",
+        "bsnr": "731549722"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 10.09.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nThorsten Mentzel\nGemeinschaftspraxis Mentzel & Holt (Nervenärzte), St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-29T12:04:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00180",
+      "createdAt": "2025-08-18T17:32:00+02:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "930186268",
+        "bsnr": "735004859"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Else Barth\nPsychotherapeutische Praxis M. Sc. Psych. Barth, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-30T17:32:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00004",
+      "createdAt": "2025-08-20T09:28:00+02:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "529143401",
+        "bsnr": "731211191"
+      },
+      "subject": "Genehmigung Hautkrebs-Screening",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Hautkrebs-Screening beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nPeter-Michael Becker\nGemeinschaftspraxis Becker & Rosenow (Hausärzte), Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-30T13:28:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00162",
+      "createdAt": "2025-08-22T14:39:00+02:00",
+      "channel": "EMAIL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "852728203",
+        "bsnr": "732803342"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nDr. med. Zlatko Faust\nGemeinschaftspraxis Faust & Trubin & Römer (Hausärzte), Rehlingen-Siersburg",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00178",
+      "createdAt": "2025-08-25T07:11:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "454872568",
+        "bsnr": "738937634"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 09210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDipl.-Psych. Margarita Geisler\nPsychotherapeutische Praxis Dipl.-Psych. Geisler, Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-08-29T10:11:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00129",
+      "createdAt": "2025-08-25T13:01:00+02:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "970553968",
+        "bsnr": "731760146"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Volkhard Rosemann\nPsychotherapeutische Praxis M. Sc. Psych. Rosemann, Eppelborn",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-10T18:01:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00005",
+      "createdAt": "2025-08-25T14:08:00+02:00",
+      "channel": "PORTAL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "817656303",
+        "bsnr": "732753050"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDr. med. Heinz-Jürgen Barkholz\nMVZ Neunkirchen, Neunkirchen",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00138",
+      "createdAt": "2025-08-27T13:06:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "502394368",
+        "bsnr": "736218645"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nDipl.-Psych. Antonietta Aumann\nPsychotherapeutische Praxis Dipl.-Psych. Aumann, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-06T19:06:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00101",
+      "createdAt": "2025-09-02T15:28:00+02:00",
+      "channel": "TELEFON",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "425603501",
+        "bsnr": "734896039"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 3/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nDr. med. Frida Becker\nGemeinschaftspraxis Weinhold & Becker (Hausärzte), Großrosseln",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-07T20:28:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00058",
+      "createdAt": "2025-09-09T10:52:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "364402403",
+        "bsnr": "736897666"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 23210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Stefano Jüttner\nMVZ Saarbrücken 3, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-19T13:52:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00009",
+      "createdAt": "2025-09-15T09:53:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "103630834",
+        "bsnr": "732294657"
+      },
+      "subject": "Korrektur der Abrechnung 3/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 3/2025 wurde die GOP 01732 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Silvester Köster\nGemeinschaftspraxis Hethur & Drub & Sorgatz (Kinder- und Jugendärzte), Ottweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-26T13:53:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00148",
+      "createdAt": "2025-09-16T13:58:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "369320368",
+        "bsnr": "738220919"
+      },
+      "subject": "Frage zur Abrechnung der GOP 01760",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 738220919) ist unklar, ob die GOP 01760 (Krebsfrüherkennung bei der Frau) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDipl.-Psych. Laura Dobes\nGemeinschaftspraxis Hethur & Heuser (Psychotherapeuten), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-19T19:58:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00029",
+      "createdAt": "2025-09-16T16:52:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "725226401",
+        "bsnr": "732264877"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10041",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10041 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nDr. med. Korbinian Seidel\nHausarztpraxis Dr. med. Seidel, Quierschied",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-09-19T18:52:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00136",
+      "createdAt": "2025-09-19T13:58:00+02:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "554532468",
+        "bsnr": "733789607"
+      },
+      "subject": "Frage zur Abrechnung der GOP 30791",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 733789607) ist unklar, ob die GOP 30791 (Durchführung einer Körperakupunktur) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nM. Sc. Psych. Anni Wähner\nPsychotherapeutische Praxis Semra Junitz, Überherrn",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-06T19:58:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00088",
+      "createdAt": "2025-09-29T09:48:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "987569401",
+        "bsnr": "732024372"
+      },
+      "subject": "Frage zur Abrechnung der GOP 06210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 732024372) ist unklar, ob die GOP 06210 (Grundpauschale Augenheilkunde, bis 5. Lebensjahr) im Quartal 3/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nAbbas Margraf\nGemeinschaftspraxis Margraf & Winkler (Hausärzte), Wadern",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-13T11:48:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00166",
+      "createdAt": "2025-10-01T09:40:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "383692615",
+        "bsnr": "731097916"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Annelies Langern\nMVZ Schwalbach, Schwalbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-02T14:40:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00033",
+      "createdAt": "2025-10-06T10:27:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "241179401",
+        "bsnr": "739158230"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 23.10.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nHubert Steinberg\nGemeinschaftspraxis Steinberg & Sontag (Hausärzte), Spiesen-Elversberg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-13T14:27:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00049",
+      "createdAt": "2025-10-06T17:40:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "539387501",
+        "bsnr": "731200798"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 13210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nFiliz Schacht\nGemeinschaftspraxis Schacht & Kusch & Mangold (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-26T18:40:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00022",
+      "createdAt": "2025-10-06T18:48:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "922662223",
+        "bsnr": "733531063"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 4/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 733531063).\n\nMit freundlichen Grüßen\nDr. med. Kunibert Austermühle\nGemeinschaftspraxis Nerger & Austermühle (Fachinternisten), Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-08T00:48:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00060",
+      "createdAt": "2025-10-08T17:12:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "146285101",
+        "bsnr": "737418831"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 18210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Lia Beckmann\nGemeinschaftspraxis Hermann & Reinhardt & Beckmann (Hausärzte), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-13T22:12:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00167",
+      "createdAt": "2025-10-08T18:32:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "439506268",
+        "bsnr": "739596690"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 07.12.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. phil. Sinaida Lorch\nPsychotherapeutische Praxis Dr. phil. Lorch, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-09T23:32:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00081",
+      "createdAt": "2025-10-09T15:28:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "353555168",
+        "bsnr": "735468827"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 03321 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDipl.-Psych. Evi Ernst\nPsychotherapeutische Praxis Dipl.-Psych. Ernst, Schiffweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-30T18:28:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00052",
+      "createdAt": "2025-10-10T11:54:00+02:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "550685419",
+        "bsnr": "734585288"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Otto Jacob\nHNO-Praxis Arnfried Kroker, Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-24T13:54:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00091",
+      "createdAt": "2025-10-13T09:43:00+02:00",
+      "channel": "EMAIL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "887836068",
+        "bsnr": "739040167"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nM. Sc. Psych. Kurt Rosemann\nPsychotherapeutische Praxis M. Sc. Psych. Rosemann, Rehlingen-Siersburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-25T13:43:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00076",
+      "createdAt": "2025-10-14T08:49:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "425746351",
+        "bsnr": "736357862"
+      },
+      "subject": "Frage zur Abrechnung der GOP 18212",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 736357862) ist unklar, ob die GOP 18212 (Grundpauschale Orthopädie, ab 60. Lebensjahr) im Quartal 4/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Rotraut Heydrich\nNervenärztliche Praxis Dr. med. Heydrich, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-29T09:49:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00152",
+      "createdAt": "2025-10-15T15:46:00+02:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "917045603",
+        "bsnr": "735580545"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 03321 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Flora Zahn\nMVZ Quierschied, Quierschied",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-02T19:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00164",
+      "createdAt": "2025-10-16T14:03:00+02:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "310467619",
+        "bsnr": "738547686"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10044",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10044 derzeit Zulassungsmöglichkeiten für HNO-Ärzte?\n\nMit freundlichen Grüßen\nMaria Spieß\nGemeinschaftspraxis Spieß & Zobel & Warmer (HNO-Ärzte), Saarwellingen",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00094",
+      "createdAt": "2025-10-20T12:37:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "106139015",
+        "bsnr": "737582748"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Friedl Textor\nMVZ Homburg 2, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-25T13:37:00+02:00"
+    },
+    {
+      "ticketId": "T-2025-00154",
+      "createdAt": "2025-10-21T10:50:00+02:00",
+      "channel": "PORTAL",
+      "topic": "IT",
+      "requester": {
+        "lanr": "528606268",
+        "bsnr": "737953595"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nDipl.-Psych. Gotthilf Seifert\nGemeinschaftspraxis Buchholz & Seifert (Psychotherapeuten), Wadgassen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-06T15:50:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00068",
+      "createdAt": "2025-10-22T18:52:00+02:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "385542701",
+        "bsnr": "735542832"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 4/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 735542832).\n\nMit freundlichen Grüßen\nDr. med. Ayten Cichorius\nGemeinschaftspraxis Mans & Cichorius (Hausärzte), Heusweiler",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-27T21:52:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00096",
+      "createdAt": "2025-10-24T07:25:00+02:00",
+      "channel": "TELEFON",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "963004203",
+        "bsnr": "736430243"
+      },
+      "subject": "Diensttausch am 13.12.2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 13.12.2025 in der Bereitschaftsdienstpraxis Saarlouis mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDr. med. Ute Gertz\nHausarztpraxis Dr. med. Gertz, Großrosseln",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-10-29T10:25:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00065",
+      "createdAt": "2025-10-27T10:49:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "491533515",
+        "bsnr": "734504981"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 04230 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nSibilla Dussen van\nGemeinschaftspraxis Dussen van & Harloff (Frauenärzte), Nalbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-16T13:49:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00028",
+      "createdAt": "2025-10-27T18:19:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "167102734",
+        "bsnr": "737108942"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10043",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10043 derzeit Zulassungsmöglichkeiten für Kinder- und Jugendärzte?\n\nMit freundlichen Grüßen\nAntonino Margraf\nKinder- und Jugendarztpraxis Antonino Margraf, Neunkirchen",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00179",
+      "createdAt": "2025-10-31T07:46:00+01:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "276503301",
+        "bsnr": "735580545"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. med. Tülay Juncken\nMVZ Quierschied, Quierschied",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-02T09:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00074",
+      "createdAt": "2025-11-03T13:43:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "336867801",
+        "bsnr": "731545406"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 09212 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDetlef Keudel\nGemeinschaftspraxis Hettner & Keudel (Hausärzte), Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-15T15:43:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00015",
+      "createdAt": "2025-11-03T15:15:00+01:00",
+      "channel": "EMAIL",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "862002801",
+        "bsnr": "733636646"
+      },
+      "subject": "Frage zur Richtgröße Arzneimittel",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Arzneimittelverordnungen lagen im Quartal 4/2025 über dem Durchschnitt der Fachgruppe. Droht uns eine Wirtschaftlichkeitsprüfung, und welche Praxisbesonderheiten können wir geltend machen?\n\nMit freundlichen Grüßen\nBerndt Bolnbach\nGemeinschaftspraxis Bolnbach & Graf (Hausärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-13T20:15:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00047",
+      "createdAt": "2025-11-05T15:44:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "548982101",
+        "bsnr": "737769172"
+      },
+      "subject": "Frage zur Abrechnung der GOP 01732",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 737769172) ist unklar, ob die GOP 01732 (Gesundheitsuntersuchung bei Erwachsenen) im Quartal 4/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Frank-Peter Mitschke\nGemeinschaftspraxis Wieloch & Riehl (Hausärzte), Mettlach",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-07T19:44:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00007",
+      "createdAt": "2025-11-05T17:47:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "394229401",
+        "bsnr": "737278431"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 04.01.2026 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Arnfried Mentzel\nHausarztpraxis Dr. med. Mentzel, Sulzbach/Saar",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-20T20:47:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00051",
+      "createdAt": "2025-11-06T07:59:00+01:00",
+      "channel": "TELEFON",
+      "topic": "QS",
+      "requester": {
+        "lanr": "777001201",
+        "bsnr": "739618307"
+      },
+      "subject": "Genehmigung Hautkrebs-Screening",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Hautkrebs-Screening beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Astrid Tintzmann\nGemeinschaftspraxis Häring & Segebahn & Tintzmann (Hausärzte), Püttlingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-09T07:59:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00030",
+      "createdAt": "2025-11-10T10:19:00+01:00",
+      "channel": "TELEFON",
+      "topic": "VERORDNUNG",
+      "requester": {
+        "lanr": "651081603",
+        "bsnr": "735818892"
+      },
+      "subject": "Langfristiger Heilmittelbedarf",
+      "body": "Sehr geehrte Damen und Herren,\n\nwie sind Heilmittelverordnungen bei langfristigem Heilmittelbedarf in der Wirtschaftlichkeitsprüfung zu berücksichtigen?\n\nMit freundlichen Grüßen\nDr. med. Leon Aumann\nHausarztpraxis Dr. med. Aumann, Saarlouis",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00137",
+      "createdAt": "2025-11-10T16:57:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "759177105",
+        "bsnr": "734614372"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 21.12.2025 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Martin Ullmann\nAugenarztpraxis Dr. med. Ullmann, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-17T16:57:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00107",
+      "createdAt": "2025-11-17T08:53:00+01:00",
+      "channel": "PORTAL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "172644968",
+        "bsnr": "738152056"
+      },
+      "subject": "Nachweis der Fortbildungspunkte",
+      "body": "Sehr geehrte Damen und Herren,\n\nbis wann muss ich den Nachweis der Fortbildungspunkte nach § 95d SGB V erbringen, und werden die Punkte direkt von der Kammer übermittelt?\n\nMit freundlichen Grüßen\nDr. phil. Adina Walter\nGemeinschaftspraxis Walter & Ladeck (Psychotherapeuten), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-27T12:53:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00150",
+      "createdAt": "2025-11-24T12:55:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "223369019",
+        "bsnr": "731239332"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 03000 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Evangelia Siering\nGemeinschaftspraxis Werner & Siering & Winkler (HNO-Ärzte), Mandelbachtal",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-11-26T12:55:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00069",
+      "createdAt": "2025-11-26T14:52:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "400566110",
+        "bsnr": "733027639"
+      },
+      "subject": "Anstellung einer Kollegin in Teilzeit",
+      "body": "Sehr geehrte Damen und Herren,\n\nwir möchten zum 19.01.2026 eine Kollegin mit einem Anrechnungsfaktor von 0,5 anstellen. Welche Unterlagen benötigt der Zulassungsausschuss?\n\nMit freundlichen Grüßen\nDr. med. Hans D. Rörricht\nMVZ Wadgassen, Wadgassen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-01T16:52:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00155",
+      "createdAt": "2025-12-01T09:29:00+01:00",
+      "channel": "TELEFON",
+      "topic": "IT",
+      "requester": {
+        "lanr": "437262910",
+        "bsnr": "737582748"
+      },
+      "subject": "Zugang zum Mitgliederportal",
+      "body": "Sehr geehrte Damen und Herren,\n\nseit dem letzten Update kann ich mich nicht mehr im Mitgliederportal anmelden. Bitte setzen Sie meinen Zugang zurück.\n\nMit freundlichen Grüßen\nDr. med. Arnfried Pechel\nMVZ Homburg 2, Homburg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-05T11:29:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00059",
+      "createdAt": "2025-12-01T15:02:00+01:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "287187815",
+        "bsnr": "733748780"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nDr. med. Magda Drewes\nGemeinschaftspraxis Drewes & Hänel (Frauenärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-06T21:02:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00087",
+      "createdAt": "2025-12-03T07:51:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "644506551",
+        "bsnr": "737782253"
+      },
+      "subject": "Genehmigung Hautkrebs-Screening",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Hautkrebs-Screening beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nDr. med. Birgitt Krein\nNervenärztliche Praxis Dr. med. Krein, Spiesen-Elversberg",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-21T09:51:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00017",
+      "createdAt": "2025-12-03T17:27:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "665846001",
+        "bsnr": "739637035"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10046",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10046 derzeit Zulassungsmöglichkeiten für Hausärzte?\n\nMit freundlichen Grüßen\nKenan Oderwald\nGemeinschaftspraxis Oderwald & Karz & Hermighausen (Hausärzte), Namborn",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-20T23:27:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00066",
+      "createdAt": "2025-12-05T17:55:00+01:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "401090415",
+        "bsnr": "734457735"
+      },
+      "subject": "Diensttausch am 20.01.2026",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte meinen Bereitschaftsdienst am 20.01.2026 in der Bereitschaftsdienstpraxis St. Wendel mit einer Kollegin tauschen. Bitte bestätigen Sie den Tausch.\n\nMit freundlichen Grüßen\nDr. med. Urte Schaaf\nFrauenarztpraxis Dr. med. Schaaf, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-17T21:55:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00046",
+      "createdAt": "2025-12-08T07:12:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "782451723",
+        "bsnr": "734077167"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Niklas Reuter\nInternistische Praxis Dr. med. Reuter, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-17T13:12:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00027",
+      "createdAt": "2025-12-08T14:22:00+01:00",
+      "channel": "PORTAL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "596625821",
+        "bsnr": "731223343"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 4/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 731223343).\n\nMit freundlichen Grüßen\nChristine Albers\nHautarztpraxis Christine Albers, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-27T16:22:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00020",
+      "createdAt": "2025-12-08T17:53:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "393230568",
+        "bsnr": "732065806"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 4/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 732065806).\n\nMit freundlichen Grüßen\nDr. phil. Nermin Atzler\nPsychotherapeutische Praxis Dr. phil. Atzler, St. Wendel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-29T17:53:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00011",
+      "createdAt": "2025-12-09T16:35:00+01:00",
+      "channel": "PORTAL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "253323315",
+        "bsnr": "736076210"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nKarl Franke\nGemeinschaftspraxis Franke & Hesse & Wagner (Frauenärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-20T21:35:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00082",
+      "createdAt": "2025-12-10T12:09:00+01:00",
+      "channel": "TELEFON",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "782451723",
+        "bsnr": "734077167"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Niklas Reuter\nInternistische Praxis Dr. med. Reuter, Neunkirchen",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-16T17:09:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00141",
+      "createdAt": "2025-12-11T18:03:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "752046951",
+        "bsnr": "731160639"
+      },
+      "subject": "Freie Sitze im Planungsbereich PB10044",
+      "body": "Sehr geehrte Damen und Herren,\n\ngibt es im Planungsbereich PB10044 derzeit Zulassungsmöglichkeiten für Nervenärzte?\n\nMit freundlichen Grüßen\nDr. med. Othmar Seifert\nGemeinschaftspraxis Noack & Gute & Seifert (Nervenärzte), Saarlouis",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-18T22:03:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00056",
+      "createdAt": "2025-12-15T09:46:00+01:00",
+      "channel": "EMAIL",
+      "topic": "QS",
+      "requester": {
+        "lanr": "480715068",
+        "bsnr": "737457895"
+      },
+      "subject": "Genehmigung Koloskopie",
+      "body": "Sehr geehrte Damen und Herren,\n\nich möchte eine Genehmigung für den Leistungsbereich Koloskopie beantragen. Welche fachlichen Nachweise sind einzureichen?\n\nMit freundlichen Grüßen\nSilvia Koch II\nPsychotherapeutische Praxis Silvia Koch II, Blieskastel",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-31T14:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00127",
+      "createdAt": "2025-12-15T17:53:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "922662223",
+        "bsnr": "733531063"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDr. med. Kunibert Austermühle\nGemeinschaftspraxis Nerger & Austermühle (Fachinternisten), Beckingen",
+      "status": "ERLEDIGT",
+      "closedAt": "2026-01-05T18:53:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00042",
+      "createdAt": "2025-12-22T11:59:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "294841851",
+        "bsnr": "731688879"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nTheda Höfig\nMVZ Saarbrücken 8, Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2026-01-10T13:59:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00133",
+      "createdAt": "2025-12-22T14:03:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "284369201",
+        "bsnr": "734835068"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 13250 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Lidwina Heydrich\nMVZ Dillingen/Saar, Dillingen/Saar",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00099",
+      "createdAt": "2025-12-22T14:58:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "196269868",
+        "bsnr": "739277367"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 10212 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. phil. Lorenz Haase\nPsychotherapeutische Praxis Dipl.-Psych. Nerger, Bous",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-25T20:58:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00014",
+      "createdAt": "2025-12-23T10:07:00+01:00",
+      "channel": "PORTAL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "615362868",
+        "bsnr": "731870279"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 08210 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDipl.-Psych. Gordana Ullrich\nPsychotherapeutische Praxis Dipl.-Psych. Ullrich, Saarlouis",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00103",
+      "createdAt": "2025-12-23T13:26:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ZULASSUNG",
+      "requester": {
+        "lanr": "395191334",
+        "bsnr": "735292636"
+      },
+      "subject": "Praxisabgabe und Nachbesetzung",
+      "body": "Sehr geehrte Damen und Herren,\n\nich plane, meine vertragsärztliche Tätigkeit zum Ende des kommenden Jahres zu beenden. Wie läuft das Nachbesetzungsverfahren für meinen Sitz ab?\n\nMit freundlichen Grüßen\nStanislaw Röhrdanz\nKinder- und Jugendarztpraxis Dr. med. Schuchhardt, Eppelborn",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-27T19:26:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00165",
+      "createdAt": "2025-12-23T14:13:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "700028268",
+        "bsnr": "731729461"
+      },
+      "subject": "Frage zur Abrechnung der GOP 13211",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 731729461) ist unklar, ob die GOP 13211 (Grundpauschale Innere Medizin (fachärztlich), 6. bis 59. Lebensjahr) im Quartal 4/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. phil. Erica Heinz\nPsychotherapeutische Praxis Dr. phil. Heinz, Dillingen/Saar",
+      "status": "OFFEN",
+      "closedAt": null
+    },
+    {
+      "ticketId": "T-2025-00037",
+      "createdAt": "2025-12-24T07:48:00+01:00",
+      "channel": "TELEFON",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "967304923",
+        "bsnr": "736187351"
+      },
+      "subject": "Frage zur Abrechnung der GOP 06210",
+      "body": "Sehr geehrte Damen und Herren,\n\nin unserer Praxis (BSNR 736187351) ist unklar, ob die GOP 06210 (Grundpauschale Augenheilkunde, bis 5. Lebensjahr) im Quartal 4/2025 neben der Grundpauschale berechnungsfähig ist. Gibt es hierzu einen Abrechnungsausschluss?\n\nMit freundlichen Grüßen\nDr. med. Jann Gierschner\nGemeinschaftspraxis Schleich & Gierschner (Fachinternisten), Quierschied",
+      "status": "ERLEDIGT",
+      "closedAt": "2025-12-31T09:48:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00112",
+      "createdAt": "2025-12-29T07:51:00+01:00",
+      "channel": "EMAIL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "564227121",
+        "bsnr": "736429078"
+      },
+      "subject": "Rückfrage zum Honorarbescheid 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\ndie im Honorarbescheid 4/2025 ausgewiesene Quote für die morbiditätsbedingte Gesamtvergütung ist für uns nicht nachvollziehbar. Bitte erläutern Sie die Berechnung für unsere Betriebsstätte (BSNR 736429078).\n\nMit freundlichen Grüßen\nDr. med. Claudia Döhn\nGemeinschaftspraxis Döhn & Zorbach & Hentschel (Hautärzte), Saarbrücken",
+      "status": "ERLEDIGT",
+      "closedAt": "2026-01-06T12:51:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00131",
+      "createdAt": "2025-12-29T10:32:00+01:00",
+      "channel": "EMAIL",
+      "topic": "BEREITSCHAFTSDIENST",
+      "requester": {
+        "lanr": "856483401",
+        "bsnr": "737291141"
+      },
+      "subject": "Befreiung vom Bereitschaftsdienst",
+      "body": "Sehr geehrte Damen und Herren,\n\naus gesundheitlichen Gründen beantrage ich eine befristete Befreiung vom ärztlichen Bereitschaftsdienst. Ein Attest liegt bei.\n\nMit freundlichen Grüßen\nTassilo Kroker\nGemeinschaftspraxis Kroker & Kohl (Hausärzte), Bexbach",
+      "status": "ERLEDIGT",
+      "closedAt": "2026-01-15T11:32:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00078",
+      "createdAt": "2025-12-29T12:46:00+01:00",
+      "channel": "EMAIL",
+      "topic": "ABRECHNUNG",
+      "requester": {
+        "lanr": "980716115",
+        "bsnr": "735268243"
+      },
+      "subject": "Korrektur der Abrechnung 4/2025",
+      "body": "Sehr geehrte Damen und Herren,\n\nbei unserer Quartalsabrechnung 4/2025 wurde die GOP 01410 versehentlich mit falschem Leistungsdatum übermittelt. Wie können wir die Abrechnung korrigieren?\n\nMit freundlichen Grüßen\nDr. med. Eugenie Martin\nGemeinschaftspraxis Stolze & Martin & Kraus (Frauenärzte), Kleinblittersdorf",
+      "status": "ERLEDIGT",
+      "closedAt": "2026-01-18T14:46:00+01:00"
+    },
+    {
+      "ticketId": "T-2025-00038",
+      "createdAt": "2025-12-29T15:08:00+01:00",
+      "channel": "PORTAL",
+      "topic": "HONORAR",
+      "requester": {
+        "lanr": "260570568",
+        "bsnr": "739277367"
+      },
+      "subject": "Anpassung der Abschlagszahlungen",
+      "body": "Sehr geehrte Damen und Herren,\n\nunsere Fallzahlen sind seit dem letzten Quartal deutlich gestiegen. Wir bitten um Anpassung der monatlichen Abschlagszahlungen.\n\nMit freundlichen Grüßen\nDipl.-Psych. Anette Nerger\nPsychotherapeutische Praxis Dipl.-Psych. Nerger, Bous",
+      "status": "OFFEN",
+      "closedAt": null
+    }
+  ]
+}

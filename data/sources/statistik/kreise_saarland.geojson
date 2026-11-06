@@ -1,0 +1,102 @@
+{
+  "type": "FeatureCollection",
+  "name": "kreise_saarland",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10041",
+        "GEN": "Regionalverband Saarbrücken",
+        "BEZ": "Regionalverband",
+        "SITZ": "Saarbrücken"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9965,
+          49.2354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10042",
+        "GEN": "Merzig-Wadern",
+        "BEZ": "Landkreis",
+        "SITZ": "Merzig"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.6378,
+          49.4433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10043",
+        "GEN": "Neunkirchen",
+        "BEZ": "Landkreis",
+        "SITZ": "Ottweiler"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.163,
+          49.401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10044",
+        "GEN": "Saarlouis",
+        "BEZ": "Landkreis",
+        "SITZ": "Saarlouis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.7524,
+          49.3135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10045",
+        "GEN": "Saarpfalz-Kreis",
+        "BEZ": "Landkreis",
+        "SITZ": "Homburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.3386,
+          49.3266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AGS": "10046",
+        "GEN": "St. Wendel",
+        "BEZ": "Landkreis",
+        "SITZ": "St. Wendel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.1686,
+          49.4669
+        ]
+      }
+    }
+  ]
+}

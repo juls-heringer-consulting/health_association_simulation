@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<EBM version="2025" gueltig_ab="2025-01-01">
+  <Orientierungswert jahr="2025" euro_je_punkt="0.123934" />
+  <Kapitel nr="1" bereich="II" bezeichnung="Allgemeine Gebührenordnungspositionen">
+    <GOP code="01100" punkte="196" extrabudgetaer="nein">
+      <Titel>Unvorhergesehene Inanspruchnahme I</Titel>
+    </GOP>
+    <GOP code="01410" punkte="213" pruefzeit_min="20" extrabudgetaer="nein">
+      <Titel>Besuch eines Kranken</Titel>
+    </GOP>
+    <GOP code="01732" punkte="300" pruefzeit_min="20" extrabudgetaer="ja">
+      <Titel>Gesundheitsuntersuchung bei Erwachsenen</Titel>
+    </GOP>
+    <GOP code="01741" punkte="1700" pruefzeit_min="30" extrabudgetaer="ja" qs_bereich="KOLO">
+      <Titel>Früherkennungskoloskopie</Titel>
+    </GOP>
+    <GOP code="01745" punkte="270" pruefzeit_min="10" extrabudgetaer="ja" qs_bereich="HKS">
+      <Titel>Früherkennungsuntersuchung auf Hautkrebs</Titel>
+    </GOP>
+    <GOP code="01760" punkte="230" pruefzeit_min="12" extrabudgetaer="ja">
+      <Titel>Krebsfrüherkennung bei der Frau</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="3" bereich="III.a" bezeichnung="Hausärztlicher Versorgungsbereich">
+    <GOP code="03000" punkte="150" pruefzeit_min="12" extrabudgetaer="nein">
+      <Titel>Versichertenpauschale (hausärztlich)</Titel>
+    </GOP>
+    <GOP code="03040" punkte="138" extrabudgetaer="nein">
+      <Titel>Zuschlag zur Versichertenpauschale (Vorhaltepauschale)</Titel>
+    </GOP>
+    <GOP code="03220" punkte="130" pruefzeit_min="4" extrabudgetaer="nein">
+      <Titel>Zuschlag Behandlung chronisch Kranker (Chronikerpauschale I)</Titel>
+    </GOP>
+    <GOP code="03221" punkte="40" pruefzeit_min="1" extrabudgetaer="nein">
+      <Titel>Zuschlag Chronikerpauschale II</Titel>
+    </GOP>
+    <GOP code="03230" punkte="128" pruefzeit_min="10" extrabudgetaer="nein">
+      <Titel>Problemorientiertes ärztliches Gespräch</Titel>
+    </GOP>
+    <GOP code="03321" punkte="196" pruefzeit_min="10" extrabudgetaer="nein">
+      <Titel>Belastungs-Elektrokardiographie</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="4" bereich="III.a" bezeichnung="Versorgungsbereich Kinder- und Jugendmedizin">
+    <GOP code="04000" punkte="250" pruefzeit_min="12" extrabudgetaer="nein">
+      <Titel>Versichertenpauschale (Kinder- und Jugendmedizin)</Titel>
+    </GOP>
+    <GOP code="04230" punkte="128" pruefzeit_min="10" extrabudgetaer="nein">
+      <Titel>Problemorientiertes ärztliches Gespräch (Kinder- und Jugendmedizin)</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="6" bereich="III.b" bezeichnung="Augenheilkunde">
+    <GOP code="06210" punkte="123" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Augenheilkunde, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="06211" punkte="112" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Augenheilkunde, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="06212" punkte="121" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Augenheilkunde, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="8" bereich="III.b" bezeichnung="Frauenheilkunde und Geburtshilfe">
+    <GOP code="08210" punkte="148" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Frauenheilkunde, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="08211" punkte="135" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Frauenheilkunde, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="08212" punkte="146" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Frauenheilkunde, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="9" bereich="III.b" bezeichnung="Hals-Nasen-Ohrenheilkunde">
+    <GOP code="09210" punkte="130" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Hals-Nasen-Ohrenheilkunde, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="09211" punkte="118" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Hals-Nasen-Ohrenheilkunde, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="09212" punkte="127" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Hals-Nasen-Ohrenheilkunde, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="10" bereich="III.b" bezeichnung="Dermatologie">
+    <GOP code="10210" punkte="112" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Dermatologie, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="10211" punkte="102" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Dermatologie, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="10212" punkte="110" pruefzeit_min="6" extrabudgetaer="nein">
+      <Titel>Grundpauschale Dermatologie, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="13" bereich="III.b" bezeichnung="Innere Medizin (fachärztlich)">
+    <GOP code="13210" punkte="198" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Innere Medizin (fachärztlich), bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="13211" punkte="180" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Innere Medizin (fachärztlich), 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="13212" punkte="194" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Innere Medizin (fachärztlich), ab 60. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="13250" punkte="150" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Zusatzpauschale fachinternistische Behandlung</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="16" bereich="III.b" bezeichnung="Neurologie und Nervenheilkunde">
+    <GOP code="16210" punkte="176" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Nervenheilkunde, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="16211" punkte="160" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Nervenheilkunde, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="16212" punkte="173" pruefzeit_min="9" extrabudgetaer="nein">
+      <Titel>Grundpauschale Nervenheilkunde, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="18" bereich="III.b" bezeichnung="Orthopädie">
+    <GOP code="18210" punkte="143" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Orthopädie, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="18211" punkte="130" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Orthopädie, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="18212" punkte="140" pruefzeit_min="7" extrabudgetaer="nein">
+      <Titel>Grundpauschale Orthopädie, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="23" bereich="III.b" bezeichnung="Psychotherapie (Psychotherapeuten)">
+    <GOP code="23210" punkte="154" pruefzeit_min="8" extrabudgetaer="nein">
+      <Titel>Grundpauschale Psychotherapie, bis 5. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="23211" punkte="140" pruefzeit_min="8" extrabudgetaer="nein">
+      <Titel>Grundpauschale Psychotherapie, 6. bis 59. Lebensjahr</Titel>
+    </GOP>
+    <GOP code="23212" punkte="151" pruefzeit_min="8" extrabudgetaer="nein">
+      <Titel>Grundpauschale Psychotherapie, ab 60. Lebensjahr</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="30" bereich="IV" bezeichnung="Spezielle Versorgungsbereiche">
+    <GOP code="30790" punkte="450" pruefzeit_min="20" extrabudgetaer="nein" qs_bereich="AKU">
+      <Titel>Eingangsdiagnostik und Abschlussuntersuchung Körperakupunktur</Titel>
+    </GOP>
+    <GOP code="30791" punkte="200" pruefzeit_min="20" extrabudgetaer="nein" qs_bereich="AKU">
+      <Titel>Durchführung einer Körperakupunktur</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="33" bereich="IV" bezeichnung="Ultraschalldiagnostik">
+    <GOP code="33042" punkte="145" pruefzeit_min="10" extrabudgetaer="nein" qs_bereich="US">
+      <Titel>Sonographie des Abdomens</Titel>
+    </GOP>
+  </Kapitel>
+  <Kapitel nr="35" bereich="IV" bezeichnung="Leistungen gemäß Psychotherapie-Richtlinie">
+    <GOP code="35150" punkte="860" pruefzeit_min="70" extrabudgetaer="ja">
+      <Titel>Probatorische Sitzung</Titel>
+    </GOP>
+    <GOP code="35151" punkte="860" pruefzeit_min="70" extrabudgetaer="ja">
+      <Titel>Psychotherapeutische Sprechstunde</Titel>
+    </GOP>
+    <GOP code="35401" punkte="945" pruefzeit_min="70" extrabudgetaer="ja">
+      <Titel>Verhaltenstherapie Kurzzeittherapie, Einzelbehandlung</Titel>
+    </GOP>
+  </Kapitel>
+</EBM>
