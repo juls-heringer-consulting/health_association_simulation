@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/.tmp/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+
+# Excel lock files
+~$*.xlsx

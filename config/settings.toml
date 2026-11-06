@@ -1,0 +1,22 @@
+# Central settings for the KV simulation.
+# Python reads this file (python/kvsim/config.py); SQL scripts do not.
+
+[database]
+server = "localhost"                         # default instance of SQL Server 2025 on this machine
+database = "KVSim"
+driver = "ODBC Driver 18 for SQL Server"
+trust_server_certificate = true              # local dev only: the instance uses a self-signed certificate
+
+[generation]
+seed = 20250101                              # same seed -> same synthetic data (reproducible)
+year = 2025                                  # billing year (4 quarters)
+export_date = "2026-10-31"                   # "as of" date of all simulated exports
+patient_pool_size = 12000                    # synthetic, pseudonymised patients
+cases_per_fte_quarter = 1.8                  # billing detail is a SAMPLE (see docs/assumptions.md)
+tss_requests = 1500                          # Terminservicestelle requests in the year
+member_enquiries = 180                       # Mitgliederanfragen (CRM tickets)
+complaints = 45                              # Beschwerden
+# Salt for patient pseudonyms. In a real KV this is a secret kept outside the repository.
+pseudonym_salt = "kvsim-training-salt"
+# Optional training phase (NOT implemented yet, keep false unless explicitly requested):
+inject_dq_issues = false
