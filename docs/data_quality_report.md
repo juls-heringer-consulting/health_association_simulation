@@ -66,6 +66,19 @@ WHERE g.qs_bereich_code IS NOT NULL
                     AND l.leistungsdatum >= q.valid_from AND l.leistungsdatum < q.valid_to);
 ```
 
+## Known simulation artefacts (found while building the exercises)
+
+These are weaknesses of the *generator*, not of the warehouse. They are candidates for the
+next version:
+
+| Artefact | Effect | Fix idea |
+|---|---|---|
+| Repeated sessions (e.g. psychotherapy 35401, up to 10 × 70 min) are billed as **one line with `anzahl` > 1 on one date** | 32 doctor-days exceed 12 h of Prüfzeit; one psychotherapist hits the Plausi day rule (explained in solution 3.2) | spread repeated sessions over separate lines and dates |
+| Only ~3 cases per practice and quarter (sample, A-30) | quarterly Fallwerte are noisy; exercise 2.2 uses the whole year and a minimum of 8 cases | raise `cases_per_fte_quarter` for statistics exercises |
+| Waiting times of the TSS are short for most groups | almost all urgent appointments fall within 4 weeks except Psychotherapie, Nervenärzte, Fachinternisten | calibrate `TSS_WARTEZEIT_BASIS_TAGE` |
+| Bereitschaftspraxen have no own coordinates | spatial exercise uses the Kreis seat (e.g. Ottweiler for Neunkirchen) | add coordinates per practice |
+| BIT flags in fact tables (`ist_vermittelt`, ...) | `SUM()` on BIT fails (error 8117) - used as a teaching pitfall in level 2 | use TINYINT/INT 0/1 measures in facts |
+
 ## Not checked yet (ideas)
 
 - Statistical outliers (Fallwert, prescription costs) as a rule instead of an exercise

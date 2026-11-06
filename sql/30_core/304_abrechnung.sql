@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    304_abrechnung.sql
    Billing: Behandlungsfaelle (cases), Leistungen (billed GOPs), diagnoses,
    Honorarbescheide (fee statements) and Abschlagszahlungen (advance payments).

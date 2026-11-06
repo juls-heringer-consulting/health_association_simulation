@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    701_dq_rules_and_checks.sql
    Data-quality rule catalogue (meta.dq_rule) and the procedure that runs all
    checks and stores the results (meta.dq_result).

@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    404_load_abrechnung.sql
    core.usp_load_abrechnung: cases, billed GOPs, diagnoses, Honorarbescheide and
    Abschlagszahlungen.

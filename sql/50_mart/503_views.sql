@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    503_views.sql
    Reporting views on top of the stars: they hide the joins and give business
    users ready-made, well-named result sets.

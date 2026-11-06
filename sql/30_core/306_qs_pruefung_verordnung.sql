@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    306_qs_pruefung_verordnung.sql
    Quality assurance (QS-Genehmigungen, Fortbildung), audits (Pruefverfahren)
    and aggregated prescriptions (Verordnungen) with their targets (Richtgroessen).

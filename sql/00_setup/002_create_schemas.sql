@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    002_create_schemas.sql
    One schema per architecture layer. Schemas are namespaces AND security
    boundaries: permissions can be granted per schema (see sql/80_security).

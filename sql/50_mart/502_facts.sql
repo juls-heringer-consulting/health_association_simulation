@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    502_facts.sql
    Fact tables: the measurable events. Each fact table has a declared GRAIN
    ("what does one row mean?") - the most important design decision of a star.

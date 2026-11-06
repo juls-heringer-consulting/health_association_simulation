@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    405_load_versorgung.sql
    core.usp_load_versorgung: TSS requests (JSON API pages), Bereitschaftspraxen
    and the Bereitschaftsdienst rota (CSV).

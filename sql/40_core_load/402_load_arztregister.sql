@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    402_load_arztregister.sql
    core.usp_load_arztregister: Aerzte, Praxen (Betriebsstaetten), Teilnahmen and
    their status history.  Pattern: see 401_load_referenz.sql.

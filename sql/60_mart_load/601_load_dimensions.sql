@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    601_load_dimensions.sql
    mart.usp_load_dimensions: fills all dimensions from core.
      * type-1 dimensions: upsert by the durable core id -> surrogate keys stay stable

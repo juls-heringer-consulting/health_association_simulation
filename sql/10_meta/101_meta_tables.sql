@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    101_meta_tables.sql
    Technical metadata: load log (batches, files, steps) and data-quality results.
    Re-runnable WITHOUT data loss: tables are only created if missing, so the load

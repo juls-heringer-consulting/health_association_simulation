@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    407_load_kommunikation.sql
    core.usp_load_kommunikation: documents from four sources into ONE table, plus
    their links to doctors, practices and procedures.

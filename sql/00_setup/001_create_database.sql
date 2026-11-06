@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    001_create_database.sql
    Creates the training database KVSim if it does not exist yet.
    Re-runnable: never drops anything.

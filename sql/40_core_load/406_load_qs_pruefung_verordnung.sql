@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    406_load_qs_pruefung_verordnung.sql
    core.usp_load_qs_pruefung_verordnung: QS-Genehmigungen, Fortbildungspunkte,
    Pruefverfahren (XML), Verordnungen (fixed-width) and Richtgroessen.

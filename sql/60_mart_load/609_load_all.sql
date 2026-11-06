@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    609_load_all.sql
    mart.usp_load_all: rebuild the mart from core.
      1. empty the fact tables (they reference dimension versions)

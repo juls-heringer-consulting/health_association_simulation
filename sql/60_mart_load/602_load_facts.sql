@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    602_load_facts.sql
    mart.usp_load_facts: full rebuild of all fact tables from core.
    At this data volume a full refresh takes seconds and is the simplest correct

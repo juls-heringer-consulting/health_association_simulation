@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    103_data_dictionary.sql
    A data dictionary that is generated from the database itself (system catalog
    views + MS_Description extended properties), so it can never drift away from

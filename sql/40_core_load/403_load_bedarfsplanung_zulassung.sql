@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    403_load_bedarfsplanung_zulassung.sql
    core.usp_load_bedarfsplanung : Planungsbereiche and Versorgungsgrade (Excel)
    core.usp_load_zulassung      : Zulassungsverfahren and status history (XML)

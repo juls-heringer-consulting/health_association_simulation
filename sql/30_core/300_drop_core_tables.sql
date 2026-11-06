@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    300_drop_core_tables.sql
    Start of the CORE layer. Drops all core tables so that 301-309 can rebuild
    them. All core data can be reloaded from staging (EXEC core.usp_load_all).

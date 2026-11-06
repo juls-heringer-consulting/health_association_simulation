@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    305_versorgung.sql
    Care provision: Terminservicestelle (appointment service, 116117) and the
    aerztlicher Bereitschaftsdienst (out-of-hours service).

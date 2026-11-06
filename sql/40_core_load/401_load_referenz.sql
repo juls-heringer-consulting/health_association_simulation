@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    401_load_referenz.sql
    core.usp_load_referenz: region, population, insurers, physician groups,
    EBM catalogue, ICD-10.

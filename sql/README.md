@@ -30,6 +30,9 @@ EXEC meta.usp_run_dq_checks;                          (data quality)
 
 `tools\run_all.ps1` does exactly this (plus generating the source files).
 
+All `.sql` files are saved as **UTF-8 with BOM** (byte order mark), so SSMS reads German
+umlauts in literals such as `N'männlich'` correctly. Keep it that way when you save files.
+
 ## sqlcmd flags used
 
 `sqlcmd -S localhost -E -C -b -I -f 65001 -i <file>`: Windows authentication (`-E`), trust the

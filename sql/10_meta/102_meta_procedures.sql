@@ -1,4 +1,4 @@
-/* =============================================================================
+﻿/* =============================================================================
    102_meta_procedures.sql
    Helper procedures used by the Python loader and by all load procedures.
    CREATE OR ALTER makes every procedure re-runnable.
