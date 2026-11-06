@@ -48,8 +48,8 @@ BEGIN
         step_id        INT IDENTITY(1,1) NOT NULL CONSTRAINT pk_load_step PRIMARY KEY,
         batch_id       INT            NOT NULL CONSTRAINT fk_load_step_load_batch REFERENCES meta.load_batch (batch_id),
         step_name      NVARCHAR(128)  NOT NULL,
-        started_at     DATETIME2(0)   NOT NULL CONSTRAINT df_load_step_started_at DEFAULT (SYSDATETIME()),
-        finished_at    DATETIME2(0)   NULL,
+        started_at     DATETIME2(3)   NOT NULL CONSTRAINT df_load_step_started_at DEFAULT (SYSDATETIME()),   -- (3) = milliseconds
+        finished_at    DATETIME2(3)   NULL,
         status         VARCHAR(10)    NOT NULL CONSTRAINT df_load_step_status DEFAULT ('RUNNING')
                        CONSTRAINT ck_load_step_status CHECK (status IN ('RUNNING', 'OK', 'FAILED')),
         rows_affected  INT            NULL,
