@@ -66,6 +66,7 @@ health_association_simulation/
 ├── config/settings.toml       DB connection, random seed, volumes, inject_dq_issues (off)
 ├── data/sources/              17 simulated source systems, each with a README (origin, owner, quirks)
 ├── docs/
+│   ├── reading_map.md         guided tour for beginners, with diagrams
 │   ├── architecture.md        layers, flow, domains, what is left out
 │   ├── er_diagrams.md         Mermaid ER diagrams (core + mart)
 │   ├── data_dictionary.md     every table and column (generated from the database)
@@ -90,6 +91,8 @@ health_association_simulation/
 ```
 
 ## Learning path
+
+New to SQL or to this project? Start with the [reading map](docs/reading_map.md): a guided tour with diagrams.
 
 | Step | Read | Look at | Try in SSMS |
 |---|---|---|---|
