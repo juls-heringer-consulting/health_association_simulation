@@ -1,0 +1,137 @@
+table fact_tss_anfrage
+	lineageTag: 81643453-91ac-53b5-9817-a4d124eb03dc
+
+	column anfrage_id
+		dataType: int64
+		isHidden
+		lineageTag: e927f8ce-7f92-5fdb-86c1-3eb5da8eff4d
+		summarizeBy: none
+		sourceColumn: anfrage_id
+
+	column eingang_datum_key
+		dataType: int64
+		isHidden
+		lineageTag: 92141fce-1e4b-5b56-9680-58e1e46bcd42
+		summarizeBy: none
+		sourceColumn: eingang_datum_key
+
+	column arztgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: dfae86b1-a55c-5bce-a880-e29e3295bdcc
+		summarizeBy: none
+		sourceColumn: arztgruppe_key
+
+	column patient_region_key
+		dataType: int64
+		isHidden
+		lineageTag: 1b5175e2-5134-5e8b-94fe-606e89c038e6
+		summarizeBy: none
+		sourceColumn: patient_region_key
+
+	column kanal
+		dataType: string
+		lineageTag: 62745092-ae23-5298-ab98-ad0e9a1c0f95
+		summarizeBy: none
+		sourceColumn: kanal
+
+	column dringlichkeit
+		dataType: string
+		lineageTag: 89a6a96f-1bbc-5626-a732-dc71730b7377
+		summarizeBy: none
+		sourceColumn: dringlichkeit
+
+	column status
+		dataType: string
+		lineageTag: 6a49ec55-9914-52d7-9194-affea09eb883
+		summarizeBy: none
+		sourceColumn: status
+
+	column ist_vermittelt
+		dataType: boolean
+		isHidden
+		lineageTag: 983541f5-7d4a-5a42-94f1-391ec97d26d6
+		summarizeBy: none
+		sourceColumn: ist_vermittelt
+
+	column termin_wahrgenommen
+		dataType: boolean
+		isHidden
+		lineageTag: c09280fe-a68e-5f6b-af2c-a4f33e545048
+		summarizeBy: none
+		sourceColumn: termin_wahrgenommen
+
+	column wartezeit_tage
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: ed8d533c-f9ab-5532-a80d-b86b98b82cf9
+		summarizeBy: none
+		sourceColumn: wartezeit_tage
+
+	column ist_innerhalb_4_wochen
+		dataType: boolean
+		isHidden
+		lineageTag: 945ccb76-e0cc-5d26-b49e-5ee1d9f90d1f
+		summarizeBy: none
+		sourceColumn: ist_innerhalb_4_wochen
+
+	column 'Wait Class Sort' = VAR w = fact_tss_anfrage[wartezeit_tage] RETURN SWITCH(TRUE(), ISBLANK(w), BLANK(), w <= 7, 1, w <= 14, 2, w <= 21, 3, w <= 28, 4, w <= 35, 5, 6)
+		dataType: int64
+		isHidden
+		lineageTag: fb46c417-07bf-5a28-bd3e-03aea49cf58a
+		summarizeBy: none
+
+	column 'Wait Class' = SWITCH(fact_tss_anfrage[Wait Class Sort], 1, "0-7 days", 2, "8-14 days", 3, "15-21 days", 4, "22-28 days", 5, "29-35 days", 6, "over 35 days", BLANK())
+		dataType: string
+		sortByColumn: 'Wait Class Sort'
+		lineageTag: 99386ba0-2d7e-5197-b34a-f98b769c28c1
+		summarizeBy: none
+
+	measure 'TSS Requests' = COUNTROWS(fact_tss_anfrage)
+		formatString: #,0
+		lineageTag: 0f065b59-df2f-5213-9eb4-6b632b2f24f9
+
+	measure Arranged = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_vermittelt] = TRUE())
+		formatString: #,0
+		lineageTag: eca61285-4615-5794-8031-5c67fc0c9d21
+
+	measure Attended = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[termin_wahrgenommen] = TRUE())
+		formatString: #,0
+		lineageTag: 49b8361a-e4df-51d9-a8ce-a812f23871be
+
+	measure 'Placement Rate' = DIVIDE([Arranged], [TSS Requests])
+		formatString: 0.0%
+		lineageTag: 17e0b1b7-b961-5137-bea3-963330bdc21f
+
+	measure 'Share Within 4 Weeks' = DIVIDE(CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_innerhalb_4_wochen] = TRUE()), [Arranged])
+		formatString: 0.0%
+		lineageTag: 6d583905-8e23-5130-b91a-de3e2ca6dc92
+
+	measure 'Avg Wait Days' = AVERAGE(fact_tss_anfrage[wartezeit_tage])
+		formatString: 0.0
+		lineageTag: 45e888a7-d251-5693-80df-87badeec32f2
+
+	measure 'TSS Funnel' = SWITCH(SELECTEDVALUE('TSS Stage'[Sort]), 1, [TSS Requests], 2, [Arranged], 3, [Attended])
+		formatString: #,0
+		lineageTag: da09232a-5a4c-5a50-9cbd-a0181a6f3177
+
+	measure 'Color Wait Class' = IF(SELECTEDVALUE(fact_tss_anfrage[Wait Class Sort]) > 4, "#e34948", "#2a78d6")
+		displayFolder: Formatting
+		lineageTag: d2818bec-14ce-501f-af13-ce7122bf59df
+
+	measure 'Color Avg Wait' = IF([Avg Wait Days] > 28, "#e34948", "#2a78d6")
+		displayFolder: Formatting
+		lineageTag: 3f13c4a3-d3fa-595f-b02d-1c75af7090d4
+
+	partition fact_tss_anfrage = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "fact_tss_anfrage"]}[Data],
+					Selected = Table.SelectColumns(Data, {"anfrage_id", "eingang_datum_key", "arztgruppe_key", "patient_region_key", "kanal", "dringlichkeit", "status", "ist_vermittelt", "termin_wahrgenommen", "wartezeit_tage", "ist_innerhalb_4_wochen"}),
+					Known = Selected,
+					Result = Known
+				in
+					Result

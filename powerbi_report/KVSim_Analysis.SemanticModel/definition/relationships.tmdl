@@ -1,0 +1,71 @@
+relationship 87434bde-a3f7-5c9d-9992-b69caf87ce26
+	fromColumn: fact_abrechnungsfall.quartal_key
+	toColumn: dim_quartal.quartal_key
+
+relationship ead56b23-133b-5b7e-995f-5c628890053c
+	fromColumn: fact_abrechnungsfall.praxis_key
+	toColumn: dim_praxis.praxis_key
+
+relationship 2a30f01e-12d0-583e-ad1d-c7a352e18473
+	fromColumn: fact_abrechnungsfall.region_key
+	toColumn: dim_region.region_key
+
+relationship 62316b47-83df-51e8-8137-a800af36c431
+	fromColumn: fact_abrechnungsfall.fachgruppe_key
+	toColumn: dim_fachgruppe.fachgruppe_key
+
+relationship 860d0966-18fb-5aa0-b410-a119219681ad
+	fromColumn: fact_abrechnungsfall.kasse_key
+	toColumn: dim_krankenkasse.kasse_key
+
+relationship 24babba7-1aab-584b-8461-ddb3e569a4bb
+	fromColumn: fact_abrechnungsfall.altersgruppe_key
+	toColumn: dim_altersgruppe.altersgruppe_key
+
+relationship ea31c235-55ac-5219-a13c-250c84f78981
+	fromColumn: fact_leistung.quartal_key
+	toColumn: dim_quartal.quartal_key
+
+relationship ee9d41e2-865f-5e8e-b234-cc3b3581b5bc
+	fromColumn: fact_leistung.gop_key
+	toColumn: dim_gop.gop_key
+
+relationship eb06114f-df14-57fa-85a9-ce2f29c523e5
+	fromColumn: fact_honorar_quartal.quartal_key
+	toColumn: dim_quartal.quartal_key
+
+relationship 847a6baa-d546-5d2e-9a7d-1ae7a54fa37c
+	fromColumn: fact_honorar_quartal.praxis_key
+	toColumn: dim_praxis.praxis_key
+
+relationship c6f13dcf-d795-5057-a074-49bd09035395
+	fromColumn: fact_tss_anfrage.eingang_datum_key
+	toColumn: dim_datum.datum_key
+
+relationship cba28e0f-587f-5f64-b35d-ca8a2c815ad5
+	fromColumn: fact_tss_anfrage.arztgruppe_key
+	toColumn: dim_arztgruppe.arztgruppe_key
+
+relationship 88d0f7a9-543a-57e9-a320-28ef9bfbeb22
+	fromColumn: fact_tss_anfrage.patient_region_key
+	toColumn: dim_region.region_key
+
+relationship 6f11aeb7-a3d9-5611-81e0-9f912b7634ff
+	fromColumn: fact_bereitschaftsdienst.datum_key
+	toColumn: dim_datum.datum_key
+
+relationship e42497ec-886b-519b-940b-e6ffb3d368dd
+	fromColumn: fact_bereitschaftsdienst.region_key
+	toColumn: dim_region.region_key
+
+relationship caaa6460-f60d-5205-a3fc-92f03915887a
+	fromColumn: fact_versorgungsgrad.planungsbereich_key
+	toColumn: dim_planungsbereich.planungsbereich_key
+
+relationship 81a68258-50fc-593c-b019-efe022c093fa
+	fromColumn: fact_versorgungsgrad.arztgruppe_key
+	toColumn: dim_arztgruppe.arztgruppe_key
+
+relationship 5fba23ac-54a5-5adf-8c41-37e558ffedc4
+	fromColumn: dim_arzt.praxis_bsnr
+	toColumn: dim_praxis.bsnr

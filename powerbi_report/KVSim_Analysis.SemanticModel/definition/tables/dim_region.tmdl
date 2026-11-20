@@ -1,0 +1,33 @@
+table dim_region
+	lineageTag: 1fa09480-62d6-52ec-97cd-1200e9f51ca6
+
+	column region_key
+		dataType: int64
+		isHidden
+		lineageTag: 166401ee-3d1f-5768-9e03-8374a1cc2507
+		summarizeBy: none
+		sourceColumn: region_key
+
+	column kreis
+		dataType: string
+		lineageTag: 30c7770b-179e-5a16-a266-20655c7d1410
+		summarizeBy: none
+		sourceColumn: kreis
+
+	column kreisart
+		dataType: string
+		lineageTag: f19ba900-3ead-5668-8bfe-9b3ca0d82b6b
+		summarizeBy: none
+		sourceColumn: kreisart
+
+	partition dim_region = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_region"]}[Data],
+					Selected = Table.SelectColumns(Data, {"region_key", "kreis", "kreisart"}),
+					Known = Table.SelectRows(Selected, each [region_key] <> -1),
+					Result = Known
+				in
+					Result

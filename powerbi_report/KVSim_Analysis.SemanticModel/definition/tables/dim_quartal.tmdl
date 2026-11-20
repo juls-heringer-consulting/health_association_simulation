@@ -1,0 +1,36 @@
+table dim_quartal
+	lineageTag: c2c73d15-5770-57d1-8fbc-c3e5f7e1d13b
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		lineageTag: 0da6bc31-dbe6-5311-bed4-85d48f21dd06
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column quartal_label
+		dataType: string
+		sortByColumn: quartal_key
+		lineageTag: b7df8b72-89c2-5095-9098-62395cf72789
+		summarizeBy: none
+		sourceColumn: quartal_label
+
+	column jahr
+		dataType: int64
+		lineageTag: 38e0af3c-3cab-5ba9-a60b-8555dd75477f
+		summarizeBy: none
+		sourceColumn: jahr
+
+	partition dim_quartal = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_quartal"]}[Data],
+					Selected = Table.SelectColumns(Data, {"quartal_key", "quartal_label", "jahr"}),
+					Known = Table.SelectRows(Selected, each [quartal_key] <> -1),
+					Used = Table.Distinct(Table.SelectColumns(Source{[Schema = "mart", Item = "fact_abrechnungsfall"]}[Data], {"quartal_key"})),
+					Joined = Table.NestedJoin(Known, {"quartal_key"}, Used, {"quartal_key"}, "used", JoinKind.Inner),
+					Result = Table.RemoveColumns(Joined, {"used"})
+				in
+					Result

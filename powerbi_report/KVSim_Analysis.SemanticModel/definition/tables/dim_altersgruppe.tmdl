@@ -1,0 +1,35 @@
+table dim_altersgruppe
+	lineageTag: 26cb39b7-e43e-56c0-b8dc-7c0580031d88
+
+	column altersgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: c56e511a-5e55-572b-8f97-467f318bfb6c
+		summarizeBy: none
+		sourceColumn: altersgruppe_key
+
+	column altersgruppe
+		dataType: string
+		sortByColumn: sortierung
+		lineageTag: 547d05ab-26e7-548c-8d4e-9c5efda63378
+		summarizeBy: none
+		sourceColumn: altersgruppe
+
+	column sortierung
+		dataType: int64
+		isHidden
+		lineageTag: 50121efc-6c06-5672-991e-cded27f9113c
+		summarizeBy: none
+		sourceColumn: sortierung
+
+	partition dim_altersgruppe = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_altersgruppe"]}[Data],
+					Selected = Table.SelectColumns(Data, {"altersgruppe_key", "altersgruppe", "sortierung"}),
+					Known = Table.SelectRows(Selected, each [altersgruppe_key] <> -1),
+					Result = Known
+				in
+					Result

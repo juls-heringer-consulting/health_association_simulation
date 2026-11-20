@@ -1,0 +1,108 @@
+table fact_honorar_quartal
+	lineageTag: 0ff4b7c2-43f4-5ee3-8f00-9cbeeef7809f
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		lineageTag: e5ad1745-3064-59a7-956b-06c33b8c4233
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		lineageTag: b80561ef-32b8-5b98-acf5-af2bdc70f374
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column honorar_brutto
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: a5145d56-6584-5537-81af-91f8c0215219
+		summarizeBy: none
+		sourceColumn: honorar_brutto
+
+	column verwaltungskosten
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: f80f2ba7-5d21-59b8-b587-ca272b5ca4a6
+		summarizeBy: none
+		sourceColumn: verwaltungskosten
+
+	column abschlaege_gezahlt
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: aebe0fce-39fe-589c-b675-c095d76bc332
+		summarizeBy: none
+		sourceColumn: abschlaege_gezahlt
+
+	column auszahlungsbetrag
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: 4044ceba-5ca0-54be-b022-1a816297f5da
+		summarizeBy: none
+		sourceColumn: auszahlungsbetrag
+
+	column betrag_mgv
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: cdf449bd-52f6-5a97-8016-6bdba2a1b34f
+		summarizeBy: none
+		sourceColumn: betrag_mgv
+
+	column betrag_egv
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: 191c7f64-c9ff-58d1-9aca-15bc3c2b7dd4
+		summarizeBy: none
+		sourceColumn: betrag_egv
+
+	measure 'Honorar Brutto' = SUM(fact_honorar_quartal[honorar_brutto])
+		formatString: #,0 "€"
+		lineageTag: 841c2bb7-76aa-539c-931b-54ba4bbfea3d
+
+	measure Payout = SUM(fact_honorar_quartal[auszahlungsbetrag])
+		formatString: #,0 "€"
+		lineageTag: bbc1fb91-9d13-5ede-b9a5-4dd4c36297c6
+
+	measure 'Admin Costs' = SUM(fact_honorar_quartal[verwaltungskosten])
+		formatString: #,0 "€"
+		lineageTag: 634eb412-f1ef-54a0-8dd4-cee3e14803ec
+
+	measure 'Advance Payments' = SUM(fact_honorar_quartal[abschlaege_gezahlt])
+		formatString: #,0 "€"
+		lineageTag: face3ee7-f0f1-5449-a15a-2805c17df571
+
+	measure MGV = SUM(fact_honorar_quartal[betrag_mgv])
+		formatString: #,0 "€"
+		lineageTag: 12df1082-1eee-51da-b59f-4c695af2bb1b
+
+	measure EGV = SUM(fact_honorar_quartal[betrag_egv])
+		formatString: #,0 "€"
+		lineageTag: aa91fff3-899b-5d8e-91c7-86d922fa3a92
+
+	measure 'EGV Share' = DIVIDE([EGV], [Honorar Brutto])
+		formatString: 0.0%
+		lineageTag: 657af2ff-cf69-5a36-a862-deb962be247e
+
+	measure 'Honorar Bridge' = VAR s = SELECTEDVALUE('Honorar Step'[Sort]) RETURN SWITCH(s, 1, [Honorar Brutto], 2, -[Admin Costs], 3, -[Advance Payments], [Payout])
+		formatString: #,0 "€"
+		lineageTag: 7fb7037c-6561-55d0-9ce1-50803952c498
+
+	partition fact_honorar_quartal = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "fact_honorar_quartal"]}[Data],
+					Selected = Table.SelectColumns(Data, {"quartal_key", "praxis_key", "honorar_brutto", "verwaltungskosten", "abschlaege_gezahlt", "auszahlungsbetrag", "betrag_mgv", "betrag_egv"}),
+					Known = Selected,
+					Result = Known
+				in
+					Result

@@ -1,0 +1,39 @@
+table dim_fachgruppe
+	lineageTag: 74386f8c-6b3b-5609-94d1-4c73026cbb58
+
+	column fachgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: f64f3101-8cba-5333-bd0e-8771032857ab
+		summarizeBy: none
+		sourceColumn: fachgruppe_key
+
+	column fachgruppe
+		dataType: string
+		lineageTag: 496e4736-3e04-5bc4-9ff0-38fb631ee085
+		summarizeBy: none
+		sourceColumn: fachgruppe
+
+	column arztgruppe
+		dataType: string
+		lineageTag: 79845f04-1176-5a3f-adda-e678cf7f5bc6
+		summarizeBy: none
+		sourceColumn: arztgruppe
+
+	column versorgungsebene
+		dataType: string
+		lineageTag: 9c03c840-fbc2-5642-abbb-b2ff5623f87a
+		summarizeBy: none
+		sourceColumn: versorgungsebene
+
+	partition dim_fachgruppe = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_fachgruppe"]}[Data],
+					Selected = Table.SelectColumns(Data, {"fachgruppe_key", "fachgruppe", "arztgruppe", "versorgungsebene"}),
+					Known = Table.SelectRows(Selected, each [fachgruppe_key] <> -1),
+					Result = Known
+				in
+					Result

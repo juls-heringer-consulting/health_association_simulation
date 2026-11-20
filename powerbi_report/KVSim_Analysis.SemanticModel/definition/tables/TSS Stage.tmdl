@@ -1,0 +1,21 @@
+table 'TSS Stage'
+	lineageTag: 3db4b8dc-3b68-5439-b664-189491962e61
+
+	column Stage
+		dataType: string
+		sortByColumn: Sort
+		lineageTag: 4b88b03d-3ef6-5cc7-9151-7bf0cc73255a
+		summarizeBy: none
+		sourceColumn: Stage
+
+	column Sort
+		dataType: int64
+		isHidden
+		lineageTag: 34039b8e-527d-5450-becb-a7a72c5df46e
+		summarizeBy: none
+		sourceColumn: Sort
+
+	partition 'TSS Stage' = m
+		mode: import
+		source =
+				#table(type table [Stage = text, Sort = Int64.Type], {{"Requests", 1}, {"Arranged", 2}, {"Attended", 3}})

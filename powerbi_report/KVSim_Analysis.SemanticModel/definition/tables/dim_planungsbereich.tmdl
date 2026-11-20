@@ -1,0 +1,33 @@
+table dim_planungsbereich
+	lineageTag: 45fbd56b-b2f1-5fea-8f4f-04b548d89401
+
+	column planungsbereich_key
+		dataType: int64
+		isHidden
+		lineageTag: 312a837e-677e-5b9a-a279-0bc3b3651904
+		summarizeBy: none
+		sourceColumn: planungsbereich_key
+
+	column planungsbereich
+		dataType: string
+		lineageTag: 80977d62-ee2e-562d-80c8-e9bbf266606a
+		summarizeBy: none
+		sourceColumn: planungsbereich
+
+	column typ
+		dataType: string
+		lineageTag: 08f7c12b-9908-5e78-9ddb-17e3842fa9ac
+		summarizeBy: none
+		sourceColumn: typ
+
+	partition dim_planungsbereich = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_planungsbereich"]}[Data],
+					Selected = Table.SelectColumns(Data, {"planungsbereich_key", "planungsbereich", "typ"}),
+					Known = Table.SelectRows(Selected, each [planungsbereich_key] <> -1),
+					Result = Known
+				in
+					Result

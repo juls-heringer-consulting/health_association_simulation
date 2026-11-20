@@ -1,0 +1,57 @@
+table dim_gop
+	lineageTag: 45dcefb9-4692-5078-8c85-38c14e067c49
+
+	column gop_key
+		dataType: int64
+		isHidden
+		lineageTag: e8c0e285-f2ea-5f7a-af0b-b80fb3627705
+		summarizeBy: none
+		sourceColumn: gop_key
+
+	column gop_code
+		dataType: string
+		lineageTag: 3d5ab535-6b8d-50a6-b52d-531ad5aac0f2
+		summarizeBy: none
+		sourceColumn: gop_code
+
+	column gop
+		dataType: string
+		lineageTag: 60cf717c-fcc3-5769-852b-a3b50218c13b
+		summarizeBy: none
+		sourceColumn: gop
+
+	column kapitel
+		dataType: string
+		lineageTag: 684482aa-1fbd-5e2a-b583-64b971c49607
+		summarizeBy: none
+		sourceColumn: kapitel
+
+	column ebm_bereich
+		dataType: string
+		lineageTag: b5a8974a-b2a1-55c6-a00d-59481fdb492c
+		summarizeBy: none
+		sourceColumn: ebm_bereich
+
+	column ist_extrabudgetaer
+		dataType: boolean
+		isHidden
+		lineageTag: e913dc6c-b2b3-544b-89aa-bd616d287ecd
+		summarizeBy: none
+		sourceColumn: ist_extrabudgetaer
+
+	column Remuneration = IF(dim_gop[ist_extrabudgetaer], "EGV (extra-budgetary)", "MGV (budgeted)")
+		dataType: string
+		lineageTag: 3468c11e-2d69-5686-9d22-cfcabe8a0017
+		summarizeBy: none
+
+	partition dim_gop = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_gop"]}[Data],
+					Selected = Table.SelectColumns(Data, {"gop_key", "gop_code", "gop", "kapitel", "ebm_bereich", "ist_extrabudgetaer"}),
+					Known = Table.SelectRows(Selected, each [gop_key] <> -1),
+					Result = Known
+				in
+					Result

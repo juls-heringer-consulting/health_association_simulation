@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "supply_legend",
+  "position": {
+    "x": 16,
+    "y": 674,
+    "z": 0,
+    "height": 40,
+    "width": 812,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "■ ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#e34948"
+                    }
+                  },
+                  {
+                    "value": "below target (< 100 %, under-supply from 75 %)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#52514e"
+                    }
+                  },
+                  {
+                    "value": "     ■ ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#f0efec"
+                    }
+                  },
+                  {
+                    "value": "at target (100 %)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#52514e"
+                    }
+                  },
+                  {
+                    "value": "     ■ ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#3987e5"
+                    }
+                  },
+                  {
+                    "value": "above target (≥ 110 % = closed)",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "9pt",
+                      "color": "#52514e"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

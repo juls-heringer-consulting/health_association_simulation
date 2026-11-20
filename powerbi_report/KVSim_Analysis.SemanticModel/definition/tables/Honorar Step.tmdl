@@ -1,0 +1,21 @@
+table 'Honorar Step'
+	lineageTag: 514c2894-7e98-59c4-9831-874d4b85e1ac
+
+	column Step
+		dataType: string
+		sortByColumn: Sort
+		lineageTag: 0360351a-994d-5a28-b39b-69bd00db7af9
+		summarizeBy: none
+		sourceColumn: Step
+
+	column Sort
+		dataType: int64
+		isHidden
+		lineageTag: 8016280e-c5e3-517c-86cf-cd2891fad319
+		summarizeBy: none
+		sourceColumn: Sort
+
+	partition 'Honorar Step' = m
+		mode: import
+		source =
+				#table(type table [Step = text, Sort = Int64.Type], {{"Honorar brutto", 1}, {"Administrative costs", 2}, {"Advance payments", 3}})

@@ -1,0 +1,74 @@
+table fact_bereitschaftsdienst
+	lineageTag: fdbb9112-cab3-5eee-96ca-dcb8b84fc63e
+
+	column dienst_id
+		dataType: int64
+		isHidden
+		lineageTag: 5ea37d55-a79b-5e9c-9cf3-d1d28d001328
+		summarizeBy: none
+		sourceColumn: dienst_id
+
+	column datum_key
+		dataType: int64
+		isHidden
+		lineageTag: 2e2592c8-399b-5d37-aa55-77b05ce6364a
+		summarizeBy: none
+		sourceColumn: datum_key
+
+	column region_key
+		dataType: int64
+		isHidden
+		lineageTag: 4ceebc57-681d-5c50-964b-d4b7417f79c8
+		summarizeBy: none
+		sourceColumn: region_key
+
+	column dauer_stunden
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: 587f5b72-cbe7-5333-b044-e997872d428f
+		summarizeBy: none
+		sourceColumn: dauer_stunden
+
+	column ist_wochenende_feiertag
+		dataType: boolean
+		isHidden
+		lineageTag: e5019df8-ee2d-587c-ae05-41ae7e487410
+		summarizeBy: none
+		sourceColumn: ist_wochenende_feiertag
+
+	column ist_getauscht
+		dataType: boolean
+		isHidden
+		lineageTag: dee11a6a-efcb-5d8b-80db-624d376d4035
+		summarizeBy: none
+		sourceColumn: ist_getauscht
+
+	column 'Day Type' = IF(fact_bereitschaftsdienst[ist_wochenende_feiertag], "Weekend / holiday", "Weekday")
+		dataType: string
+		lineageTag: a2df94e2-903f-5779-9c9d-4c6c7adee04d
+		summarizeBy: none
+
+	measure Shifts = COUNTROWS(fact_bereitschaftsdienst)
+		formatString: #,0
+		lineageTag: afbc2c37-e057-53fd-bf54-4eae309ec1d6
+
+	measure 'Shift Hours' = SUM(fact_bereitschaftsdienst[dauer_stunden])
+		formatString: #,0
+		lineageTag: 8456a9ab-48aa-5818-80c7-24ea6f5a2e41
+
+	measure 'Swap Rate' = DIVIDE(CALCULATE(COUNTROWS(fact_bereitschaftsdienst), fact_bereitschaftsdienst[ist_getauscht] = TRUE()), [Shifts])
+		formatString: 0.0%
+		lineageTag: a9d02487-c19c-5aaf-9da8-b369a9e9a4a2
+
+	partition fact_bereitschaftsdienst = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "fact_bereitschaftsdienst"]}[Data],
+					Selected = Table.SelectColumns(Data, {"dienst_id", "datum_key", "region_key", "dauer_stunden", "ist_wochenende_feiertag", "ist_getauscht"}),
+					Known = Selected,
+					Result = Known
+				in
+					Result

@@ -1,0 +1,33 @@
+table dim_arztgruppe
+	lineageTag: 75cb1b61-797e-5051-ae87-ed2b55023fa8
+
+	column arztgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: 623e2dc5-0608-5df0-82af-8ae232ef10cc
+		summarizeBy: none
+		sourceColumn: arztgruppe_key
+
+	column arztgruppe
+		dataType: string
+		lineageTag: 10073490-2037-5aea-bb67-9b1ce21738c3
+		summarizeBy: none
+		sourceColumn: arztgruppe
+
+	column versorgungsebene
+		dataType: string
+		lineageTag: 9770084a-db05-515f-b90c-907ef7eed8fa
+		summarizeBy: none
+		sourceColumn: versorgungsebene
+
+	partition dim_arztgruppe = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_arztgruppe"]}[Data],
+					Selected = Table.SelectColumns(Data, {"arztgruppe_key", "arztgruppe", "versorgungsebene"}),
+					Known = Table.SelectRows(Selected, each [arztgruppe_key] <> -1),
+					Result = Known
+				in
+					Result

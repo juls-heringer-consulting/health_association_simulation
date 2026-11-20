@@ -1,0 +1,115 @@
+table dim_arzt
+	lineageTag: da9e3f43-724d-5aa3-8803-fe46d21ad4ec
+
+	column arzt_key
+		dataType: int64
+		isHidden
+		lineageTag: b0f3f2be-728c-5a70-a226-990ad2d15b8e
+		summarizeBy: none
+		sourceColumn: arzt_key
+
+	column arzt_id
+		dataType: int64
+		isHidden
+		lineageTag: 544bdde2-83db-5f1b-b7cd-73ab6b2c119e
+		summarizeBy: none
+		sourceColumn: arzt_id
+
+	column praxis_bsnr
+		dataType: string
+		isHidden
+		lineageTag: fffc1092-71da-578c-a262-a8180728cc60
+		summarizeBy: none
+		sourceColumn: praxis_bsnr
+
+	column geschlecht
+		dataType: string
+		isHidden
+		lineageTag: 03a3ea49-4693-5dcb-9af1-1fcabd2a44de
+		summarizeBy: none
+		sourceColumn: geschlecht
+
+	column geburtsjahr
+		dataType: int64
+		lineageTag: f971ac0d-2117-5da3-923f-a5f925a411f9
+		summarizeBy: none
+		sourceColumn: geburtsjahr
+
+	column fachgruppe
+		dataType: string
+		lineageTag: 341cb672-f22b-5591-bc7c-47701cae19cd
+		summarizeBy: none
+		sourceColumn: fachgruppe
+
+	column teilnahmeform_code
+		dataType: string
+		isHidden
+		lineageTag: d4bb320c-a375-53b4-be62-23573b97631d
+		summarizeBy: none
+		sourceColumn: teilnahmeform_code
+
+	column is_current
+		dataType: boolean
+		isHidden
+		lineageTag: 1b939941-5b54-5d6e-be5b-4dc71d2d5346
+		summarizeBy: none
+		sourceColumn: is_current
+
+	column Gender = SWITCH(dim_arzt[geschlecht], "w", "female", "m", "male", "unknown")
+		dataType: string
+		lineageTag: d8d4e078-a98a-5dd0-b53e-a60b77a586fa
+		summarizeBy: none
+
+	column Participation = SWITCH(dim_arzt[teilnahmeform_code], "ZUL", "Licensed (Zulassung)", "ANG", "Employed (Anstellung)", "No active participation")
+		dataType: string
+		lineageTag: f1e07e46-2128-53b5-b29e-4292e95c12e8
+		summarizeBy: none
+
+	column 'Age 2025' = 2025 - dim_arzt[geburtsjahr]
+		dataType: int64
+		lineageTag: 7a92d2b9-2b73-569f-bea6-ab06ec13dd85
+		summarizeBy: none
+
+	column 'Age Band Sort' = VAR a = dim_arzt[Age 2025] RETURN SWITCH(TRUE(), a < 40, 1, a < 50, 2, a < 60, 3, a < 65, 4, 5)
+		dataType: int64
+		isHidden
+		lineageTag: a320ee98-c5af-536c-ba5e-99705bab0761
+		summarizeBy: none
+
+	column 'Age Band' = SWITCH(dim_arzt[Age Band Sort], 1, "under 40", 2, "40-49", 3, "50-59", 4, "60-64", "65 and over")
+		dataType: string
+		sortByColumn: 'Age Band Sort'
+		lineageTag: d7b6ca67-cbb8-579a-b809-9d0581381a26
+		summarizeBy: none
+
+	measure Doctors = CALCULATE(DISTINCTCOUNT(dim_arzt[arzt_id]), dim_arzt[is_current] = TRUE())
+		formatString: #,0
+		lineageTag: fdc14fd3-5d88-5857-bea4-72fd5c7db2b1
+
+	measure 'Share Female' = DIVIDE(CALCULATE([Doctors], dim_arzt[geschlecht] = "w"), [Doctors])
+		formatString: 0.0%
+		lineageTag: c6cf8311-9dd3-56ce-9a1d-78cf125cc6f5
+
+	measure 'Avg Age' = CALCULATE(AVERAGE(dim_arzt[Age 2025]), dim_arzt[is_current] = TRUE())
+		formatString: 0.0
+		lineageTag: f61904d4-4d42-51b3-b4d6-765add048d2d
+
+	measure 'Share 60 Plus' = DIVIDE(CALCULATE([Doctors], dim_arzt[Age 2025] >= 60), [Doctors])
+		formatString: 0.0%
+		lineageTag: a44d0aea-5907-545c-acf9-185e41f1164e
+
+	measure 'Share Employed' = DIVIDE(CALCULATE([Doctors], dim_arzt[teilnahmeform_code] = "ANG"), [Doctors])
+		formatString: 0.0%
+		lineageTag: dc41472d-c66a-54dd-b838-5bb3129865e3
+
+	partition dim_arzt = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_arzt"]}[Data],
+					Selected = Table.SelectColumns(Data, {"arzt_key", "arzt_id", "praxis_bsnr", "geschlecht", "geburtsjahr", "fachgruppe", "teilnahmeform_code", "is_current"}),
+					Known = Table.SelectRows(Selected, each [arzt_key] <> -1),
+					Result = Known
+				in
+					Result

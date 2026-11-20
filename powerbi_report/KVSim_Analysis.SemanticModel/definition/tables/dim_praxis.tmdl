@@ -1,0 +1,55 @@
+table dim_praxis
+	lineageTag: a3674b99-b7c4-54f3-a752-6f0d1fe3d37a
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		lineageTag: c00d7089-57cb-5ec1-889c-6272b03ae7b7
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column bsnr
+		dataType: string
+		lineageTag: 28652e82-0bd6-559a-9f1b-a56894352802
+		summarizeBy: none
+		sourceColumn: bsnr
+
+	column praxis_name
+		dataType: string
+		lineageTag: c94880b4-5026-5f52-867f-86378b314f40
+		summarizeBy: none
+		sourceColumn: praxis_name
+
+	column kooperationsform
+		dataType: string
+		lineageTag: 063e6dfa-7853-58e3-b047-0bcc1abf1ac5
+		summarizeBy: none
+		sourceColumn: kooperationsform
+
+	column ort
+		dataType: string
+		lineageTag: 922f703f-8613-5b62-bf34-4c9a03090425
+		summarizeBy: none
+		sourceColumn: ort
+
+	column kreis
+		dataType: string
+		lineageTag: 9cce9500-fd9e-57e4-9207-972be9df41ae
+		summarizeBy: none
+		sourceColumn: kreis
+
+	measure Practices = DISTINCTCOUNT(dim_praxis[bsnr])
+		formatString: #,0
+		lineageTag: 3a4fc063-c5dd-5846-a0b6-8cf29830bb94
+
+	partition dim_praxis = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_praxis"]}[Data],
+					Selected = Table.SelectColumns(Data, {"praxis_key", "bsnr", "praxis_name", "kooperationsform", "ort", "kreis"}),
+					Known = Table.SelectRows(Selected, each [praxis_key] <> -1),
+					Result = Known
+				in
+					Result

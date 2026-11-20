@@ -1,0 +1,62 @@
+table dim_datum
+	lineageTag: cf37c128-870c-514c-b3b4-0cfad75a917b
+
+	column datum_key
+		dataType: int64
+		isHidden
+		lineageTag: d7e24b44-8b61-551c-98aa-faccffb1a707
+		summarizeBy: none
+		sourceColumn: datum_key
+
+	column datum
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: 98da35d0-b75e-5c75-b0e3-187a9b66abe3
+		summarizeBy: none
+		sourceColumn: datum
+
+	column jahr
+		dataType: int64
+		lineageTag: f82b42fe-526c-5ce7-be6d-377433ff7f4c
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column monat_nr
+		dataType: int64
+		isHidden
+		lineageTag: 34cb03d2-2a0f-5280-90f4-0f1730ab014c
+		summarizeBy: none
+		sourceColumn: monat_nr
+
+	column monat_name
+		dataType: string
+		sortByColumn: monat_nr
+		lineageTag: 214038ed-1456-5688-bf30-d09838332377
+		summarizeBy: none
+		sourceColumn: monat_name
+
+	column wochentag_nr
+		dataType: int64
+		isHidden
+		lineageTag: b2a2b120-9f20-57d3-8087-3794df88fcd0
+		summarizeBy: none
+		sourceColumn: wochentag_nr
+
+	column wochentag_name
+		dataType: string
+		sortByColumn: wochentag_nr
+		lineageTag: 6f608769-0240-599a-ac78-76c12bc6f1f4
+		summarizeBy: none
+		sourceColumn: wochentag_name
+
+	partition dim_datum = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_datum"]}[Data],
+					Selected = Table.SelectColumns(Data, {"datum_key", "datum", "jahr", "monat_nr", "monat_name", "wochentag_nr", "wochentag_name"}),
+					Known = Table.SelectRows(Selected, each [datum_key] <> -1),
+					Result = Known
+				in
+					Result

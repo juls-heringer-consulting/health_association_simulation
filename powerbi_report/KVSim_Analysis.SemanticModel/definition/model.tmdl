@@ -1,0 +1,30 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+
+	annotation __PBI_TimeIntelligenceEnabled = 0
+
+ref table dim_quartal
+ref table dim_praxis
+ref table dim_region
+ref table dim_fachgruppe
+ref table dim_arztgruppe
+ref table dim_altersgruppe
+ref table dim_krankenkasse
+ref table dim_planungsbereich
+ref table dim_datum
+ref table dim_gop
+ref table dim_arzt
+ref table fact_abrechnungsfall
+ref table fact_leistung
+ref table fact_honorar_quartal
+ref table fact_tss_anfrage
+ref table fact_bereitschaftsdienst
+ref table fact_versorgungsgrad
+ref table 'Honorar Step'
+ref table 'TSS Stage'
+
+ref expression ServerName
+ref expression DatabaseName

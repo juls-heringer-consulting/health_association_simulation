@@ -1,0 +1,79 @@
+table fact_abrechnungsfall
+	lineageTag: 2652c083-3f22-5999-87c4-d78816048e84
+
+	column fall_id
+		dataType: int64
+		isHidden
+		lineageTag: 1106ec2b-6bbf-56cf-a039-7f05a27ddf4b
+		summarizeBy: none
+		sourceColumn: fall_id
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		lineageTag: 5ed2fd98-395a-5721-b351-94d3db37a331
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		lineageTag: 2ebb2a75-d7e8-5f10-bf31-0ea3ff465851
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column region_key
+		dataType: int64
+		isHidden
+		lineageTag: 84527e89-27fa-5a6b-bee0-0bcc1f2cf56e
+		summarizeBy: none
+		sourceColumn: region_key
+
+	column fachgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: 91dbd162-8049-5838-a6cc-bc739c50f3fa
+		summarizeBy: none
+		sourceColumn: fachgruppe_key
+
+	column kasse_key
+		dataType: int64
+		isHidden
+		lineageTag: 9726777b-2fd5-51f8-81ee-c774e88efb6e
+		summarizeBy: none
+		sourceColumn: kasse_key
+
+	column altersgruppe_key
+		dataType: int64
+		isHidden
+		lineageTag: 42e12c02-5a7f-5fa5-8a2e-19679da1f026
+		summarizeBy: none
+		sourceColumn: altersgruppe_key
+
+	column punkte
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 55b7bc5c-c417-5f91-ac98-dfb8fe48c2de
+		summarizeBy: none
+		sourceColumn: punkte
+
+	measure Cases = COUNTROWS(fact_abrechnungsfall)
+		formatString: #,0
+		lineageTag: ae78377f-d689-5d26-aa73-24d7beebf2b2
+
+	measure 'Points per Case' = DIVIDE(SUM(fact_abrechnungsfall[punkte]), [Cases])
+		formatString: #,0
+		lineageTag: 0e0cd056-8fbb-54e2-ac7c-41dca7c2fc6e
+
+	partition fact_abrechnungsfall = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "fact_abrechnungsfall"]}[Data],
+					Selected = Table.SelectColumns(Data, {"fall_id", "quartal_key", "praxis_key", "region_key", "fachgruppe_key", "kasse_key", "altersgruppe_key", "punkte"}),
+					Known = Selected,
+					Result = Known
+				in
+					Result

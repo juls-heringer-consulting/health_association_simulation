@@ -1,0 +1,33 @@
+table dim_krankenkasse
+	lineageTag: b9abfa28-4397-511d-b60a-5212f4b4e32f
+
+	column kasse_key
+		dataType: int64
+		isHidden
+		lineageTag: f519be1a-e7ef-51e0-8db5-bc67af265823
+		summarizeBy: none
+		sourceColumn: kasse_key
+
+	column krankenkasse
+		dataType: string
+		lineageTag: d58a4a74-ab8c-5af0-9425-caf5afd7e4e3
+		summarizeBy: none
+		sourceColumn: krankenkasse
+
+	column kassenart
+		dataType: string
+		lineageTag: b1c3c799-90df-5ddb-8f95-97a636e80898
+		summarizeBy: none
+		sourceColumn: kassenart
+
+	partition dim_krankenkasse = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "dim_krankenkasse"]}[Data],
+					Selected = Table.SelectColumns(Data, {"kasse_key", "krankenkasse", "kassenart"}),
+					Known = Table.SelectRows(Selected, each [kasse_key] <> -1),
+					Result = Known
+				in
+					Result

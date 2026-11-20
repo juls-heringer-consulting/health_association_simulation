@@ -1,0 +1,47 @@
+table fact_leistung
+	lineageTag: dc686d97-5482-5a9b-a959-65b348a24df7
+
+	column leistung_id
+		dataType: int64
+		isHidden
+		lineageTag: a54e1a73-c5f1-50c6-82fe-59b89607c433
+		summarizeBy: none
+		sourceColumn: leistung_id
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		lineageTag: 368564e5-f593-5161-bd00-f4fde49e89b9
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column gop_key
+		dataType: int64
+		isHidden
+		lineageTag: 2c073427-05f2-5759-991c-1f09e2728b64
+		summarizeBy: none
+		sourceColumn: gop_key
+
+	column betrag_eur
+		dataType: decimal
+		isHidden
+		formatString: #,0.00
+		lineageTag: 1759fc38-e4d6-58d1-bff0-52b8cad09789
+		summarizeBy: none
+		sourceColumn: betrag_eur
+
+	measure 'Billed Amount' = SUM(fact_leistung[betrag_eur])
+		formatString: #,0 "€"
+		lineageTag: 7c8876ab-a6af-506f-a4ec-4e278e8591f2
+
+	partition fact_leistung = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Data = Source{[Schema = "mart", Item = "fact_leistung"]}[Data],
+					Selected = Table.SelectColumns(Data, {"leistung_id", "quartal_key", "gop_key", "betrag_eur"}),
+					Known = Selected,
+					Result = Known
+				in
+					Result
