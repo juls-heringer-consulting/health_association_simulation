@@ -31,6 +31,14 @@ flowchart LR
 | Verordnungen | 4,664 aggregated prescription records + Richtgrößen |
 | Kommunikation | 355 documents (enquiries, complaints, minutes, notices) linked to doctors/practices/procedures |
 
+## Dashboards
+
+- **[Live dashboard (GitHub Pages)](https://juls-heringer-consulting.github.io/health_association_simulation/)**:
+  five interactive pages in the browser, with no installation. Source and data refresh are
+  described in [dashboard_site/README.md](dashboard_site/README.md).
+- Power BI: [powerbi_report/](powerbi_report/README.md) has the full analysis report (5 pages),
+  and [powerbi_overview/](powerbi_overview/README.md) has a first quick look.
+
 ## Quick start
 
 Prerequisites (all present on this machine): SQL Server 2019+ (here: 2025 Standard
@@ -81,7 +89,11 @@ health_association_simulation/
 │   ├── kvsim/                 generator (one consistent world), writers, loader, config
 │   ├── generate_sources.py    → data/sources
 │   ├── load_staging.py        → stg
-│   └── export_data_dictionary.py
+│   ├── export_data_dictionary.py
+│   └── export_dashboard_data.py → dashboard_site/data.js
+├── dashboard_site/            static dashboard, published with GitHub Pages (.github/workflows/pages.yml)
+├── powerbi_report/            Power BI analysis report (PBIP)
+├── powerbi_overview/          Power BI first overview (PBIP)
 ├── sql/                       numbered, re-runnable T-SQL scripts (see sql/README.md)
 │   ├── 00_setup … 85_fulltext build the database
 │   ├── 90_exercises/          exercise path, 4 levels
