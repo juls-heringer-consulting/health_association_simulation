@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "card3",
+  "position": {
+    "x": 860,
+    "y": 20,
+    "z": 0,
+    "height": 110,
+    "width": 400,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_abrechnungsfall"
+                    }
+                  },
+                  "Property": "Cases"
+                }
+              },
+              "queryRef": "fact_abrechnungsfall.Cases",
+              "nativeQueryRef": "Cases"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Billing cases (Behandlungsfälle)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

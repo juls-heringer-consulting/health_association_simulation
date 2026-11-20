@@ -1,0 +1,32 @@
+table fact_honorar_quartal
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column honorar_brutto
+		dataType: decimal
+		formatString: #,0.00
+		summarizeBy: none
+		sourceColumn: honorar_brutto
+
+	measure 'Honorar Brutto EUR' = SUM(fact_honorar_quartal[honorar_brutto])
+		formatString: #,0 "€"
+
+	partition fact_honorar_quartal = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "fact_honorar_quartal"]}[Data],
+					Selected = Table.SelectColumns(Table, {"quartal_key", "praxis_key", "honorar_brutto"})
+				in
+					Selected

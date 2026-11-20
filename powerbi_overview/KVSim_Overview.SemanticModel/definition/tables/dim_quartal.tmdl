@@ -1,0 +1,28 @@
+table dim_quartal
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column quartal_label
+		dataType: string
+		sortByColumn: quartal_key
+		summarizeBy: none
+		sourceColumn: quartal_label
+
+	column jahr
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: jahr
+
+	partition dim_quartal = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_quartal"]}[Data],
+					Selected = Table.SelectColumns(Table, {"quartal_key", "quartal_label", "jahr"})
+				in
+					Selected

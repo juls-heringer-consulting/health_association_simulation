@@ -1,0 +1,44 @@
+table fact_abrechnungsfall
+
+	column fall_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: fall_id
+
+	column quartal_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column region_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_key
+
+	column fachgruppe_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: fachgruppe_key
+
+	measure Cases = COUNTROWS(fact_abrechnungsfall)
+		formatString: #,0
+
+	partition fact_abrechnungsfall = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "fact_abrechnungsfall"]}[Data],
+					Selected = Table.SelectColumns(Table, {"fall_id", "quartal_key", "praxis_key", "region_key", "fachgruppe_key"})
+				in
+					Selected

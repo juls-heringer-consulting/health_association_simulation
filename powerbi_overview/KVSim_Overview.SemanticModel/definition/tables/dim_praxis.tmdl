@@ -1,0 +1,51 @@
+table dim_praxis
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column praxis_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: praxis_id
+
+	column bsnr
+		dataType: string
+		summarizeBy: none
+		sourceColumn: bsnr
+
+	column praxis_name
+		dataType: string
+		summarizeBy: none
+		sourceColumn: praxis_name
+
+	column kooperationsform
+		dataType: string
+		summarizeBy: none
+		sourceColumn: kooperationsform
+
+	column ort
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ort
+
+	column kreis
+		dataType: string
+		summarizeBy: none
+		sourceColumn: kreis
+
+	measure Practices = DISTINCTCOUNT(dim_praxis[bsnr])
+		formatString: #,0
+
+	partition dim_praxis = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_praxis"]}[Data],
+					Selected = Table.SelectColumns(Table, {"praxis_key", "praxis_id", "bsnr", "praxis_name", "kooperationsform", "ort", "kreis"})
+				in
+					Selected

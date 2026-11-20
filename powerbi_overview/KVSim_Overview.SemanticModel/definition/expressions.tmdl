@@ -1,0 +1,5 @@
+expression ServerName = "localhost" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 6f1c0d52-7a41-4c0e-9d0b-1a2b3c4d5e01
+
+expression DatabaseName = "KVSim" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 6f1c0d52-7a41-4c0e-9d0b-1a2b3c4d5e02

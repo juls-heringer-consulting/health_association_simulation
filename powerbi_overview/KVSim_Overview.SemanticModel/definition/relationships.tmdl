@@ -1,0 +1,48 @@
+relationship 7e0c6d88-5261-54db-a532-83358ac60ecd
+	fromColumn: fact_abrechnungsfall.quartal_key
+	toColumn: dim_quartal.quartal_key
+
+relationship dd420174-9b1e-5184-a359-5c29eb8d630c
+	fromColumn: fact_abrechnungsfall.praxis_key
+	toColumn: dim_praxis.praxis_key
+
+relationship 67821737-d333-5f4f-8073-9b03afa8f006
+	fromColumn: fact_abrechnungsfall.region_key
+	toColumn: dim_region.region_key
+
+relationship f546f2f2-2856-51c6-ac25-72d1eac70c4e
+	fromColumn: fact_abrechnungsfall.fachgruppe_key
+	toColumn: dim_fachgruppe.fachgruppe_key
+
+relationship 75458c52-e481-516f-9b5f-4ea673593c4c
+	fromColumn: fact_honorar_quartal.quartal_key
+	toColumn: dim_quartal.quartal_key
+
+relationship b1c1fce2-65ee-5aff-a00c-b297a4cf8514
+	fromColumn: fact_honorar_quartal.praxis_key
+	toColumn: dim_praxis.praxis_key
+
+relationship e0519ae2-a82e-590f-b6fc-0a51bd7fd7a5
+	fromColumn: fact_tss_anfrage.eingang_datum_key
+	toColumn: dim_datum.datum_key
+
+relationship 1fb27bc7-f768-5290-b95f-3032690cb15f
+	isActive: false
+	fromColumn: fact_tss_anfrage.termin_datum_key
+	toColumn: dim_datum.datum_key
+
+relationship 27198123-9e7f-5d83-9ca3-4fca17ebbc06
+	fromColumn: fact_tss_anfrage.arztgruppe_key
+	toColumn: dim_arztgruppe.arztgruppe_key
+
+relationship 0fb2cb4a-a9fa-5da4-8133-d0d327d8185e
+	fromColumn: fact_tss_anfrage.patient_region_key
+	toColumn: dim_region.region_key
+
+relationship 1575a4d6-833d-5540-a63a-a3dc16dcc377
+	fromColumn: fact_bereitschaftsdienst.datum_key
+	toColumn: dim_datum.datum_key
+
+relationship 59799bdd-75b9-58b2-b88c-4e0f04bf9811
+	fromColumn: fact_bereitschaftsdienst.region_key
+	toColumn: dim_region.region_key

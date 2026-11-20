@@ -1,0 +1,27 @@
+table dim_region
+
+	column region_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_key
+
+	column kreis
+		dataType: string
+		summarizeBy: none
+		sourceColumn: kreis
+
+	column kreisart
+		dataType: string
+		summarizeBy: none
+		sourceColumn: kreisart
+
+	partition dim_region = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_region"]}[Data],
+					Selected = Table.SelectColumns(Table, {"region_key", "kreis", "kreisart"})
+				in
+					Selected

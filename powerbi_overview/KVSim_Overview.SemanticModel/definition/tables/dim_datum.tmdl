@@ -1,0 +1,40 @@
+table dim_datum
+
+	column datum_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: datum_key
+
+	column datum
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		summarizeBy: none
+		sourceColumn: datum
+
+	column jahr
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: jahr
+
+	column monat_nr
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: monat_nr
+
+	column monat_name
+		dataType: string
+		sortByColumn: monat_nr
+		summarizeBy: none
+		sourceColumn: monat_name
+
+	partition dim_datum = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_datum"]}[Data],
+					Selected = Table.SelectColumns(Table, {"datum_key", "datum", "jahr", "monat_nr", "monat_name"})
+				in
+					Selected

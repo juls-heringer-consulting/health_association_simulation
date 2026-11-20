@@ -1,0 +1,57 @@
+table fact_tss_anfrage
+
+	column anfrage_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: anfrage_id
+
+	column eingang_datum_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: eingang_datum_key
+
+	column termin_datum_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: termin_datum_key
+
+	column arztgruppe_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: arztgruppe_key
+
+	column patient_region_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: patient_region_key
+
+	column status
+		dataType: string
+		summarizeBy: none
+		sourceColumn: status
+
+	column ist_innerhalb_4_wochen
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: ist_innerhalb_4_wochen
+
+	measure 'TSS Requests' = COUNTROWS(fact_tss_anfrage)
+		formatString: #,0
+
+	measure 'Share Within 4 Weeks' = DIVIDE(CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_innerhalb_4_wochen] = TRUE()), CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_innerhalb_4_wochen] IN {TRUE(), FALSE()}))
+		formatString: 0.0%
+
+	partition fact_tss_anfrage = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "fact_tss_anfrage"]}[Data],
+					Selected = Table.SelectColumns(Table, {"anfrage_id", "eingang_datum_key", "termin_datum_key", "arztgruppe_key", "patient_region_key", "status", "ist_innerhalb_4_wochen"})
+				in
+					Selected

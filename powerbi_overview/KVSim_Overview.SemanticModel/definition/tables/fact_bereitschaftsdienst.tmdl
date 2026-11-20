@@ -1,0 +1,32 @@
+table fact_bereitschaftsdienst
+
+	column dienst_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: dienst_id
+
+	column datum_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: datum_key
+
+	column region_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: region_key
+
+	measure Shifts = COUNTROWS(fact_bereitschaftsdienst)
+		formatString: #,0
+
+	partition fact_bereitschaftsdienst = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "fact_bereitschaftsdienst"]}[Data],
+					Selected = Table.SelectColumns(Table, {"dienst_id", "datum_key", "region_key"})
+				in
+					Selected

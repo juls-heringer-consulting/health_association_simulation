@@ -1,0 +1,27 @@
+table dim_fachgruppe
+
+	column fachgruppe_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: fachgruppe_key
+
+	column fachgruppe
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fachgruppe
+
+	column arztgruppe
+		dataType: string
+		summarizeBy: none
+		sourceColumn: arztgruppe
+
+	partition dim_fachgruppe = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_fachgruppe"]}[Data],
+					Selected = Table.SelectColumns(Table, {"fachgruppe_key", "fachgruppe", "arztgruppe"})
+				in
+					Selected

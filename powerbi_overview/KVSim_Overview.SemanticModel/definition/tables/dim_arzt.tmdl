@@ -1,0 +1,41 @@
+table dim_arzt
+
+	column arzt_key
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: arzt_key
+
+	column arzt_id
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: arzt_id
+
+	column geschlecht
+		dataType: string
+		summarizeBy: none
+		sourceColumn: geschlecht
+
+	column fachgruppe
+		dataType: string
+		summarizeBy: none
+		sourceColumn: fachgruppe
+
+	column is_current
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: is_current
+
+	measure Doctors = DISTINCTCOUNT(dim_arzt[arzt_id])
+		formatString: #,0
+
+	partition dim_arzt = m
+		mode: import
+		source =
+				let
+					Source = Sql.Database(ServerName, DatabaseName),
+					Table = Source{[Schema = "mart", Item = "dim_arzt"]}[Data],
+					Selected = Table.SelectColumns(Table, {"arzt_key", "arzt_id", "geschlecht", "fachgruppe", "is_current"})
+				in
+					Selected
