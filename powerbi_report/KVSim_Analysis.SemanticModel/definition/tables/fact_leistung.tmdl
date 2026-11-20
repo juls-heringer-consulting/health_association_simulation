@@ -1,6 +1,10 @@
 table fact_leistung
 	lineageTag: dc686d97-5482-5a9b-a959-65b348a24df7
 
+	measure 'Billed Amount' = SUM(fact_leistung[betrag_eur])
+		formatString: #,0 "€"
+		lineageTag: 7c8876ab-a6af-506f-a4ec-4e278e8591f2
+
 	column leistung_id
 		dataType: int64
 		isHidden
@@ -23,16 +27,14 @@ table fact_leistung
 		sourceColumn: gop_key
 
 	column betrag_eur
-		dataType: decimal
+		dataType: double
 		isHidden
 		formatString: #,0.00
 		lineageTag: 1759fc38-e4d6-58d1-bff0-52b8cad09789
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: betrag_eur
 
-	measure 'Billed Amount' = SUM(fact_leistung[betrag_eur])
-		formatString: #,0 "€"
-		lineageTag: 7c8876ab-a6af-506f-a4ec-4e278e8591f2
+		annotation SummarizationSetBy = Automatic
 
 	partition fact_leistung = m
 		mode: import
@@ -45,3 +47,4 @@ table fact_leistung
 					Result = Known
 				in
 					Result
+

@@ -1,6 +1,10 @@
 table dim_praxis
 	lineageTag: a3674b99-b7c4-54f3-a752-6f0d1fe3d37a
 
+	measure Practices = DISTINCTCOUNT(dim_praxis[bsnr])
+		formatString: #,0
+		lineageTag: 3a4fc063-c5dd-5846-a0b6-8cf29830bb94
+
 	column praxis_key
 		dataType: int64
 		isHidden
@@ -38,10 +42,6 @@ table dim_praxis
 		summarizeBy: none
 		sourceColumn: kreis
 
-	measure Practices = DISTINCTCOUNT(dim_praxis[bsnr])
-		formatString: #,0
-		lineageTag: 3a4fc063-c5dd-5846-a0b6-8cf29830bb94
-
 	partition dim_praxis = m
 		mode: import
 		source =
@@ -53,3 +53,4 @@ table dim_praxis
 					Result = Known
 				in
 					Result
+

@@ -1,6 +1,14 @@
 table fact_abrechnungsfall
 	lineageTag: 2652c083-3f22-5999-87c4-d78816048e84
 
+	measure Cases = COUNTROWS(fact_abrechnungsfall)
+		formatString: #,0
+		lineageTag: ae78377f-d689-5d26-aa73-24d7beebf2b2
+
+	measure 'Points per Case' = DIVIDE(SUM(fact_abrechnungsfall[punkte]), [Cases])
+		formatString: #,0
+		lineageTag: 0e0cd056-8fbb-54e2-ac7c-41dca7c2fc6e
+
 	column fall_id
 		dataType: int64
 		isHidden
@@ -58,14 +66,6 @@ table fact_abrechnungsfall
 		summarizeBy: none
 		sourceColumn: punkte
 
-	measure Cases = COUNTROWS(fact_abrechnungsfall)
-		formatString: #,0
-		lineageTag: ae78377f-d689-5d26-aa73-24d7beebf2b2
-
-	measure 'Points per Case' = DIVIDE(SUM(fact_abrechnungsfall[punkte]), [Cases])
-		formatString: #,0
-		lineageTag: 0e0cd056-8fbb-54e2-ac7c-41dca7c2fc6e
-
 	partition fact_abrechnungsfall = m
 		mode: import
 		source =
@@ -77,3 +77,4 @@ table fact_abrechnungsfall
 					Result = Known
 				in
 					Result
+

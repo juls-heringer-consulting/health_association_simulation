@@ -1,6 +1,18 @@
 table fact_bereitschaftsdienst
 	lineageTag: fdbb9112-cab3-5eee-96ca-dcb8b84fc63e
 
+	measure Shifts = COUNTROWS(fact_bereitschaftsdienst)
+		formatString: #,0
+		lineageTag: afbc2c37-e057-53fd-bf54-4eae309ec1d6
+
+	measure 'Shift Hours' = SUM(fact_bereitschaftsdienst[dauer_stunden])
+		formatString: #,0
+		lineageTag: 8456a9ab-48aa-5818-80c7-24ea6f5a2e41
+
+	measure 'Swap Rate' = DIVIDE(CALCULATE(COUNTROWS(fact_bereitschaftsdienst), fact_bereitschaftsdienst[ist_getauscht] = TRUE()), [Shifts])
+		formatString: 0.0%
+		lineageTag: a9d02487-c19c-5aaf-9da8-b369a9e9a4a2
+
 	column dienst_id
 		dataType: int64
 		isHidden
@@ -23,12 +35,14 @@ table fact_bereitschaftsdienst
 		sourceColumn: region_key
 
 	column dauer_stunden
-		dataType: decimal
+		dataType: double
 		isHidden
 		formatString: #,0.00
 		lineageTag: 587f5b72-cbe7-5333-b044-e997872d428f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: dauer_stunden
+
+		annotation SummarizationSetBy = Automatic
 
 	column ist_wochenende_feiertag
 		dataType: boolean
@@ -49,18 +63,6 @@ table fact_bereitschaftsdienst
 		lineageTag: a2df94e2-903f-5779-9c9d-4c6c7adee04d
 		summarizeBy: none
 
-	measure Shifts = COUNTROWS(fact_bereitschaftsdienst)
-		formatString: #,0
-		lineageTag: afbc2c37-e057-53fd-bf54-4eae309ec1d6
-
-	measure 'Shift Hours' = SUM(fact_bereitschaftsdienst[dauer_stunden])
-		formatString: #,0
-		lineageTag: 8456a9ab-48aa-5818-80c7-24ea6f5a2e41
-
-	measure 'Swap Rate' = DIVIDE(CALCULATE(COUNTROWS(fact_bereitschaftsdienst), fact_bereitschaftsdienst[ist_getauscht] = TRUE()), [Shifts])
-		formatString: 0.0%
-		lineageTag: a9d02487-c19c-5aaf-9da8-b369a9e9a4a2
-
 	partition fact_bereitschaftsdienst = m
 		mode: import
 		source =
@@ -72,3 +74,4 @@ table fact_bereitschaftsdienst
 					Result = Known
 				in
 					Result
+

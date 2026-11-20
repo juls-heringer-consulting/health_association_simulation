@@ -3,10 +3,10 @@ table 'Honorar Step'
 
 	column Step
 		dataType: string
-		sortByColumn: Sort
 		lineageTag: 0360351a-994d-5a28-b39b-69bd00db7af9
 		summarizeBy: none
 		sourceColumn: Step
+		sortByColumn: Sort
 
 	column Sort
 		dataType: int64
@@ -17,5 +17,5 @@ table 'Honorar Step'
 
 	partition 'Honorar Step' = m
 		mode: import
-		source =
-				#table(type table [Step = text, Sort = Int64.Type], {{"Honorar brutto", 1}, {"Administrative costs", 2}, {"Advance payments", 3}})
+		source = #table(type table [Step = text, Sort = Int64.Type], {{"Honorar brutto", 1}, {"Administrative costs", 2}, {"Advance payments", 3}})
+

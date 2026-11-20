@@ -15,6 +15,8 @@ table dim_datum
 		summarizeBy: none
 		sourceColumn: datum
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column jahr
 		dataType: int64
 		lineageTag: f82b42fe-526c-5ce7-be6d-377433ff7f4c
@@ -30,10 +32,10 @@ table dim_datum
 
 	column monat_name
 		dataType: string
-		sortByColumn: monat_nr
 		lineageTag: 214038ed-1456-5688-bf30-d09838332377
 		summarizeBy: none
 		sourceColumn: monat_name
+		sortByColumn: monat_nr
 
 	column wochentag_nr
 		dataType: int64
@@ -44,10 +46,10 @@ table dim_datum
 
 	column wochentag_name
 		dataType: string
-		sortByColumn: wochentag_nr
 		lineageTag: 6f608769-0240-599a-ac78-76c12bc6f1f4
 		summarizeBy: none
 		sourceColumn: wochentag_name
+		sortByColumn: wochentag_nr
 
 	partition dim_datum = m
 		mode: import
@@ -60,3 +62,4 @@ table dim_datum
 					Result = Known
 				in
 					Result
+

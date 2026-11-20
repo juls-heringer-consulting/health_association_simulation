@@ -1,5 +1,10 @@
 expression ServerName = "localhost" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
 	lineageTag: dcc4ba35-8f39-5dd4-a906-b032ba1d188f
 
+	annotation PBI_ResultType = Text
+
 expression DatabaseName = "KVSim" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
 	lineageTag: f0d1a0f3-52e1-56f2-8235-15981458a66c
+
+	annotation PBI_ResultType = Text
+

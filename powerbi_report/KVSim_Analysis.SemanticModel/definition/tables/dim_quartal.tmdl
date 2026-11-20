@@ -10,10 +10,10 @@ table dim_quartal
 
 	column quartal_label
 		dataType: string
-		sortByColumn: quartal_key
 		lineageTag: b7df8b72-89c2-5095-9098-62395cf72789
 		summarizeBy: none
 		sourceColumn: quartal_label
+		sortByColumn: quartal_key
 
 	column jahr
 		dataType: int64
@@ -34,3 +34,4 @@ table dim_quartal
 					Result = Table.RemoveColumns(Joined, {"used"})
 				in
 					Result
+

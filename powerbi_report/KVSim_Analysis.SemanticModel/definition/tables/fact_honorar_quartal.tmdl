@@ -1,68 +1,6 @@
 table fact_honorar_quartal
 	lineageTag: 0ff4b7c2-43f4-5ee3-8f00-9cbeeef7809f
 
-	column quartal_key
-		dataType: int64
-		isHidden
-		lineageTag: e5ad1745-3064-59a7-956b-06c33b8c4233
-		summarizeBy: none
-		sourceColumn: quartal_key
-
-	column praxis_key
-		dataType: int64
-		isHidden
-		lineageTag: b80561ef-32b8-5b98-acf5-af2bdc70f374
-		summarizeBy: none
-		sourceColumn: praxis_key
-
-	column honorar_brutto
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: a5145d56-6584-5537-81af-91f8c0215219
-		summarizeBy: none
-		sourceColumn: honorar_brutto
-
-	column verwaltungskosten
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: f80f2ba7-5d21-59b8-b587-ca272b5ca4a6
-		summarizeBy: none
-		sourceColumn: verwaltungskosten
-
-	column abschlaege_gezahlt
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: aebe0fce-39fe-589c-b675-c095d76bc332
-		summarizeBy: none
-		sourceColumn: abschlaege_gezahlt
-
-	column auszahlungsbetrag
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: 4044ceba-5ca0-54be-b022-1a816297f5da
-		summarizeBy: none
-		sourceColumn: auszahlungsbetrag
-
-	column betrag_mgv
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: cdf449bd-52f6-5a97-8016-6bdba2a1b34f
-		summarizeBy: none
-		sourceColumn: betrag_mgv
-
-	column betrag_egv
-		dataType: decimal
-		isHidden
-		formatString: #,0.00
-		lineageTag: 191c7f64-c9ff-58d1-9aca-15bc3c2b7dd4
-		summarizeBy: none
-		sourceColumn: betrag_egv
-
 	measure 'Honorar Brutto' = SUM(fact_honorar_quartal[honorar_brutto])
 		formatString: #,0 "€"
 		lineageTag: 841c2bb7-76aa-539c-931b-54ba4bbfea3d
@@ -95,6 +33,80 @@ table fact_honorar_quartal
 		formatString: #,0 "€"
 		lineageTag: 7fb7037c-6561-55d0-9ce1-50803952c498
 
+	column quartal_key
+		dataType: int64
+		isHidden
+		lineageTag: e5ad1745-3064-59a7-956b-06c33b8c4233
+		summarizeBy: none
+		sourceColumn: quartal_key
+
+	column praxis_key
+		dataType: int64
+		isHidden
+		lineageTag: b80561ef-32b8-5b98-acf5-af2bdc70f374
+		summarizeBy: none
+		sourceColumn: praxis_key
+
+	column honorar_brutto
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: a5145d56-6584-5537-81af-91f8c0215219
+		summarizeBy: sum
+		sourceColumn: honorar_brutto
+
+		annotation SummarizationSetBy = Automatic
+
+	column verwaltungskosten
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: f80f2ba7-5d21-59b8-b587-ca272b5ca4a6
+		summarizeBy: sum
+		sourceColumn: verwaltungskosten
+
+		annotation SummarizationSetBy = Automatic
+
+	column abschlaege_gezahlt
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: aebe0fce-39fe-589c-b675-c095d76bc332
+		summarizeBy: sum
+		sourceColumn: abschlaege_gezahlt
+
+		annotation SummarizationSetBy = Automatic
+
+	column auszahlungsbetrag
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 4044ceba-5ca0-54be-b022-1a816297f5da
+		summarizeBy: sum
+		sourceColumn: auszahlungsbetrag
+
+		annotation SummarizationSetBy = Automatic
+
+	column betrag_mgv
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: cdf449bd-52f6-5a97-8016-6bdba2a1b34f
+		summarizeBy: sum
+		sourceColumn: betrag_mgv
+
+		annotation SummarizationSetBy = Automatic
+
+	column betrag_egv
+		dataType: double
+		isHidden
+		formatString: #,0.00
+		lineageTag: 191c7f64-c9ff-58d1-9aca-15bc3c2b7dd4
+		summarizeBy: sum
+		sourceColumn: betrag_egv
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_honorar_quartal = m
 		mode: import
 		source =
@@ -106,3 +118,4 @@ table fact_honorar_quartal
 					Result = Known
 				in
 					Result
+

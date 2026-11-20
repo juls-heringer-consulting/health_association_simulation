@@ -3,10 +3,10 @@ table 'TSS Stage'
 
 	column Stage
 		dataType: string
-		sortByColumn: Sort
 		lineageTag: 4b88b03d-3ef6-5cc7-9151-7bf0cc73255a
 		summarizeBy: none
 		sourceColumn: Stage
+		sortByColumn: Sort
 
 	column Sort
 		dataType: int64
@@ -17,5 +17,5 @@ table 'TSS Stage'
 
 	partition 'TSS Stage' = m
 		mode: import
-		source =
-				#table(type table [Stage = text, Sort = Int64.Type], {{"Requests", 1}, {"Arranged", 2}, {"Attended", 3}})
+		source = #table(type table [Stage = text, Sort = Int64.Type], {{"Requests", 1}, {"Arranged", 2}, {"Attended", 3}})
+

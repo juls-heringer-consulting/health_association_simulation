@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "practice_scatter",
   "position": {
     "x": 16,
@@ -65,7 +65,8 @@
                 }
               },
               "queryRef": "fact_abrechnungsfall.Cases",
-              "nativeQueryRef": "Cases"
+              "nativeQueryRef": "Cases",
+              "active": true
             }
           ]
         },

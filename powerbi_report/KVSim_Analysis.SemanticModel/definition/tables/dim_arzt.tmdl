@@ -1,6 +1,26 @@
 table dim_arzt
 	lineageTag: da9e3f43-724d-5aa3-8803-fe46d21ad4ec
 
+	measure Doctors = CALCULATE(DISTINCTCOUNT(dim_arzt[arzt_id]), dim_arzt[is_current] = TRUE())
+		formatString: #,0
+		lineageTag: fdc14fd3-5d88-5857-bea4-72fd5c7db2b1
+
+	measure 'Share Female' = DIVIDE(CALCULATE([Doctors], dim_arzt[geschlecht] = "w"), [Doctors])
+		formatString: 0.0%
+		lineageTag: c6cf8311-9dd3-56ce-9a1d-78cf125cc6f5
+
+	measure 'Avg Age' = CALCULATE(AVERAGE(dim_arzt[Age 2025]), dim_arzt[is_current] = TRUE())
+		formatString: 0.0
+		lineageTag: f61904d4-4d42-51b3-b4d6-765add048d2d
+
+	measure 'Share 60 Plus' = DIVIDE(CALCULATE([Doctors], dim_arzt[Age 2025] >= 60), [Doctors])
+		formatString: 0.0%
+		lineageTag: a44d0aea-5907-545c-acf9-185e41f1164e
+
+	measure 'Share Employed' = DIVIDE(CALCULATE([Doctors], dim_arzt[teilnahmeform_code] = "ANG"), [Doctors])
+		formatString: 0.0%
+		lineageTag: dc41472d-c66a-54dd-b838-5bb3129865e3
+
 	column arzt_key
 		dataType: int64
 		isHidden
@@ -78,29 +98,9 @@ table dim_arzt
 
 	column 'Age Band' = SWITCH(dim_arzt[Age Band Sort], 1, "under 40", 2, "40-49", 3, "50-59", 4, "60-64", "65 and over")
 		dataType: string
-		sortByColumn: 'Age Band Sort'
 		lineageTag: d7b6ca67-cbb8-579a-b809-9d0581381a26
 		summarizeBy: none
-
-	measure Doctors = CALCULATE(DISTINCTCOUNT(dim_arzt[arzt_id]), dim_arzt[is_current] = TRUE())
-		formatString: #,0
-		lineageTag: fdc14fd3-5d88-5857-bea4-72fd5c7db2b1
-
-	measure 'Share Female' = DIVIDE(CALCULATE([Doctors], dim_arzt[geschlecht] = "w"), [Doctors])
-		formatString: 0.0%
-		lineageTag: c6cf8311-9dd3-56ce-9a1d-78cf125cc6f5
-
-	measure 'Avg Age' = CALCULATE(AVERAGE(dim_arzt[Age 2025]), dim_arzt[is_current] = TRUE())
-		formatString: 0.0
-		lineageTag: f61904d4-4d42-51b3-b4d6-765add048d2d
-
-	measure 'Share 60 Plus' = DIVIDE(CALCULATE([Doctors], dim_arzt[Age 2025] >= 60), [Doctors])
-		formatString: 0.0%
-		lineageTag: a44d0aea-5907-545c-acf9-185e41f1164e
-
-	measure 'Share Employed' = DIVIDE(CALCULATE([Doctors], dim_arzt[teilnahmeform_code] = "ANG"), [Doctors])
-		formatString: 0.0%
-		lineageTag: dc41472d-c66a-54dd-b838-5bb3129865e3
+		sortByColumn: 'Age Band Sort'
 
 	partition dim_arzt = m
 		mode: import
@@ -113,3 +113,4 @@ table dim_arzt
 					Result = Known
 				in
 					Result
+

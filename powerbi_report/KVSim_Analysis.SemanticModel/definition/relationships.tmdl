@@ -69,3 +69,4 @@ relationship 81a68258-50fc-593c-b019-efe022c093fa
 relationship 5fba23ac-54a5-5adf-8c41-37e558ffedc4
 	fromColumn: dim_arzt.praxis_bsnr
 	toColumn: dim_praxis.bsnr
+

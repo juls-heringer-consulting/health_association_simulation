@@ -10,10 +10,10 @@ table dim_altersgruppe
 
 	column altersgruppe
 		dataType: string
-		sortByColumn: sortierung
 		lineageTag: 547d05ab-26e7-548c-8d4e-9c5efda63378
 		summarizeBy: none
 		sourceColumn: altersgruppe
+		sortByColumn: sortierung
 
 	column sortierung
 		dataType: int64
@@ -33,3 +33,4 @@ table dim_altersgruppe
 					Result = Known
 				in
 					Result
+

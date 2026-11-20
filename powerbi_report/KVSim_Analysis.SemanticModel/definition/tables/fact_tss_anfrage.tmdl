@@ -1,6 +1,42 @@
 table fact_tss_anfrage
 	lineageTag: 81643453-91ac-53b5-9817-a4d124eb03dc
 
+	measure 'TSS Requests' = COUNTROWS(fact_tss_anfrage)
+		formatString: #,0
+		lineageTag: 0f065b59-df2f-5213-9eb4-6b632b2f24f9
+
+	measure Arranged = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_vermittelt] = TRUE())
+		formatString: #,0
+		lineageTag: eca61285-4615-5794-8031-5c67fc0c9d21
+
+	measure Attended = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[termin_wahrgenommen] = TRUE())
+		formatString: #,0
+		lineageTag: 49b8361a-e4df-51d9-a8ce-a812f23871be
+
+	measure 'Placement Rate' = DIVIDE([Arranged], [TSS Requests])
+		formatString: 0.0%
+		lineageTag: 17e0b1b7-b961-5137-bea3-963330bdc21f
+
+	measure 'Share Within 4 Weeks' = DIVIDE(CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_innerhalb_4_wochen] = TRUE()), [Arranged])
+		formatString: 0.0%
+		lineageTag: 6d583905-8e23-5130-b91a-de3e2ca6dc92
+
+	measure 'Avg Wait Days' = AVERAGE(fact_tss_anfrage[wartezeit_tage])
+		formatString: 0.0
+		lineageTag: 45e888a7-d251-5693-80df-87badeec32f2
+
+	measure 'TSS Funnel' = SWITCH(SELECTEDVALUE('TSS Stage'[Sort]), 1, [TSS Requests], 2, [Arranged], 3, [Attended])
+		formatString: #,0
+		lineageTag: da09232a-5a4c-5a50-9cbd-a0181a6f3177
+
+	measure 'Color Wait Class' = IF(SELECTEDVALUE(fact_tss_anfrage[Wait Class Sort]) > 4, "#e34948", "#2a78d6")
+		displayFolder: Formatting
+		lineageTag: d2818bec-14ce-501f-af13-ce7122bf59df
+
+	measure 'Color Avg Wait' = IF([Avg Wait Days] > 28, "#e34948", "#2a78d6")
+		displayFolder: Formatting
+		lineageTag: 3f13c4a3-d3fa-595f-b02d-1c75af7090d4
+
 	column anfrage_id
 		dataType: int64
 		isHidden
@@ -84,45 +120,9 @@ table fact_tss_anfrage
 
 	column 'Wait Class' = SWITCH(fact_tss_anfrage[Wait Class Sort], 1, "0-7 days", 2, "8-14 days", 3, "15-21 days", 4, "22-28 days", 5, "29-35 days", 6, "over 35 days", BLANK())
 		dataType: string
-		sortByColumn: 'Wait Class Sort'
 		lineageTag: 99386ba0-2d7e-5197-b34a-f98b769c28c1
 		summarizeBy: none
-
-	measure 'TSS Requests' = COUNTROWS(fact_tss_anfrage)
-		formatString: #,0
-		lineageTag: 0f065b59-df2f-5213-9eb4-6b632b2f24f9
-
-	measure Arranged = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_vermittelt] = TRUE())
-		formatString: #,0
-		lineageTag: eca61285-4615-5794-8031-5c67fc0c9d21
-
-	measure Attended = CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[termin_wahrgenommen] = TRUE())
-		formatString: #,0
-		lineageTag: 49b8361a-e4df-51d9-a8ce-a812f23871be
-
-	measure 'Placement Rate' = DIVIDE([Arranged], [TSS Requests])
-		formatString: 0.0%
-		lineageTag: 17e0b1b7-b961-5137-bea3-963330bdc21f
-
-	measure 'Share Within 4 Weeks' = DIVIDE(CALCULATE(COUNTROWS(fact_tss_anfrage), fact_tss_anfrage[ist_innerhalb_4_wochen] = TRUE()), [Arranged])
-		formatString: 0.0%
-		lineageTag: 6d583905-8e23-5130-b91a-de3e2ca6dc92
-
-	measure 'Avg Wait Days' = AVERAGE(fact_tss_anfrage[wartezeit_tage])
-		formatString: 0.0
-		lineageTag: 45e888a7-d251-5693-80df-87badeec32f2
-
-	measure 'TSS Funnel' = SWITCH(SELECTEDVALUE('TSS Stage'[Sort]), 1, [TSS Requests], 2, [Arranged], 3, [Attended])
-		formatString: #,0
-		lineageTag: da09232a-5a4c-5a50-9cbd-a0181a6f3177
-
-	measure 'Color Wait Class' = IF(SELECTEDVALUE(fact_tss_anfrage[Wait Class Sort]) > 4, "#e34948", "#2a78d6")
-		displayFolder: Formatting
-		lineageTag: d2818bec-14ce-501f-af13-ce7122bf59df
-
-	measure 'Color Avg Wait' = IF([Avg Wait Days] > 28, "#e34948", "#2a78d6")
-		displayFolder: Formatting
-		lineageTag: 3f13c4a3-d3fa-595f-b02d-1c75af7090d4
+		sortByColumn: 'Wait Class Sort'
 
 	partition fact_tss_anfrage = m
 		mode: import
@@ -135,3 +135,4 @@ table fact_tss_anfrage
 					Result = Known
 				in
 					Result
+

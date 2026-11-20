@@ -1,6 +1,22 @@
 table fact_versorgungsgrad
 	lineageTag: a4598dc1-bc03-58bc-8a36-52e018ac3fd0
 
+	measure 'Supply Level' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(DIVIDE(SUM(fact_versorgungsgrad[ist_aerzte]), SUM(fact_versorgungsgrad[soll_aerzte])), fact_versorgungsgrad[stichtag_key] = s)
+		formatString: 0.0%
+		lineageTag: 7cc71dc0-80e0-5401-ac71-434aa6f3514f
+
+	measure 'Areas Open' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "OFFEN") + 0
+		formatString: #,0
+		lineageTag: db6476d6-60df-5780-981c-898dd09ae467
+
+	measure 'Areas Closed' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "GESPERRT") + 0
+		formatString: #,0
+		lineageTag: 631124d8-7580-5ee1-9373-275bd9e587ce
+
+	measure 'Areas Undersupplied' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "UNTERVERSORGT") + 0
+		formatString: #,0
+		lineageTag: a135ff38-13c1-50b9-bd72-1594e3fed426
+
 	column stichtag_key
 		dataType: int64
 		isHidden
@@ -31,20 +47,24 @@ table fact_versorgungsgrad
 		sourceColumn: einwohner
 
 	column soll_aerzte
-		dataType: decimal
+		dataType: double
 		isHidden
 		formatString: #,0.00
 		lineageTag: c0f64f5a-e536-5721-b5b8-7f4a46d7f25d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: soll_aerzte
 
+		annotation SummarizationSetBy = Automatic
+
 	column ist_aerzte
-		dataType: decimal
+		dataType: double
 		isHidden
 		formatString: #,0.00
 		lineageTag: 462c2e0f-99ab-55e4-b950-c6a5e09dc183
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ist_aerzte
+
+		annotation SummarizationSetBy = Automatic
 
 	column status
 		dataType: string
@@ -58,22 +78,6 @@ table fact_versorgungsgrad
 		lineageTag: b37b318e-f66d-55e9-970b-0f254681ef8c
 		summarizeBy: none
 
-	measure 'Supply Level' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(DIVIDE(SUM(fact_versorgungsgrad[ist_aerzte]), SUM(fact_versorgungsgrad[soll_aerzte])), fact_versorgungsgrad[stichtag_key] = s)
-		formatString: 0.0%
-		lineageTag: 7cc71dc0-80e0-5401-ac71-434aa6f3514f
-
-	measure 'Areas Open' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "OFFEN") + 0
-		formatString: #,0
-		lineageTag: db6476d6-60df-5780-981c-898dd09ae467
-
-	measure 'Areas Closed' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "GESPERRT") + 0
-		formatString: #,0
-		lineageTag: 631124d8-7580-5ee1-9373-275bd9e587ce
-
-	measure 'Areas Undersupplied' = VAR s = MAX(fact_versorgungsgrad[stichtag_key]) RETURN CALCULATE(COUNTROWS(fact_versorgungsgrad), fact_versorgungsgrad[stichtag_key] = s, fact_versorgungsgrad[status] = "UNTERVERSORGT") + 0
-		formatString: #,0
-		lineageTag: a135ff38-13c1-50b9-bd72-1594e3fed426
-
 	partition fact_versorgungsgrad = m
 		mode: import
 		source =
@@ -85,3 +89,4 @@ table fact_versorgungsgrad
 					Result = Known
 				in
 					Result
+
