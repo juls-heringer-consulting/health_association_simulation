@@ -1,0 +1,14 @@
+table 'Growth Year'
+	lineageTag: f376819a-4a5a-4b16-867f-5bd5ed1b1d8c
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d32137c-4b02-44a3-906a-f6d9cd644e2d
+		summarizeBy: none
+		sourceColumn: Year
+
+	partition 'Growth Year' = m
+		mode: import
+		source = #table(type table [Year = Int64.Type], List.Transform({2010..2025}, each {_}))
+

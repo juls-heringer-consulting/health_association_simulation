@@ -1,0 +1,208 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "growth_raincloud",
+  "position": {
+    "x": 16,
+    "y": 80,
+    "z": 0,
+    "height": 632,
+    "width": 760,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "fachgruppe"
+                }
+              },
+              "queryRef": "dim_arzt.fachgruppe",
+              "nativeQueryRef": "fachgruppe",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Growth Year"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "Growth Year.Year",
+              "nativeQueryRef": "Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "Doctor Growth YoY"
+                }
+              },
+              "queryRef": "dim_arzt.Doctor Growth YoY",
+              "nativeQueryRef": "Doctor Growth YoY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "Active Doctors (Year End)"
+                }
+              },
+              "queryRef": "dim_arzt.Active Doctors (Year End)",
+              "nativeQueryRef": "Active Doctors (Year End)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.0'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega/v6.json\",\n  \"description\": \"Raincloud plot of yearly growth in active doctors per Fachgruppe (cloud = density, box = quartiles, rain = years).\",\n  \"data\": [\n    {\n      \"name\": \"dataset\"\n    },\n    {\n      \"name\": \"growth\",\n      \"source\": \"dataset\",\n      \"transform\": [\n        {\n          \"type\": \"filter\",\n          \"expr\": \"isValid(datum[''Doctor Growth YoY'']) && isFinite(datum[''Doctor Growth YoY''])\"\n        },\n        {\n          \"type\": \"formula\",\n          \"as\": \"g\",\n          \"expr\": \"datum[''Doctor Growth YoY'']\"\n        },\n        {\n          \"type\": \"formula\",\n          \"as\": \"jitter\",\n          \"expr\": \"((datum[''Year''] * 7) % 16) / 15\"\n        },\n        {\n          \"type\": \"extent\",\n          \"field\": \"g\",\n          \"signal\": \"gExtent\"\n        }\n      ]\n    },\n    {\n      \"name\": \"stats\",\n      \"source\": \"growth\",\n      \"transform\": [\n        {\n          \"type\": \"aggregate\",\n          \"groupby\": [\n            \"fachgruppe\"\n          ],\n          \"fields\": [\n            \"g\",\n            \"g\",\n            \"g\",\n            \"g\",\n            \"g\",\n            \"g\"\n          ],\n          \"ops\": [\n            \"min\",\n            \"q1\",\n            \"median\",\n            \"q3\",\n            \"max\",\n            \"count\"\n          ],\n          \"as\": [\n            \"min\",\n            \"q1\",\n            \"median\",\n            \"q3\",\n            \"max\",\n            \"n\"\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"density\",\n      \"source\": \"growth\",\n      \"transform\": [\n        {\n          \"type\": \"kde\",\n          \"groupby\": [\n            \"fachgruppe\"\n          ],\n          \"field\": \"g\",\n          \"steps\": 120,\n          \"extent\": {\n            \"signal\": \"[gExtent[0] - 0.03, gExtent[1] + 0.03]\"\n          },\n          \"as\": [\n            \"value\",\n            \"density\"\n          ]\n        },\n        {\n          \"type\": \"joinaggregate\",\n          \"fields\": [\n            \"density\"\n          ],\n          \"ops\": [\n            \"max\"\n          ],\n          \"as\": [\n            \"maxDensity\"\n          ]\n        },\n        {\n          \"type\": \"lookup\",\n          \"from\": \"stats\",\n          \"key\": \"fachgruppe\",\n          \"fields\": [\n            \"fachgruppe\"\n          ],\n          \"values\": [\n            \"min\",\n            \"max\"\n          ],\n          \"as\": [\n            \"groupMin\",\n            \"groupMax\"\n          ]\n        },\n        {\n          \"type\": \"filter\",\n          \"expr\": \"datum.value >= datum.groupMin && datum.value <= datum.groupMax\"\n        }\n      ]\n    }\n  ],\n  \"scales\": [\n    {\n      \"name\": \"x\",\n      \"type\": \"linear\",\n      \"range\": \"width\",\n      \"nice\": true,\n      \"zero\": false,\n      \"domain\": {\n        \"signal\": \"[min(0, gExtent[0] - 0.03), gExtent[1] + 0.03]\"\n      }\n    },\n    {\n      \"name\": \"y\",\n      \"type\": \"band\",\n      \"range\": \"height\",\n      \"paddingInner\": 0.12,\n      \"paddingOuter\": 0.04,\n      \"domain\": {\n        \"data\": \"stats\",\n        \"field\": \"fachgruppe\",\n        \"sort\": {\n          \"field\": \"median\",\n          \"op\": \"max\",\n          \"order\": \"descending\"\n        }\n      }\n    }\n  ],\n  \"axes\": [\n    {\n      \"orient\": \"bottom\",\n      \"scale\": \"x\",\n      \"format\": \".0%\",\n      \"grid\": true,\n      \"tickCount\": 8,\n      \"zindex\": 0,\n      \"title\": \"Year-on-year growth in active doctors (2010–2025)\"\n    },\n    {\n      \"orient\": \"left\",\n      \"scale\": \"y\",\n      \"ticks\": false,\n      \"domain\": false,\n      \"labelPadding\": 8,\n      \"labelLimit\": 220,\n      \"labelFontSize\": 11,\n      \"labelColor\": \"#0b0b0b\"\n    }\n  ],\n  \"marks\": [\n    {\n      \"type\": \"rule\",\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"scale\": \"x\",\n            \"value\": 0\n          },\n          \"y\": {\n            \"value\": 0\n          },\n          \"y2\": {\n            \"signal\": \"height\"\n          },\n          \"stroke\": {\n            \"value\": \"#898781\"\n          },\n          \"strokeDash\": {\n            \"value\": [\n              4,\n              3\n            ]\n          },\n          \"strokeWidth\": {\n            \"value\": 1\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"group\",\n      \"name\": \"clouds\",\n      \"from\": {\n        \"facet\": {\n          \"name\": \"cloud\",\n          \"data\": \"density\",\n          \"groupby\": \"fachgruppe\"\n        }\n      },\n      \"encode\": {\n        \"update\": {\n          \"y\": {\n            \"scale\": \"y\",\n            \"field\": \"fachgruppe\"\n          },\n          \"height\": {\n            \"scale\": \"y\",\n            \"band\": 1\n          },\n          \"width\": {\n            \"signal\": \"width\"\n          }\n        }\n      },\n      \"marks\": [\n        {\n          \"type\": \"area\",\n          \"from\": {\n            \"data\": \"cloud\"\n          },\n          \"encode\": {\n            \"update\": {\n              \"x\": {\n                \"scale\": \"x\",\n                \"field\": \"value\"\n              },\n              \"y\": {\n                \"signal\": \"bandwidth(''y'') * 0.55\"\n              },\n              \"y2\": {\n                \"signal\": \"bandwidth(''y'') * 0.55 * (1 - datum.density / datum.maxDensity)\"\n              },\n              \"fill\": {\n                \"value\": \"#2a78d6\"\n              },\n              \"fillOpacity\": {\n                \"value\": 0.3\n              },\n              \"stroke\": {\n                \"value\": \"#2a78d6\"\n              },\n              \"strokeWidth\": {\n                \"value\": 1.2\n              },\n              \"interpolate\": {\n                \"value\": \"monotone\"\n              }\n            }\n          }\n        }\n      ]\n    },\n    {\n      \"type\": \"rule\",\n      \"from\": {\n        \"data\": \"stats\"\n      },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"scale\": \"x\",\n            \"field\": \"min\"\n          },\n          \"x2\": {\n            \"scale\": \"x\",\n            \"field\": \"max\"\n          },\n          \"y\": {\n            \"scale\": \"y\",\n            \"field\": \"fachgruppe\",\n            \"offset\": {\n              \"signal\": \"bandwidth(''y'') * 0.66\"\n            }\n          },\n          \"stroke\": {\n            \"value\": \"#52514e\"\n          },\n          \"strokeWidth\": {\n            \"value\": 1\n          },\n          \"tooltip\": {\n            \"signal\": \"{''Fachgruppe'': datum.fachgruppe, ''Median growth'': format(datum.median, ''.1%''), ''Middle 50 %'': format(datum.q1, ''.1%'') + '' to '' + format(datum.q3, ''.1%''), ''Lowest / highest year'': format(datum.min, ''.1%'') + '' / '' + format(datum.max, ''.1%''), ''Years'': datum.n}\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"rect\",\n      \"from\": {\n        \"data\": \"stats\"\n      },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"scale\": \"x\",\n            \"field\": \"q1\"\n          },\n          \"x2\": {\n            \"scale\": \"x\",\n            \"field\": \"q3\"\n          },\n          \"y\": {\n            \"scale\": \"y\",\n            \"field\": \"fachgruppe\",\n            \"offset\": {\n              \"signal\": \"bandwidth(''y'') * 0.6\"\n            }\n          },\n          \"height\": {\n            \"signal\": \"bandwidth(''y'') * 0.12\"\n          },\n          \"fill\": {\n            \"value\": \"#fcfcfb\"\n          },\n          \"stroke\": {\n            \"value\": \"#52514e\"\n          },\n          \"strokeWidth\": {\n            \"value\": 1\n          },\n          \"cornerRadius\": {\n            \"value\": 2\n          },\n          \"tooltip\": {\n            \"signal\": \"{''Fachgruppe'': datum.fachgruppe, ''Median growth'': format(datum.median, ''.1%''), ''Middle 50 %'': format(datum.q1, ''.1%'') + '' to '' + format(datum.q3, ''.1%''), ''Lowest / highest year'': format(datum.min, ''.1%'') + '' / '' + format(datum.max, ''.1%''), ''Years'': datum.n}\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"rect\",\n      \"from\": {\n        \"data\": \"stats\"\n      },\n      \"encode\": {\n        \"update\": {\n          \"xc\": {\n            \"scale\": \"x\",\n            \"field\": \"median\"\n          },\n          \"width\": {\n            \"value\": 2.5\n          },\n          \"y\": {\n            \"scale\": \"y\",\n            \"field\": \"fachgruppe\",\n            \"offset\": {\n              \"signal\": \"bandwidth(''y'') * 0.58\"\n            }\n          },\n          \"height\": {\n            \"signal\": \"bandwidth(''y'') * 0.16\"\n          },\n          \"fill\": {\n            \"value\": \"#0b0b0b\"\n          },\n          \"tooltip\": {\n            \"signal\": \"{''Fachgruppe'': datum.fachgruppe, ''Median growth'': format(datum.median, ''.1%''), ''Middle 50 %'': format(datum.q1, ''.1%'') + '' to '' + format(datum.q3, ''.1%''), ''Lowest / highest year'': format(datum.min, ''.1%'') + '' / '' + format(datum.max, ''.1%''), ''Years'': datum.n}\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"symbol\",\n      \"from\": {\n        \"data\": \"growth\"\n      },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"scale\": \"x\",\n            \"field\": \"g\"\n          },\n          \"y\": {\n            \"scale\": \"y\",\n            \"field\": \"fachgruppe\",\n            \"offset\": {\n              \"signal\": \"bandwidth(''y'') * (0.79 + 0.17 * datum.jitter)\"\n            }\n          },\n          \"size\": {\n            \"value\": 30\n          },\n          \"fill\": [\n            {\n              \"test\": \"datum.g < 0\",\n              \"value\": \"#e34948\"\n            },\n            {\n              \"value\": \"#2a78d6\"\n            }\n          ],\n          \"fillOpacity\": {\n            \"value\": 0.8\n          },\n          \"stroke\": {\n            \"value\": \"#ffffff\"\n          },\n          \"strokeWidth\": {\n            \"value\": 0.5\n          },\n          \"tooltip\": {\n            \"signal\": \"{''Fachgruppe'': datum.fachgruppe, ''Year'': datum[''Year''], ''Growth'': format(datum.g, ''.1%''), ''Active doctors (year end)'': format(datum[''Active Doctors (Year End)''], '','')}\"\n          }\n        }\n      }\n    }\n  ]\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"contains\": \"padding\"\n  },\n  \"padding\": 6,\n  \"axis\": {\n    \"labelFont\": \"Segoe UI\",\n    \"labelFontSize\": 10,\n    \"labelColor\": \"#52514e\",\n    \"titleFont\": \"Segoe UI\",\n    \"titleFontSize\": 11,\n    \"titleFontWeight\": \"normal\",\n    \"titleColor\": \"#52514e\",\n    \"domainColor\": \"#e1e0d9\",\n    \"tickColor\": \"#e1e0d9\",\n    \"gridColor\": \"#f0efec\"\n  },\n  \"text\": {\n    \"font\": \"Segoe UI\"\n  }\n}'"
+                }
+              }
+            },
+            "renderMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'svg'"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2.0.0.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribution of yearly growth rates'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cloud = density · box = middle 50 % with median · dots = single years (red = shrinking)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

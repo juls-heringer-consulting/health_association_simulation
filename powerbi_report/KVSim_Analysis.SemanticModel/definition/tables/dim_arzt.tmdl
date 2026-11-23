@@ -21,6 +21,16 @@ table dim_arzt
 		formatString: 0.0%
 		lineageTag: dc41472d-c66a-54dd-b838-5bb3129865e3
 
+	/// Doctors with an active participation (Zulassung or Anstellung) on 31 December of the year selected in 'Growth Year'.
+	measure 'Active Doctors (Year End)' = VAR y = SELECTEDVALUE('Growth Year'[Year]) VAR yearEnd = DATE(y, 12, 31) RETURN IF(NOT ISBLANK(y), CALCULATE(DISTINCTCOUNT(dim_arzt[arzt_id]), dim_arzt[valid_from] <= yearEnd, dim_arzt[valid_to] > yearEnd, dim_arzt[teilnahmeform_code] IN {"ZUL", "ANG"}))
+		formatString: #,0
+		lineageTag: 85559d15-4ddc-4601-8e9d-8e1eea278e7e
+
+	/// Change in active doctors at year end versus the previous year end, for the year selected in 'Growth Year'.
+	measure 'Doctor Growth YoY' = VAR y = SELECTEDVALUE('Growth Year'[Year]) VAR prevEnd = DATE(y - 1, 12, 31) VAR prev = CALCULATE(DISTINCTCOUNT(dim_arzt[arzt_id]), dim_arzt[valid_from] <= prevEnd, dim_arzt[valid_to] > prevEnd, dim_arzt[teilnahmeform_code] IN {"ZUL", "ANG"}) RETURN IF(NOT ISBLANK(y), DIVIDE([Active Doctors (Year End)] - prev, prev))
+		formatString: 0.0%
+		lineageTag: 58712afe-8b55-44cb-8b58-66835e575820
+
 	column arzt_key
 		dataType: int64
 		isHidden
@@ -75,6 +85,26 @@ table dim_arzt
 		summarizeBy: none
 		sourceColumn: is_current
 
+	column valid_from
+		dataType: dateTime
+		isHidden
+		formatString: dd.MM.yyyy
+		lineageTag: f5a7eb60-ed4d-46e8-ad85-b545e311ee51
+		summarizeBy: none
+		sourceColumn: valid_from
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column valid_to
+		dataType: dateTime
+		isHidden
+		formatString: dd.MM.yyyy
+		lineageTag: cd56adda-e1e7-4b70-83af-8a2fb1553ba8
+		summarizeBy: none
+		sourceColumn: valid_to
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Gender = SWITCH(dim_arzt[geschlecht], "w", "female", "m", "male", "unknown")
 		dataType: string
 		lineageTag: d8d4e078-a98a-5dd0-b53e-a60b77a586fa
@@ -108,7 +138,7 @@ table dim_arzt
 				let
 					Source = Sql.Database(ServerName, DatabaseName),
 					Data = Source{[Schema = "mart", Item = "dim_arzt"]}[Data],
-					Selected = Table.SelectColumns(Data, {"arzt_key", "arzt_id", "praxis_bsnr", "geschlecht", "geburtsjahr", "fachgruppe", "teilnahmeform_code", "is_current"}),
+					Selected = Table.SelectColumns(Data, {"arzt_key", "arzt_id", "praxis_bsnr", "geschlecht", "geburtsjahr", "fachgruppe", "teilnahmeform_code", "is_current", "valid_from", "valid_to"}),
 					Known = Table.SelectRows(Selected, each [arzt_key] <> -1),
 					Result = Known
 				in

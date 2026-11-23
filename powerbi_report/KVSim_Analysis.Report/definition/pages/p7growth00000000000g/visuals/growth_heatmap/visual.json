@@ -1,0 +1,208 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "growth_heatmap",
+  "position": {
+    "x": 788,
+    "y": 80,
+    "z": 0,
+    "height": 632,
+    "width": 476,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "fachgruppe"
+                }
+              },
+              "queryRef": "dim_arzt.fachgruppe",
+              "nativeQueryRef": "fachgruppe",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Growth Year"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "Growth Year.Year",
+              "nativeQueryRef": "Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "Doctor Growth YoY"
+                }
+              },
+              "queryRef": "dim_arzt.Doctor Growth YoY",
+              "nativeQueryRef": "Doctor Growth YoY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_arzt"
+                    }
+                  },
+                  "Property": "Active Doctors (Year End)"
+                }
+              },
+              "queryRef": "dim_arzt.Active Doctors (Year End)",
+              "nativeQueryRef": "Active Doctors (Year End)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vegaLite'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.4.3'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega-lite/v6.json\",\n  \"description\": \"Yearly growth in active doctors, Fachgruppe x year.\",\n  \"data\": {\n    \"name\": \"dataset\"\n  },\n  \"width\": \"container\",\n  \"height\": \"container\",\n  \"transform\": [\n    {\n      \"filter\": \"isValid(datum[''Doctor Growth YoY'']) && isFinite(datum[''Doctor Growth YoY''])\"\n    },\n    {\n      \"calculate\": \"datum[''Doctor Growth YoY'']\",\n      \"as\": \"g\"\n    }\n  ],\n  \"mark\": {\n    \"type\": \"rect\",\n    \"stroke\": \"#fcfcfb\",\n    \"strokeWidth\": 1.5,\n    \"cornerRadius\": 2\n  },\n  \"encoding\": {\n    \"x\": {\n      \"field\": \"Year\",\n      \"type\": \"ordinal\",\n      \"title\": null,\n      \"axis\": {\n        \"orient\": \"top\",\n        \"labelAngle\": 0,\n        \"labelExpr\": \"''’'' + substring(datum.label, 2)\"\n      }\n    },\n    \"y\": {\n      \"field\": \"fachgruppe\",\n      \"type\": \"nominal\",\n      \"title\": null,\n      \"sort\": {\n        \"field\": \"g\",\n        \"op\": \"median\",\n        \"order\": \"descending\"\n      }\n    },\n    \"color\": {\n      \"field\": \"g\",\n      \"type\": \"quantitative\",\n      \"title\": \"Growth\",\n      \"scale\": {\n        \"domainMid\": 0,\n        \"range\": [\n          \"#e34948\",\n          \"#f9f9f7\",\n          \"#2a78d6\"\n        ],\n        \"interpolate\": \"rgb\"\n      },\n      \"legend\": {\n        \"format\": \".0%\",\n        \"orient\": \"bottom\",\n        \"direction\": \"horizontal\",\n        \"gradientLength\": 200,\n        \"titleOrient\": \"left\"\n      }\n    },\n    \"tooltip\": [\n      {\n        \"field\": \"fachgruppe\",\n        \"type\": \"nominal\",\n        \"title\": \"Fachgruppe\"\n      },\n      {\n        \"field\": \"Year\",\n        \"type\": \"ordinal\",\n        \"title\": \"Year\"\n      },\n      {\n        \"field\": \"g\",\n        \"type\": \"quantitative\",\n        \"title\": \"Growth\",\n        \"format\": \".1%\"\n      },\n      {\n        \"field\": \"Active Doctors (Year End)\",\n        \"type\": \"quantitative\",\n        \"title\": \"Active doctors (year end)\",\n        \"format\": \",\"\n      }\n    ]\n  }\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"autosize\": {\n    \"type\": \"fit\",\n    \"contains\": \"padding\"\n  },\n  \"view\": {\n    \"stroke\": null\n  },\n  \"font\": \"Segoe UI\",\n  \"axis\": {\n    \"labelColor\": \"#52514e\",\n    \"labelFontSize\": 10,\n    \"domain\": false,\n    \"ticks\": false,\n    \"labelLimit\": 200\n  },\n  \"legend\": {\n    \"labelColor\": \"#52514e\",\n    \"titleColor\": \"#52514e\",\n    \"titleFontWeight\": \"normal\",\n    \"labelFontSize\": 10\n  }\n}'"
+                }
+              }
+            },
+            "renderMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'svg'"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2.0.0.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Growth by year'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Same order as the raincloud · red = fewer active doctors than the year before'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

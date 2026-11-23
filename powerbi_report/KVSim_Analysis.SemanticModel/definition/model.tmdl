@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["dim_quartal","dim_praxis","dim_region","dim_fachgruppe","dim_arztgruppe","dim_altersgruppe","dim_krankenkasse","dim_planungsbereich","dim_datum","dim_gop","dim_arzt","fact_abrechnungsfall","fact_leistung","fact_honorar_quartal","fact_tss_anfrage","fact_bereitschaftsdienst","fact_versorgungsgrad","Honorar Step","TSS Stage","ServerName","DatabaseName"]
+annotation PBI_QueryOrder = ["dim_quartal","dim_praxis","dim_region","dim_fachgruppe","dim_arztgruppe","dim_altersgruppe","dim_krankenkasse","dim_planungsbereich","dim_datum","dim_gop","dim_arzt","fact_abrechnungsfall","fact_leistung","fact_honorar_quartal","fact_tss_anfrage","fact_bereitschaftsdienst","fact_versorgungsgrad","Honorar Step","TSS Stage","Growth Year","ServerName","DatabaseName"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -32,4 +32,5 @@ ref table fact_bereitschaftsdienst
 ref table fact_versorgungsgrad
 ref table 'Honorar Step'
 ref table 'TSS Stage'
+ref table 'Growth Year'
 
