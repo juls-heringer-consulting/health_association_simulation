@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "cases_fachgruppe",
+  "position": {
+    "x": 16,
+    "y": 180,
+    "z": 0,
+    "height": 532,
+    "width": 780,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_fachgruppe"
+                    }
+                  },
+                  "Property": "fachgruppe"
+                }
+              },
+              "queryRef": "dim_fachgruppe.fachgruppe",
+              "nativeQueryRef": "fachgruppe",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_abrechnungsfall"
+                    }
+                  },
+                  "Property": "Cases"
+                }
+              },
+              "queryRef": "fact_abrechnungsfall.Cases",
+              "nativeQueryRef": "Cases"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_honorar_quartal"
+                    }
+                  },
+                  "Property": "Honorar Brutto (Practices in Fachgruppe)"
+                }
+              },
+              "queryRef": "fact_honorar_quartal.Honorar Brutto (Practices in Fachgruppe)",
+              "nativeQueryRef": "Honorar Brutto (Practices in Fachgruppe)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_abrechnungsfall"
+                    }
+                  },
+                  "Property": "Points per Case"
+                }
+              },
+              "queryRef": "fact_abrechnungsfall.Points per Case",
+              "nativeQueryRef": "Points per Case"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_abrechnungsfall"
+                  }
+                },
+                "Property": "Cases"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Billing cases by Fachgruppe'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Click a bar to filter the page · hover for Honorar and points per case'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

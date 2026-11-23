@@ -33,6 +33,12 @@ table fact_honorar_quartal
 		formatString: #,0 "€"
 		lineageTag: 7fb7037c-6561-55d0-9ce1-50803952c498
 
+	/// Gross Honorar of the practices that billed cases in the current filter context (e.g. one Fachgruppe).
+	/// A practice billing in several Fachgruppen counts fully in each, so values per Fachgruppe do not add up to the total.
+	measure 'Honorar Brutto (Practices in Fachgruppe)' = CALCULATE([Honorar Brutto], TREATAS(VALUES(fact_abrechnungsfall[praxis_key]), fact_honorar_quartal[praxis_key]))
+		formatString: #,0 "€"
+		lineageTag: eed9363d-a2ad-4912-99a5-cdaad0aeebaf
+
 	column quartal_key
 		dataType: int64
 		isHidden
