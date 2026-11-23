@@ -159,6 +159,74 @@ def export(cur, year: int) -> dict:
                             "requestId", "dateReceived", "status"],
                 "rows": tss}
 
+    # ---------- Fachgruppe Explorer (Power BI page 6) ----------
+    # Kreis = location of the billing practice (dim_praxis), as in the report. Honorar follows the measure
+    # 'Honorar Brutto (Practices in Fachgruppe)': Honorar of the practices that billed cases in the filter.
+    fg, qt, kr, px = Codes(), Codes(), Codes(), Codes()
+    for (label,) in cur.execute("""
+            SELECT q.quartal_label FROM mart.dim_quartal q
+            WHERE EXISTS (SELECT 1 FROM mart.fact_abrechnungsfall f WHERE f.quartal_key = q.quartal_key)
+            ORDER BY q.quartal_key""").fetchall():
+        qt(label)
+    for (name,) in cur.execute("SELECT DISTINCT kreis FROM mart.dim_praxis WHERE praxis_key <> -1 AND kreis IS NOT NULL ORDER BY kreis").fetchall():
+        kr(name)
+    practice_kreis: dict[int, int | None] = {}
+    for key, kreis in cur.execute("SELECT praxis_key, kreis FROM mart.dim_praxis WHERE praxis_key <> -1 ORDER BY praxis_key").fetchall():
+        practice_kreis[px(key)] = kr(kreis)
+    ex_cases = [[fg(r[0]), qt(r[1]), kr(r[2]), r[3], r[4]] for r in cur.execute("""
+            SELECT g.fachgruppe, q.quartal_label, p.kreis, COUNT(*), SUM(CAST(f.punkte AS bigint))
+            FROM mart.fact_abrechnungsfall f
+            JOIN mart.dim_fachgruppe g ON g.fachgruppe_key = f.fachgruppe_key
+            JOIN mart.dim_quartal q ON q.quartal_key = f.quartal_key
+            JOIN mart.dim_praxis p ON p.praxis_key = f.praxis_key
+            GROUP BY g.fachgruppe, q.quartal_key, q.quartal_label, p.kreis
+            ORDER BY g.fachgruppe, q.quartal_key, p.kreis""").fetchall()]
+    ex_activity = [[px(r[0]), fg(r[1]), qt(r[2])] for r in cur.execute("""
+            SELECT DISTINCT f.praxis_key, g.fachgruppe, q.quartal_label
+            FROM mart.fact_abrechnungsfall f
+            JOIN mart.dim_fachgruppe g ON g.fachgruppe_key = f.fachgruppe_key
+            JOIN mart.dim_quartal q ON q.quartal_key = f.quartal_key
+            WHERE f.praxis_key <> -1
+            ORDER BY f.praxis_key, g.fachgruppe, q.quartal_label""").fetchall()]
+    ex_honorar = [[px(r[0]), qt(r[1]), plain(r[2])] for r in cur.execute("""
+            SELECT h.praxis_key, q.quartal_label, h.honorar_brutto
+            FROM mart.fact_honorar_quartal h JOIN mart.dim_quartal q ON q.quartal_key = h.quartal_key
+            WHERE h.praxis_key <> -1
+            ORDER BY h.praxis_key, q.quartal_key""").fetchall()]
+    d["explorer"] = {
+        "fachgruppe": fg.values, "quarter": qt.values, "kreis": kr.values,
+        # Kreis code per anonymous practice code (index = practice code)
+        "practiceKreis": [practice_kreis.get(i) for i in range(len(px.values))],
+        # Fachgruppe, quarter, Kreis (of the practice), cases, EBM points
+        "cases": ex_cases,
+        # practice, Fachgruppe, quarter: the practice billed cases of that Fachgruppe in that quarter
+        "activity": ex_activity,
+        # practice, quarter, Honorar brutto
+        "honorar": ex_honorar,
+    }
+
+    # ---------- Fachgruppe Growth (Power BI page 7) ----------
+    # Same logic as the measures 'Active Doctors (Year End)' and 'Doctor Growth YoY': doctors with an active
+    # participation (ZUL/ANG) on 31 December, per Fachgruppe of dim_arzt, years 2010 to the data year.
+    growth = []
+    for r in cur.execute(f"""
+            WITH y AS (SELECT 2009 AS yr UNION ALL SELECT yr + 1 FROM y WHERE yr < {year}),
+            g AS (SELECT DISTINCT fachgruppe FROM mart.dim_arzt WHERE arzt_key <> -1 AND fachgruppe IS NOT NULL),
+            c AS (SELECT g.fachgruppe, y.yr,
+                         (SELECT COUNT(DISTINCT a.arzt_id) FROM mart.dim_arzt a
+                          WHERE a.arzt_key <> -1 AND a.fachgruppe = g.fachgruppe AND a.teilnahmeform_code IN ('ZUL', 'ANG')
+                            AND a.valid_from <= DATEFROMPARTS(y.yr, 12, 31) AND a.valid_to > DATEFROMPARTS(y.yr, 12, 31)) AS n
+                  FROM g CROSS JOIN y),
+            s AS (SELECT fachgruppe, yr, n, LAG(n) OVER (PARTITION BY fachgruppe ORDER BY yr) AS prev FROM c)
+            SELECT fachgruppe, yr, n, CASE WHEN prev > 0 THEN CAST(n - prev AS float) / prev END
+            FROM s WHERE yr >= 2010 ORDER BY fachgruppe, yr""").fetchall():
+        active = r[2] or None                       # DISTINCTCOUNT over no rows is BLANK, not 0
+        g_yoy = None if r[3] is None else round(r[3], 6)
+        if active is not None or g_yoy is not None:   # Power BI drops rows where every measure is blank
+            growth.append([r[0], r[1], active, g_yoy])
+    d["growth"] = {"columns": ["fachgruppe", "Year", "Active Doctors (Year End)", "Doctor Growth YoY"],
+                   "fromYear": 2010, "toYear": year, "rows": growth}
+
     # ---------- Planning & out-of-hours ----------
     d["planning"] = {
         # reference date, physician group, level of care, planning area, area type, target, actual, supply %, status

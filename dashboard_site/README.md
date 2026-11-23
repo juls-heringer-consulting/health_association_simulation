@@ -2,11 +2,19 @@
 
 Live: **https://juls-heringer-consulting.github.io/health_association_simulation/**
 
-A small static website with the core pages of the Power BI report in
-[`../powerbi_report`](../powerbi_report/README.md): Overview, Doctors, Billing & Honorar,
-Appointments (TSS) and Planning & Out-of-hours. A sixth page, **Vega Showcase**, has the radial year
-clock of the Power BI page with the same name. It runs in any browser without Power BI or SQL Server.
-All data is synthetic.
+A small static website with the same eight pages as the Power BI report in
+[`../powerbi_report`](../powerbi_report/README.md), in the same order:
+
+1. Overview
+2. Doctors
+3. Billing & Honorar
+4. Appointments (TSS)
+5. Planning & Out-of-hours
+6. Fachgruppe Explorer
+7. Fachgruppe Growth
+8. Vega Showcase
+
+It runs in any browser without Power BI or SQL Server. All data is synthetic.
 
 ## Files
 
@@ -14,18 +22,41 @@ All data is synthetic.
 |---|---|
 | `index.html`, `styles.css` | Page shell, light and dark theme |
 | `charts.js` | Small SVG chart kit (bars, 100 % bars, donut, treemap, heat map, scatter, funnel, waterfall, stacked area). It has no dependencies and no CDN |
-| `app.js` | The six pages, slicers, KPI tiles, tooltips and table views |
-| `data.js` | **Generated** data (about 250 KB), written by `python/export_dashboard_data.py`. Do not edit by hand |
-| `showcase_spec.js` | **Generated** copy of the Deneb visual's Vega spec and config, written by `python/export_showcase_spec.py`. Do not edit by hand |
-| `vendor/vega.min.js` | Vega 6.4.0, the same version Deneb uses (BSD-3-Clause, see `vendor/LICENSE-vega.txt`). It is served from this folder, not from a CDN, and is loaded only when the Vega Showcase page is opened |
+| `app.js` | The eight pages, slicers, KPI tiles, tooltips and table views, plus the card that runs Deneb visuals (`vegaCard`) |
+| `data.js` | **Generated** data (about 360 KB), written by `python/export_dashboard_data.py`. Do not edit by hand |
+| `deneb_specs.js` | **Generated** copy of every Deneb visual's spec and config in the Power BI report, written by `python/export_deneb_specs.py`. Do not edit by hand |
+| `vendor/vega.min.js`, `vendor/vega-lite.min.js` | Vega 6.4.0 and Vega-Lite 6.4.3, the versions Deneb uses (BSD-3-Clause, see `vendor/LICENSE-*.txt`). They are served from this folder, not from a CDN, and load only when a page with a Deneb visual is opened |
 
-## Vega Showcase page
+## Pages that mirror the newer Power BI pages
 
-- **The spec is the same as in Power BI.** `showcase_spec.js` is a 1:1 copy of the Deneb visual
-  `tss_year_clock` (Power BI page *Vega Showcase*).
-  - It is fed with the same field names Deneb passes: `anfrage_id`, `datum`, `arztgruppe`, `dringlichkeit`,
-    `kanal`, `status`, `wartezeit_tage` and `termin_wahrgenommen`.
-  - If the spec changes in Power BI, run `python\export_showcase_spec.py` to update the copy.
+- **Fachgruppe Explorer** is rebuilt with the chart kit. It mirrors the Power BI page:
+  - Quarter and Kreis slicers (Kreis of the billing practice).
+  - KPIs: billing cases, gross Honorar, EBM points per case.
+  - Cases by Fachgruppe. Clicking a bar filters the page; clicking it again clears the filter.
+  - Cases per quarter. Clicking a quarter sets the quarter slicer.
+  - **Honorar uses the same logic as the measure** *Honorar Brutto (Practices in Fachgruppe)*: it is
+    the Honorar of the practices that billed cases in the current filter.
+  - Checked against SQL: Psychologische Psychotherapie, 2/2025, Neunkirchen gives 77 cases,
+    38,608 € and 4,047 points per case, in both SQL and the site.
+- **Fachgruppe Growth** runs the report's two Deneb specs unchanged:
+  - The raincloud (Vega) and the heatmap (Vega-Lite).
+  - The data are the yearly counts of active doctors per Fachgruppe (2010 to the data year). They
+    are exported with the same logic as the measures *Active Doctors (Year End)* and *Doctor Growth YoY*.
+
+## Deneb visuals on the site
+
+- **The specs are the same as in Power BI.** `deneb_specs.js` is a 1:1 copy of the Deneb visuals
+  `growth_raincloud`, `growth_heatmap` and `tss_year_clock`.
+  - Each visual gets the same field names Deneb passes in Power BI. For example, the showcase gets
+    `anfrage_id`, `datum`, `arztgruppe`, `dringlichkeit`, `kanal`, `status`, `wartezeit_tage` and
+    `termin_wahrgenommen`.
+  - Vega-Lite specs are compiled to Vega in the browser.
+  - If a spec changes in Power BI, run `python\export_deneb_specs.py` to update the copy.
+- **Tooltips.** Vega tooltips appear in the dashboard's own tooltip box.
+- **Debugging.** `window.KVSIM_VIEWS` holds the live Vega views by visual name, for the browser console.
+
+### Vega Showcase page
+
 - **Renderer switch.** *SVG* and *Canvas* compare Vega's two renderers outside Power BI. The line
   *Hover state* below the chart shows the hovered request, which helps with debugging.
 - **Tooltip cards stay in the chart.**
@@ -45,7 +76,7 @@ After rebuilding the database (`tools\run_all.ps1`), run this from the project r
 
 ```powershell
 .venv\Scripts\python.exe python\export_dashboard_data.py
-.venv\Scripts\python.exe python\export_showcase_spec.py   # only if the Deneb spec changed
+.venv\Scripts\python.exe python\export_deneb_specs.py     # only if a Deneb visual changed in Power BI
 ```
 
 The script reads the connection from `config/settings.toml`. It aggregates the `mart` star

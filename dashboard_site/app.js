@@ -22,7 +22,7 @@
 
   /* ---------------- state, theme, tooltip ---------------- */
   const PAGES = [];
-  const state = { page: 'overview', kreis: 'all', quarter: 'all', specialty: 'all', stichtag: null };
+  const state = { page: 'overview', kreis: 'all', quarter: 'all', specialty: 'all', stichtag: null, exQuarter: 'all', exKreis: 'all', exFach: 'all' };
   const live = [];
   let P;
   const root = document.documentElement;
@@ -46,11 +46,15 @@
 
   const tip = document.getElementById('tip');
   function showTip(e) {
+    if (e.target.closest && e.target.closest('.vega-stage')) return;   // Vega views drive the tooltip themselves
     const t = e.target.closest && e.target.closest('[data-tip]');
     if (!t) { tip.hidden = true; return; }
     const lines = t.getAttribute('data-tip').split('\n');
     tip.innerHTML = `<strong>${esc(lines[0])}</strong>` + lines.slice(1).map((l) => `<div>${esc(l)}</div>`).join('');
     tip.hidden = false;
+    placeTip(e);
+  }
+  function placeTip(e) {
     const r = tip.getBoundingClientRect(), pad = 14;
     let x = e.clientX + pad, y = e.clientY + pad;
     if (x + r.width > innerWidth - 8) x = e.clientX - r.width - pad;
@@ -440,7 +444,7 @@
   });
 
   /* ======================================================================
-     PAGE 6 - Vega Showcase: the Power BI Deneb visual's Vega spec, rendered by Vega itself
+     Deneb visuals: the Power BI report's Vega / Vega-Lite specs (deneb_specs.js), rendered by Vega itself
      ====================================================================== */
   const loaded = {};
   function loadScript(src) {
@@ -453,7 +457,156 @@
     }
     return loaded[src];
   }
+  // Vega-Lite's browser build needs the global `vega`, so the scripts load one after the other
+  const loadVega = (lite) => ['vendor/vega.min.js', ...(lite ? ['vendor/vega-lite.min.js'] : []), 'deneb_specs.js']
+    .reduce((p, src) => p.then(() => loadScript(src)), Promise.resolve());
 
+  // Vega tooltips use the dashboard's tooltip box (first value = title)
+  function vegaTooltip(handler, event, item, value) {
+    if (value == null || value === '') { tip.hidden = true; return; }
+    const entries = typeof value === 'object' ? Object.entries(value) : [['', value]];
+    // numbers without a Vega format get the dashboard format; years stay as they are
+    const fmtV = (k, v) => (typeof v !== 'number' ? String(v) : /year|jahr/i.test(k) ? String(v) : F.dec1(v).replace(/[.,]0$/, ''));
+    tip.innerHTML = `<strong>${esc(fmtV(entries[0][0], entries[0][1]))}</strong>` + entries.slice(1).map(([k, v]) => `<div>${esc(k)}: ${esc(fmtV(k, v))}</div>`).join('');
+    tip.hidden = false;
+    placeTip(event);
+  }
+
+  window.KVSIM_VIEWS = {};   // live Vega views by Deneb visual name (handy in the browser console)
+
+  /** card that runs one Deneb visual. o: key, title, sub, span, height, minWidth, values, rendererSwitch, foot(html), onView(view) */
+  function vegaCard(parent, o) {
+    const sec = h('section', `card span-${o.span || 12} vega-card`);
+    sec.innerHTML = `<header class="card-head"><div><h3>${esc(o.title)}</h3>${o.sub ? `<p class="sub">${esc(o.sub)}</p>` : ''}</div>` +
+      (o.rendererSwitch ? '<div class="renderer-switch" role="group" aria-label="Vega renderer">' +
+        '<button type="button" class="tbl-toggle" data-renderer="svg">SVG</button>' +
+        '<button type="button" class="tbl-toggle" data-renderer="canvas">Canvas</button></div>' : '') + '</header>' +
+      `<div class="vega-scroll"><div class="vega-stage" style="height:${o.height}px;min-width:${o.minWidth || 0}px"><p class="muted">Loading Vega…</p></div></div>` +
+      (o.foot ? `<p class="foot">${o.foot}</p>` : '');
+    parent.appendChild(sec);
+    const stage = sec.querySelector('.vega-stage');
+    let view = null, renderer = null, lastW = 0, disposed = false;
+    const draw = (force) => {
+      const dn = window.KVSIM_DENEB && window.KVSIM_DENEB[o.key];
+      if (!window.vega || !dn || disposed || (dn.provider === 'vegaLite' && !window.vegaLite)) return;
+      const w = Math.max(o.minWidth || 0, Math.floor(stage.clientWidth));
+      if (view && w === lastW && !force) return;
+      lastW = w;
+      if (view) view.finalize();
+      stage.innerHTML = '';
+      renderer = renderer || dn.renderMode || 'svg';
+      sec.querySelectorAll('[data-renderer]').forEach((x) => x.setAttribute('aria-pressed', x.getAttribute('data-renderer') === renderer));
+      const spec = JSON.parse(JSON.stringify(dn.spec));
+      spec.width = w - 12; spec.height = o.height - 12;   // Deneb sizes the view to the visual the same way
+      const runtime = dn.provider === 'vegaLite' ? vega.parse(vegaLite.compile(spec, { config: dn.config }).spec) : vega.parse(spec, dn.config);
+      view = new vega.View(runtime, { renderer, container: stage, hover: true });
+      view.tooltip(vegaTooltip);
+      view.data('dataset', o.values);   // Deneb's dataset, with the same field names as in Power BI
+      view.runAsync();
+      window.KVSIM_VIEWS[o.key] = view;
+      if (o.onView) o.onView(view, sec);
+    };
+    sec.querySelectorAll('[data-renderer]').forEach((btn) => btn.addEventListener('click', () => {
+      renderer = btn.getAttribute('data-renderer');
+      draw(true);
+    }));
+    loadVega(o.lite).then(() => draw(true)).catch((e) => { stage.innerHTML = `<p class="muted">${esc(e.message)}</p>`; });
+    const ro = new ResizeObserver(() => draw(false));
+    ro.observe(stage);
+    live.push({ draw: () => {}, ro, dispose: () => { disposed = true; if (view) view.finalize(); view = null; } });
+  }
+
+  /* ======================================================================
+     PAGE 6 - Fachgruppe Explorer (Power BI page of the same name)
+     ====================================================================== */
+  PAGES.push({
+    id: 'explorer', label: 'Fachgruppe Explorer', question: 'Explore billing cases and fees by specialty',
+    build(main) {
+      const E = D.explorer;
+      const qi = state.exQuarter === 'all' ? null : E.quarter.indexOf(state.exQuarter);
+      const ki = state.exKreis === 'all' ? null : E.kreis.indexOf(state.exKreis);
+      const fi = state.exFach === 'all' ? null : E.fachgruppe.indexOf(state.exFach);
+      pageHead(main, this, [
+        ['Quarter', [{ value: 'all', label: 'All quarters' }, ...E.quarter.map((q) => ({ value: q, label: q }))], state.exQuarter, (v) => { state.exQuarter = v; render(); }],
+        ['Kreis', [{ value: 'all', label: 'All Kreise' }, ...E.kreis.map((k) => ({ value: k, label: k }))], state.exKreis, (v) => { state.exKreis = v; render(); }],
+      ]);
+      const inK = (k) => ki === null || k === ki;
+      const sliced = E.cases.filter((r) => (qi === null || r[1] === qi) && inK(r[2]));   // slicers
+      const sel = sliced.filter((r) => fi === null || r[0] === fi);                      // + clicked Fachgruppe
+      // measure 'Honorar Brutto (Practices in Fachgruppe)': Honorar of the practices that billed cases in the filter
+      const honorar = (f, q) => {
+        const pr = new Set(E.activity.filter((a) => (f === null || a[1] === f) && (q === null || a[2] === q) && inK(E.practiceKreis[a[0]])).map((a) => a[0]));
+        return sum(E.honorar.filter((x) => pr.has(x[0]) && (q === null || x[1] === q) && inK(E.practiceKreis[x[0]])).map((x) => x[2]));
+      };
+      const nCases = sum(sel.map((r) => r[3])), nAll = sum(sliced.map((r) => r[3]));
+      const ppc = nCases ? sum(sel.map((r) => r[4])) / nCases : 0;
+      const scope = [state.exQuarter === 'all' ? 'all quarters' : state.exQuarter, state.exKreis === 'all' ? 'all Kreise' : state.exKreis].join(', ');
+      lede(main, (fi === null
+        ? `In ${esc(scope)}, ${b(F.int(nCases))} billing cases were billed across ${b(String(E.fachgruppe.length))} Fachgruppen. `
+        : `${b(state.exFach)} accounts for ${b(F.int(nCases))} billing cases in ${esc(scope)}, ${b(F.pct(nCases / Math.max(nAll, 1), 0))} of all cases. `) +
+        `Click a bar to focus the page on one Fachgruppe, click it again to clear.`);
+      kpis(main, [
+        { label: 'Billing cases', value: F.int(nCases), sub: fi === null ? 'all Fachgruppen' : state.exFach },
+        { label: 'Honorar brutto', value: F.eur(honorar(fi, qi)), sub: 'practices in Fachgruppe' },
+        { label: 'EBM points per case', value: F.int(Math.round(ppc)) },
+      ]);
+      const g = grid(main);
+      const byF = E.fachgruppe.map((name, f) => {
+        const rs = sliced.filter((r) => r[0] === f), n = sum(rs.map((r) => r[3]));
+        return { name, f, n, ppc: n ? sum(rs.map((r) => r[4])) / n : 0, hon: honorar(f, qi) };
+      }).sort((a, c) => c.n - a.n);
+      card(g, {
+        title: 'Billing cases by Fachgruppe', sub: 'Click a bar to filter the page · hover for Honorar and points per case', span: 7,
+        height: () => byF.length * 30 + 22,
+        onPick: (v) => { state.exFach = state.exFach === v ? 'all' : v; render(); },
+        render: (w, ht, P) => KV.bars({ horizontal: true, labelShare: 0.36, cats: byF.map((x) => x.name), label: 'total',
+          colorAt: () => P.blue, dim: (ci) => fi !== null && byF[ci].f !== fi, pick: (ci) => byF[ci].name,
+          series: [{ name: 'Billing cases', values: byF.map((x) => x.n) }],
+          tipExtra: (ci) => [`Honorar (practices in Fachgruppe): ${F.eur(byF[ci].hon)}`, `EBM points per case: ${F.int(Math.round(byF[ci].ppc))}`,
+            `${F.pct(byF[ci].n / Math.max(nAll, 1), 1)} of all cases`] }, w, ht, P),
+        table: () => ({ head: ['Fachgruppe', 'Billing cases', 'Honorar (practices in Fachgruppe)', 'EBM points per case'],
+          rows: byF.map((x) => [x.name, F.int(x.n), F.eur(x.hon), F.int(Math.round(x.ppc))]) }),
+        foot: 'Honorar is paid per practice, not per Fachgruppe: a practice that bills in several Fachgruppen counts fully in each, so the values do not add up to the total.',
+      });
+      const byQ = E.quarter.map((q, qq) => sum(E.cases.filter((r) => r[1] === qq && inK(r[2]) && (fi === null || r[0] === fi)).map((r) => r[3])));
+      card(g, {
+        title: 'Billing cases per quarter', sub: fi === null ? 'All Fachgruppen · click a quarter to filter' : `${state.exFach} · click a quarter to filter`, span: 5,
+        height: () => byF.length * 30 + 22,
+        onPick: (v) => { state.exQuarter = state.exQuarter === v ? 'all' : v; render(); },
+        render: (w, ht, P) => KV.bars({ cats: E.quarter, label: 'total', colorAt: () => P.blue,
+          dim: (ci) => qi !== null && ci !== qi, pick: (ci) => E.quarter[ci], series: [{ name: 'Billing cases', values: byQ }] }, w, ht, P),
+        table: () => ({ head: ['Quarter', 'Billing cases'], rows: E.quarter.map((q, i) => [q, F.int(byQ[i])]) }),
+      });
+    },
+  });
+
+  /* ======================================================================
+     PAGE 7 - Fachgruppe Growth (Deneb raincloud + heatmap from the report)
+     ====================================================================== */
+  PAGES.push({
+    id: 'growth', label: 'Fachgruppe Growth', question: 'How fast is each Fachgruppe growing?',
+    build(main) {
+      const G = D.growth;
+      const values = G.rows.map((r) => ({ fachgruppe: r[0], Year: r[1], 'Active Doctors (Year End)': r[2], 'Doctor Growth YoY': r[3] }));
+      pageHead(main, this, []);
+      const byG = {};
+      G.rows.forEach((r) => { if (r[3] != null) (byG[r[0]] = byG[r[0]] || []).push(r[3]); });
+      const median = (a) => { const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+      const meds = Object.entries(byG).map(([k, v]) => [k, median(v)]).sort((a, c) => c[1] - a[1]);
+      lede(main, `Yearly growth in active doctors per Fachgruppe, ${G.fromYear}–${G.toYear}, from the Arztregister history. ` +
+        (meds.length ? `The median ranges from ${b(F.pct(meds[meds.length - 1][1], 1))} a year (${esc(meds[meds.length - 1][0])}) to ${b(F.pct(meds[0][1], 1))} (${esc(meds[0][0])}). ` : '') +
+        `The simulated register mainly holds today's doctors, so earlier growth is overstated.`);
+      const g = grid(main);
+      vegaCard(g, { key: 'growth_raincloud', title: 'Distribution of yearly growth rates', span: 7, height: 600, minWidth: 640, values,
+        sub: 'Cloud = density · box = middle 50 % with median · dots = single years (red = shrinking)' });
+      vegaCard(g, { key: 'growth_heatmap', lite: true, title: 'Growth by year', span: 5, height: 600, minWidth: 440, values,
+        sub: 'Same order as the raincloud · red = fewer active doctors than the year before' });
+    },
+  });
+
+  /* ======================================================================
+     PAGE 8 - Vega Showcase (Deneb visual 'tss_year_clock' from the report)
+     ====================================================================== */
   PAGES.push({
     id: 'showcase', label: 'Vega Showcase', question: 'A year of appointment requests: does the 4-week promise hold?',
     build(main) {
@@ -462,17 +615,6 @@
         `${b('Vega 6.4')} directly in the browser. Every dot is one of ${b(F.int(D.tss.rows.length))} requests: angle = day received, ` +
         `distance from the centre = days until the appointment. Hover dots and month segments, click a specialty or urgency, double-click to reset. ` +
         `Use the renderer switch to compare ${b('SVG')} and ${b('Canvas')}.`);
-      const sec = h('section', 'card span-12 showcase');
-      sec.innerHTML = '<header class="card-head"><div><h3>TSS year clock</h3>' +
-        '<p class="sub">1:1 copy of the Deneb spec (python/export_showcase_spec.py) · data: data.js</p></div>' +
-        '<div class="renderer-switch" role="group" aria-label="Vega renderer">' +
-        '<button type="button" class="tbl-toggle" data-renderer="svg" aria-pressed="true">SVG</button>' +
-        '<button type="button" class="tbl-toggle" data-renderer="canvas" aria-pressed="false">Canvas</button></div></header>' +
-        '<div class="vega-scroll"><div class="vega-stage"><p class="muted">Loading Vega…</p></div></div>' +
-        '<p class="foot">Hover state: <span class="hover-state">–</span></p>';
-      const grd = grid(main);
-      grd.appendChild(sec);
-      const stage = sec.querySelector('.vega-stage'), hoverState = sec.querySelector('.hover-state');
       const T = D.tss;
       // the field names Deneb passes to the spec in Power BI (one row per request)
       const values = T.rows.map((r) => {
@@ -480,34 +622,14 @@
         return { anfrage_id: r[8], datum: new Date(y, m - 1, d), arztgruppe: T.specialty[r[0]], dringlichkeit: r[2],
           kanal: r[3], status: r[10], wartezeit_tage: r[5], termin_wahrgenommen: r[10] === 'VERMITTELT' ? r[7] === 1 : null };
       });
-      let view = null, renderer = 'svg', lastW = 0, disposed = false;
-      const STAGE_H = 632;
-      const draw = (force) => {
-        if (!window.vega || !window.KVSIM_SHOWCASE || disposed) return;
-        const w = Math.max(1000, Math.floor(stage.clientWidth));
-        if (view && w === lastW && !force) return;
-        lastW = w;
-        if (view) view.finalize();
-        stage.innerHTML = '';
-        const S = window.KVSIM_SHOWCASE, spec = JSON.parse(JSON.stringify(S.spec));
-        spec.data[0].values = values;
-        spec.width = w - 12; spec.height = STAGE_H - 12;   // Deneb sizes the view to the visual the same way
-        view = new vega.View(vega.parse(spec, S.config), { renderer, container: stage, hover: true });
-        view.addSignalListener('hoverReq', (_, v) => { hoverState.textContent = v ? `request #${v.d.anfrage_id}` : '–'; });
-        view.runAsync();
-        window.KVSIM_SHOWCASE_VIEW = view;   // handy for debugging in the browser console
-      };
-      sec.querySelectorAll('[data-renderer]').forEach((btn) => btn.addEventListener('click', () => {
-        renderer = btn.getAttribute('data-renderer');
-        sec.querySelectorAll('[data-renderer]').forEach((x) => x.setAttribute('aria-pressed', x === btn));
-        draw(true);
-      }));
-      Promise.all([loadScript('vendor/vega.min.js'), loadScript('showcase_spec.js')])
-        .then(() => draw(true))
-        .catch((e) => { stage.innerHTML = `<p class="muted">${esc(e.message)}</p>`; });
-      const ro = new ResizeObserver(() => draw(false));
-      ro.observe(stage);
-      live.push({ draw: () => {}, ro, dispose: () => { disposed = true; if (view) view.finalize(); view = null; } });
+      vegaCard(grid(main), { key: 'tss_year_clock', title: 'TSS year clock', span: 12, height: 632, minWidth: 1000, values, rendererSwitch: true,
+        sub: '1:1 copy of the Deneb spec (python/export_deneb_specs.py) · data: data.js',
+        foot: 'Hover state: <span class="hover-state">–</span>',
+        onView: (view, sec) => {
+          const hs = sec.querySelector('.hover-state');
+          view.addSignalListener('hoverReq', (_, v) => { hs.textContent = v ? `request #${v.d.anfrage_id}` : '–'; });
+          window.KVSIM_SHOWCASE_VIEW = view;   // kept for existing debugging snippets
+        } });
     },
   });
 
