@@ -1,5 +1,11 @@
 # KV Simulation - a training data warehouse for a Kassenärztliche Vereinigung
 
+> ### ▶ [Open the live dashboard](https://juls-heringer-consulting.github.io/health_association_simulation/)
+> **https://juls-heringer-consulting.github.io/health_association_simulation/**. Six interactive pages
+> in the browser, no installation needed. They include the
+> [Vega Showcase](https://juls-heringer-consulting.github.io/health_association_simulation/#showcase),
+> a radial year clock of all 1,500 appointment requests.
+
 A small but realistic SQL Server project that simulates the data landscape of a
 **Kassenärztliche Vereinigung (KV)**, the regional association of statutory-health-insurance
 physicians and psychotherapists in Germany. The region is the real **KV Saarland**
@@ -34,9 +40,12 @@ flowchart LR
 ## Dashboards
 
 - **[Live dashboard (GitHub Pages)](https://juls-heringer-consulting.github.io/health_association_simulation/)**:
-  five interactive pages in the browser, with no installation. Source and data refresh are
+  six interactive pages in the browser, with no installation. Source and data refresh are
   described in [dashboard_site/README.md](dashboard_site/README.md).
-- Power BI: [powerbi_report/](powerbi_report/README.md) has the full analysis report (5 pages),
+  - The page **[Vega Showcase](https://juls-heringer-consulting.github.io/health_association_simulation/#showcase)**
+    renders the same Vega specification as the Deneb visual in the Power BI report, using Vega 6.4.
+  - Its SVG/Canvas switch compares the two renderers outside Power BI.
+- Power BI: [powerbi_report/](powerbi_report/README.md) has the full analysis report (7 pages),
   and [powerbi_overview/](powerbi_overview/README.md) has a first quick look.
 
 ## Quick start
@@ -90,7 +99,8 @@ health_association_simulation/
 │   ├── generate_sources.py    → data/sources
 │   ├── load_staging.py        → stg
 │   ├── export_data_dictionary.py
-│   └── export_dashboard_data.py → dashboard_site/data.js
+│   ├── export_dashboard_data.py → dashboard_site/data.js
+│   └── export_showcase_spec.py  → dashboard_site/showcase_spec.js (Vega spec of the Deneb visual)
 ├── dashboard_site/            static dashboard, published with GitHub Pages (.github/workflows/pages.yml)
 ├── powerbi_report/            Power BI analysis report (PBIP)
 ├── powerbi_overview/          Power BI first overview (PBIP)

@@ -175,3 +175,11 @@ main { max-width: 1320px; margin: 0 auto; padding: 20px 16px 8px; }
 @media (forced-colors: active) {
   .kpi, .card { border: 1px solid CanvasText; }
 }
+
+/* Vega Showcase: the Deneb spec is designed for a light canvas, so its stage stays light in dark mode */
+.renderer-switch { display: flex; gap: 6px; }
+.renderer-switch .tbl-toggle[aria-pressed="true"] { color: var(--ink); background: var(--accent-wash); font-weight: 600; }
+.vega-scroll { overflow-x: auto; margin-top: 10px; }
+.vega-stage { min-width: 1000px; height: 632px; background: #fcfcfb; border-radius: 8px; color-scheme: light; }
+.vega-stage > p { margin: 0; padding: 16px; }
+.hover-state { font-variant-numeric: tabular-nums; color: var(--ink-2); }

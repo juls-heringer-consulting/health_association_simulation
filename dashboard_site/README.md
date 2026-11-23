@@ -1,8 +1,11 @@
 # Static dashboard (GitHub Pages)
 
-A small static website with the same five pages as the Power BI report in
+Live: **https://juls-heringer-consulting.github.io/health_association_simulation/**
+
+A small static website with the core pages of the Power BI report in
 [`../powerbi_report`](../powerbi_report/README.md): Overview, Doctors, Billing & Honorar,
-Appointments (TSS) and Planning & Out-of-hours. It runs in any browser without Power BI or SQL Server.
+Appointments (TSS) and Planning & Out-of-hours. A sixth page, **Vega Showcase**, has the radial year
+clock of the Power BI page with the same name. It runs in any browser without Power BI or SQL Server.
 All data is synthetic.
 
 ## Files
@@ -11,8 +14,26 @@ All data is synthetic.
 |---|---|
 | `index.html`, `styles.css` | Page shell, light and dark theme |
 | `charts.js` | Small SVG chart kit (bars, 100 % bars, donut, treemap, heat map, scatter, funnel, waterfall, stacked area). It has no dependencies and no CDN |
-| `app.js` | The five pages, slicers, KPI tiles, tooltips and table views |
-| `data.js` | **Generated** data (about 200 KB), written by `python/export_dashboard_data.py`. Do not edit by hand |
+| `app.js` | The six pages, slicers, KPI tiles, tooltips and table views |
+| `data.js` | **Generated** data (about 250 KB), written by `python/export_dashboard_data.py`. Do not edit by hand |
+| `showcase_spec.js` | **Generated** copy of the Deneb visual's Vega spec and config, written by `python/export_showcase_spec.py`. Do not edit by hand |
+| `vendor/vega.min.js` | Vega 6.4.0, the same version Deneb uses (BSD-3-Clause, see `vendor/LICENSE-vega.txt`). It is served from this folder, not from a CDN, and is loaded only when the Vega Showcase page is opened |
+
+## Vega Showcase page
+
+- **The spec is the same as in Power BI.** `showcase_spec.js` is a 1:1 copy of the Deneb visual
+  `tss_year_clock` (Power BI page *Vega Showcase*).
+  - It is fed with the same field names Deneb passes: `anfrage_id`, `datum`, `arztgruppe`, `dringlichkeit`,
+    `kanal`, `status`, `wartezeit_tage` and `termin_wahrgenommen`.
+  - If the spec changes in Power BI, run `python\export_showcase_spec.py` to update the copy.
+- **Renderer switch.** *SVG* and *Canvas* compare Vega's two renderers outside Power BI. The line
+  *Hover state* below the chart shows the hovered request, which helps with debugging.
+- **Tooltip cards stay in the chart.**
+  - Vega's SVG renderer does not remove a *group* item from the page when the item's data row
+    disappears. A tooltip card built that way stays visible after the mouse has left.
+  - So the spec keeps both cards in the chart once they have been shown, and only switches their
+    opacity. The hovered dot is found from the pointer position, not from mouseover/mouseout events.
+- **Width.** The chart needs at least 1,000 px. On smaller screens the card scrolls sideways.
 
 ## Open locally
 
@@ -24,6 +45,7 @@ After rebuilding the database (`tools\run_all.ps1`), run this from the project r
 
 ```powershell
 .venv\Scripts\python.exe python\export_dashboard_data.py
+.venv\Scripts\python.exe python\export_showcase_spec.py   # only if the Deneb spec changed
 ```
 
 The script reads the connection from `config/settings.toml`. It aggregates the `mart` star

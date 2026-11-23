@@ -439,11 +439,83 @@
     },
   });
 
+  /* ======================================================================
+     PAGE 6 - Vega Showcase: the Power BI Deneb visual's Vega spec, rendered by Vega itself
+     ====================================================================== */
+  const loaded = {};
+  function loadScript(src) {
+    if (!loaded[src]) {
+      loaded[src] = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src; s.onload = resolve; s.onerror = () => reject(new Error('could not load ' + src));
+        document.head.appendChild(s);
+      });
+    }
+    return loaded[src];
+  }
+
+  PAGES.push({
+    id: 'showcase', label: 'Vega Showcase', question: 'A year of appointment requests: does the 4-week promise hold?',
+    build(main) {
+      pageHead(main, this, []);
+      lede(main, `The ${b('same Vega specification')} as the Deneb visual on the Power BI page “Vega Showcase”, rendered here by ` +
+        `${b('Vega 6.4')} directly in the browser. Every dot is one of ${b(F.int(D.tss.rows.length))} requests: angle = day received, ` +
+        `distance from the centre = days until the appointment. Hover dots and month segments, click a specialty or urgency, double-click to reset. ` +
+        `Use the renderer switch to compare ${b('SVG')} and ${b('Canvas')}.`);
+      const sec = h('section', 'card span-12 showcase');
+      sec.innerHTML = '<header class="card-head"><div><h3>TSS year clock</h3>' +
+        '<p class="sub">1:1 copy of the Deneb spec (python/export_showcase_spec.py) · data: data.js</p></div>' +
+        '<div class="renderer-switch" role="group" aria-label="Vega renderer">' +
+        '<button type="button" class="tbl-toggle" data-renderer="svg" aria-pressed="true">SVG</button>' +
+        '<button type="button" class="tbl-toggle" data-renderer="canvas" aria-pressed="false">Canvas</button></div></header>' +
+        '<div class="vega-scroll"><div class="vega-stage"><p class="muted">Loading Vega…</p></div></div>' +
+        '<p class="foot">Hover state: <span class="hover-state">–</span></p>';
+      const grd = grid(main);
+      grd.appendChild(sec);
+      const stage = sec.querySelector('.vega-stage'), hoverState = sec.querySelector('.hover-state');
+      const T = D.tss;
+      // the field names Deneb passes to the spec in Power BI (one row per request)
+      const values = T.rows.map((r) => {
+        const [y, m, d] = r[9].split('-').map(Number);
+        return { anfrage_id: r[8], datum: new Date(y, m - 1, d), arztgruppe: T.specialty[r[0]], dringlichkeit: r[2],
+          kanal: r[3], status: r[10], wartezeit_tage: r[5], termin_wahrgenommen: r[10] === 'VERMITTELT' ? r[7] === 1 : null };
+      });
+      let view = null, renderer = 'svg', lastW = 0, disposed = false;
+      const STAGE_H = 632;
+      const draw = (force) => {
+        if (!window.vega || !window.KVSIM_SHOWCASE || disposed) return;
+        const w = Math.max(1000, Math.floor(stage.clientWidth));
+        if (view && w === lastW && !force) return;
+        lastW = w;
+        if (view) view.finalize();
+        stage.innerHTML = '';
+        const S = window.KVSIM_SHOWCASE, spec = JSON.parse(JSON.stringify(S.spec));
+        spec.data[0].values = values;
+        spec.width = w - 12; spec.height = STAGE_H - 12;   // Deneb sizes the view to the visual the same way
+        view = new vega.View(vega.parse(spec, S.config), { renderer, container: stage, hover: true });
+        view.addSignalListener('hoverReq', (_, v) => { hoverState.textContent = v ? `request #${v.d.anfrage_id}` : '–'; });
+        view.runAsync();
+        window.KVSIM_SHOWCASE_VIEW = view;   // handy for debugging in the browser console
+      };
+      sec.querySelectorAll('[data-renderer]').forEach((btn) => btn.addEventListener('click', () => {
+        renderer = btn.getAttribute('data-renderer');
+        sec.querySelectorAll('[data-renderer]').forEach((x) => x.setAttribute('aria-pressed', x === btn));
+        draw(true);
+      }));
+      Promise.all([loadScript('vendor/vega.min.js'), loadScript('showcase_spec.js')])
+        .then(() => draw(true))
+        .catch((e) => { stage.innerHTML = `<p class="muted">${esc(e.message)}</p>`; });
+      const ro = new ResizeObserver(() => draw(false));
+      ro.observe(stage);
+      live.push({ draw: () => {}, ro, dispose: () => { disposed = true; if (view) view.finalize(); view = null; } });
+    },
+  });
+
   /* ---------------- routing & render ---------------- */
   const nav = document.getElementById('nav'), main = document.getElementById('main');
   nav.innerHTML = PAGES.map((p) => `<a href="#${p.id}" data-page="${p.id}">${esc(p.label)}</a>`).join('');
   function render() {
-    live.forEach((c) => c.ro.disconnect());
+    live.forEach((c) => { c.ro.disconnect(); if (c.dispose) c.dispose(); });
     live.length = 0;
     main.innerHTML = '';
     const pg = PAGES.find((p) => p.id === state.page) || PAGES[0];

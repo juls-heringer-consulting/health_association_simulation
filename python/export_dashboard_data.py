@@ -146,14 +146,17 @@ def export(cur, year: int) -> dict:
     tss = []
     for r in cur.execute("""
             SELECT g.arztgruppe, d.monat_nr, f.dringlichkeit, f.kanal, CAST(f.ist_vermittelt AS int),
-                   f.wartezeit_tage, CAST(f.ist_innerhalb_4_wochen AS int), CAST(f.termin_wahrgenommen AS int)
+                   f.wartezeit_tage, CAST(f.ist_innerhalb_4_wochen AS int), CAST(f.termin_wahrgenommen AS int),
+                   f.anfrage_id, d.datum, f.status
             FROM mart.fact_tss_anfrage f
             JOIN mart.dim_arztgruppe g ON g.arztgruppe_key = f.arztgruppe_key
             JOIN mart.dim_datum d ON d.datum_key = f.eingang_datum_key
             ORDER BY f.anfrage_id""").fetchall():
-        tss.append([grp(r[0]), r[1], r[2], r[3], r[4], r[5], r[6] or 0, r[7] or 0])
+        # columns 8-10 (request id, date received, status) feed the Vega showcase page
+        tss.append([grp(r[0]), r[1], r[2], r[3], r[4], r[5], r[6] or 0, r[7] or 0, r[8], plain(r[9]), r[10]])
     d["tss"] = {"specialty": grp.values,
-                "columns": ["specialty", "month", "urgency", "channel", "arranged", "waitDays", "within4Weeks", "attended"],
+                "columns": ["specialty", "month", "urgency", "channel", "arranged", "waitDays", "within4Weeks", "attended",
+                            "requestId", "dateReceived", "status"],
                 "rows": tss}
 
     # ---------- Planning & out-of-hours ----------
